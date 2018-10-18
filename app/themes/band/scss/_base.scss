@@ -183,10 +183,26 @@ h3{font-size:1.6rem}
 ---------------------------*/
 
 
+.header .menu{
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
 
 /* =header
 ---------------------------*/
-header{
+.header{
+	margin-top: 22px;
+	padding-bottom: 20px;
+	.menu{
+		display: flex;
+		margin-top: 20px;
+		justify-content: center;
+		&-item{
+			margin-left: 15px;
+			margin-right: 15px;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 /* =/header

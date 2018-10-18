@@ -3314,8 +3314,24 @@ h3 {
 
 /* =/top
 ---------------------------*/
+.header .menu {
+  font-family: 'Ubuntu Condensed', sans-serif; }
+
 /* =header
 ---------------------------*/
+.header {
+  margin-top: 22px;
+  padding-bottom: 20px; }
+  .header .menu {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center; }
+    .header .menu-item {
+      margin-left: 15px;
+      margin-right: 15px;
+      font-size: 18px;
+      text-transform: uppercase; }
+
 /* =/header
 ---------------------------*/
 /* =navigation
