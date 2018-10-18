@@ -32,16 +32,17 @@ gulp.task('scss', function(){
 	return gulp.src(config.templateDir + '/scss/**/*.scss') // Берем источник
 		.pipe(sass().on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(gulp.dest(config.templateDir + '/'))  // Выгружаем результата в папку app/css
+		.pipe(browserSync.reload({ stream: true }))
 });
 
 
 // сжатие css файла
-gulp.task('css-libs', ['scss'],  function(){
+gulp.task('css-libs', ['scss'], function () {
 	return gulp.src(config.templateDir + '/style.css') // Выбираем файл для минификации
 		.pipe(cleancss())  // Сжимаем
-		.pipe(rename({suffix: '.min'}))  // Добавляем суффикс .min
-		.pipe(gulp.dest(config.templateDir + '/css')) // Выгружаем в папку app/css
-		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+		// .pipe(rename({ suffix: '.min' }))  // Добавляем суффикс .min
+		.pipe(gulp.dest(config.templateDir + '/')) // Выгружаем в папку app/css
+		.pipe(browserSync.reload({ stream: true })) // Обновляем CSS на странице при изменении
 })
 
 // автоперезагрузка страницы браузера
@@ -78,8 +79,8 @@ gulp.task('clean', function() {
 
 // отслеживаем изменения
 // в квадратных скобках перечисляются таски, которые должны выполниться до watcher (до запуска сервера)
-gulp.task('watcher', ['browser-sync', 'css-libs', 'compress'], function () {
-	return gulp.watch(config.templateDir + '/scss/**/*.scss', ['scss', 'css-libs']), // при изменении любого *scss-файла вызываем таск scss
+gulp.task('watcher', ['browser-sync', 'compress'], function () {
+	return gulp.watch(config.templateDir + '/scss/**/*.scss', ['scss']), // при изменении любого *scss-файла вызываем таск scss
 		gulp.watch('app/*.html', browserSync.reload),
 		gulp.watch(config.templateDir + '/js/**/*.js', browserSync.reload)
 });
@@ -219,7 +220,7 @@ gulp.task('check-for-favicon-update', function(done) {
 gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	// переносим css файлы
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
-		config.templateDir + '/styles.min.css'
+		config.templateDir + '/style.min.css'
 	])
 		.pipe(gulp.dest(config.destDirTheme));
 
