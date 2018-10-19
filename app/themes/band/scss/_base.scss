@@ -225,6 +225,38 @@ h3{font-size:1.6rem}
 
 
 
+/* =footer
+---------------------------*/
+.footer{
+	border-bottom: 5px solid $color3;
+	padding: 45px 0;
+	.copyright{
+		p{
+			margin-left: 15px;
+		}
+	}
+	.social{
+		align-items: center;
+		justify-content: center;
+		a{
+			margin-left: 9px;
+			margin-right: 8px;
+			filter: grayscale(1) brightness(0) opacity(.7);
+			transition: .3s filter;
+			&:hover{
+				filter: none;
+			}
+		}
+		.mess{
+			margin-left: 48px;
+			margin-right: 48px;
+		}
+	}
+}
+/* =/footer
+---------------------------*/
+
+
 .visually-hidden{
 	position: absolute;
 	width: 1px;
