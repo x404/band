@@ -480,7 +480,26 @@
 
 	<!-- =footer -->
 	<footer class="footer">
-		<div class="container">
+		<div class="quickmsg">
+			<div class="container">
+				<div class="title">ОТПРАВИТЬ БЫСТРОЕ СООБЩЕНИЕ:</div>
+				<form action="#" id="quickmsg-form" method="post">
+					<fieldset>
+						<label for="name" class="visually-hidden">Ваше имя</label>
+						<input type="text" id="name" name="name" class="form-control required" value="" placeholder="Ваше имя" required="required" aria-required="true" tabindex="1" />
+				
+						<label for="email" class="visually-hidden">Email</label>
+						<input type="email" id="email" name="email" class="form-control tel required" value="" placeholder="Email" required="required" aria-required="true" tabindex="2" />
+				
+						<label for="msg" class="visually-hidden">Комментарий</label>
+						<textarea name="msg" id="msg" cols="30" class="form-control required" rows="10" placeholder="Комментарий" required="required" aria-required="true" tabindex="3"></textarea>
+						<button type="submit" class="submit center-block" tabindex="4">ОТПРАВИТЬ</button>
+					</fieldset>
+				</form>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть" tabindex="4"></button>
+			</div>
+		</div>
+		<div class="footer__body container">
 			<div class="row">
 				<div class="copyright col-lg-3">
 					<div class="d-flex">
