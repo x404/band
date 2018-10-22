@@ -29,7 +29,7 @@
 </head>
 <body>
 
-<div class="grid">
+<div class="main-grid">
 	<!-- =top -->
 	<div class="top d-flex justify-content-between">
 		<div class="top__contacts top__contacts-left d-flex">
@@ -91,46 +91,123 @@
 	<!-- =/header -->
 
 
-    <div class="main">
+	<div class="main">
 		Пароль отправляется серверу в «открытом» виде — он шифруется известным алгоритмом на известном ключе. При использовании простого логина, пароль пользователя может быть перехвачен и дешифрирован.
-    </div>
-</div>
+	</div>
 
-<!-- =footer -->
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="copyright col-lg-3">
-				<div class="d-flex">
-					<a href="/" title><img src="themes/band/images/logo-small.svg" alt="Band"></a>
-					<p>
-						© 2013 -2018 «band»<br>
-						Все права защищены
-					</p>
-				</div>
-			</div>
-			<div class="col-lg-6 social d-flex">
-				<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_pinterest.png" alt="" /></a>
-				<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_facebook.png" alt="" /></a>
-				<a href="#" title="" target="_blank" class="mess"><img src="themes/band/images/icons/icon_mess.png" alt="" /></a>
-				<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_twitter.png" alt="" /></a>
-				<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_inst.png" alt="" /></a>
-			</div>
-			<div class="col-lg-3">
-				<p>Дизайн сайта - <a href="https://kuzma.in.ua">Kuzma</a></p>
-				<p>Программирование - <a href="https://proverstka.com.ua">Proverstka</a></p>
+	<!-- =last news -->
+	<section class="lastnews">
+		<header class="text-center">
+			<h1 class="title">ИНТЕРЕСНО <sup>beta</sup></h1>
+		</header>
+		<div class="lastnews__wrapper">
+			<div class="container">
+				<div id="news-carousel">
+					<div>
+						<article class="new__item new__item-pic">
+							<a href="#" title="" class="new__link">
+								<div class="new__top"> 
+									<div class="new__pic">
+										<img src="https://dummyimage.com/260x300/000/fff" alt="" />
+										<!-- <img src="http://lorempixel.com/260/300/city/" alt="" /> -->
+									</div>
+									<div class="new__title">
+										<p>С него все и началось...</p>
+									</div>	
+								</div>
+								<div class="new__hover">
+									<div class="new__title">
+										<p>С него все и началось...</p>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div>
+						<article class="new__item new__item-pic">
+							<a href="#" title="" class="new__link">
+								<div class="new__top">
+									<div class="new__pic">
+										<img src="tmp/article-2.jpg" alt="" />
+									</div>
+									<div class="new__title">
+										<p>Заголовок в три строки здесь должен поместиться</p>
+									</div>
+								</div>
+								<div class="new__hover">
+									<div class="new__title">
+										<p>Заголовок в три строки здесь должен поместиться</p>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div>
+						<article class="new__item new__item-pic">
+							<a href="#" title="" class="new__link">
+								<div class="new__top">
+									<div class="new__pic">
+										<img src="https://dummyimage.com/260x300/000/fff" alt="" />
+									</div>
+									<div class="new__title">
+										<p>Связанные одной нитью</p>
+									</div>
+								</div>
+								<div class="new__hover">
+									<div class="new__title">
+										<p>Связанные одной нитью</p>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div>
+						<article class="new__item new__item-nopic">
+							<a href="#" title="" class="new__link">
+								<div class="new__title">
+									<p>Связанные одной нитью</p>
+								</div>
+							</a>
+						</article>
+					</div>
+				</div>				
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- =/footer -->
+	</section>
+	<!-- =/last news -->
 
+	<!-- =footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="copyright col-lg-3">
+					<div class="d-flex">
+						<a href="/" title><img src="themes/band/images/logo-small.svg" alt="Band"></a>
+						<p>
+							© 2013 -2018 «band»<br>
+							Все права защищены
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6 social d-flex">
+					<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_pinterest.png" alt="" /></a>
+					<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_facebook.png" alt="" /></a>
+					<a href="#" title="" target="_blank" class="mess"><img src="themes/band/images/icons/icon_mess.png" alt="" /></a>
+					<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_twitter.png" alt="" /></a>
+					<a href="#" title="" target="_blank"><img src="themes/band/images/icons/icon_inst.png" alt="" /></a>
+				</div>
+				<div class="col-lg-3">
+					<p>Дизайн сайта - <a href="https://kuzma.in.ua">Kuzma</a></p>
+					<p>Программирование - <a href="https://proverstka.com.ua">Proverstka</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- =/footer -->
+</div>
 
 <div id="outdated"></div>
-
-<!-- <script src="/template/js/owl.carousel.min.js"></script> -->
-<!-- <link rel="stylesheet" property="stylesheet" href="template/css/owl.carousel.css"> -->
-
+<script type="text/javascript" src="themes/band/js/slick.min.js"></script>
 <script src="/themes/band/js/engine.js"></script>
 </body>
 </html>

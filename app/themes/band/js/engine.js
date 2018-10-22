@@ -1,7 +1,49 @@
 $(document).ready(function(){
 
 	// карусель
-
+	$('#news-carousel').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '',
+		nextArrow: '',
+		responsive: [
+			{
+				breakpoint: 1399,
+				settings: {
+					slidesToShow: 14,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 11,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 9,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 650,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 450,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 2
+				}
+			}
+		]
+	});
 
 
 	// mobile-menu

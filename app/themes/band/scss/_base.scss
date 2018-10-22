@@ -29,12 +29,11 @@ html {
 
 body{
 	font-family: 'Open Sans', sans-serif;
-	// font-family: 'Ubuntu Condensed', sans-serif;
 	// @include flexbox;
 	// @include font-size(1.4);
 	// flex-flow: column;
-	// font-display: swap;
 	// height: 100vh;
+	font-display: swap;
 	font-size: 14px;
 }
 
@@ -69,6 +68,17 @@ h3{font-size:1.6rem}
 
 .regular{
 	// font-family: "SegoeUIRegular";	
+}
+
+.main-grid{
+	min-height: 100vh;
+	display: grid;
+	grid-template-areas: "top"
+								"header"
+								"main"
+								"lastnews"
+								"footer";
+	grid-template-rows: auto auto 1fr auto auto;
 }
 
 
@@ -183,7 +193,10 @@ h3{font-size:1.6rem}
 ---------------------------*/
 
 
-.header .menu{
+.header .menu,
+.lastnews .title,
+.new__title,
+{
 	font-family: 'Ubuntu Condensed', sans-serif;
 }
 
@@ -222,6 +235,161 @@ h3{font-size:1.6rem}
 	aside{
 	}
 }
+
+/* =lastnews
+---------------------------*/
+.lastnews{
+	margin-top: 50px;
+	&__wrapper{
+		background: $color6;
+		margin-top: 30px;
+		padding: 60px 0;
+	}
+
+	.title{
+		color: $color3;
+		font-size: 30px;
+		position: relative;
+		sup{
+			font-size: 18px;
+			position: relative;
+			top: -15px;
+		}
+		&:after{
+			@extend .before;
+			width: 50px;
+			border-top: 1px solid $color3;
+			left: 50%;
+			bottom: -5px;
+			margin-left: -25px;
+		}
+	}
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+$r: 10px;
+.new{
+	&__item{
+		height: 300px;
+		border-radius: $r;
+		// overflow: hidden;
+		text-align: center;
+		width: 260px;
+		&-pic{
+			position: relative;
+			.new{
+				&__title{
+					bottom: 0;					
+					left: 0;
+					position: absolute;
+					right: 0;
+					z-index: 1;
+					border-radius: 0 0 9px 9px;
+				}
+				
+				&__top{
+					.new__title{
+						background: #fff;
+						height: 150px;
+					}
+				}
+			}
+			img{
+				border-radius: $r;
+			}
+		}
+		&-nopic{
+			border-radius: $r;
+			overflow: hidden;
+			background: $color2;
+			@extend .flex-center;
+			.new{
+				&__link{
+					@extend .flex-center;
+					height: 100%;
+					transition: .3s background;
+					&:hover{
+						background: rgba(53, 73, 92, .55);
+						.new{
+							&__title{
+								color: $color2;
+							}
+						}
+					}
+				}
+			} 
+		}
+	}
+	
+	&__link{
+		
+		&:hover{
+			text-decoration: none;
+			.new__top{
+				.new__title{
+					color: $color2;
+					height: 0;
+					opacity: 0;
+				}
+			}
+			.new{
+				&__hover{
+					opacity: 1;
+					z-index: 100;
+					height: 100%;
+					.new__title{
+						display: flex;
+						background: none;
+					}
+				}
+			}
+		}
+	}
+	&__title{
+		color: $color3;
+		font-size: 24px;
+		padding-left: 25px;
+		padding-right: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1.3;
+		transition: .3s;
+	}
+	&__pic{
+		img{
+			display: block;
+		}
+	}
+	&__hover{
+		position: absolute;
+		border-radius: $r;
+		background: rgba(53, 73, 92, .55);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+		opacity: 0;
+		transition: .3s;
+		.new{
+			&__title{
+				position: static;
+				display: flex;
+				align-items: center;
+				height: 100%;
+				color: $color2;
+			}
+		}
+	}
+}
+/* =/lastnews
+---------------------------*/
 
 
 
