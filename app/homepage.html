@@ -482,21 +482,23 @@
 	<footer class="footer">
 		<div class="quickmsg show">
 			<div class="container">
-				<div class="title">ОТПРАВИТЬ БЫСТРОЕ СООБЩЕНИЕ:</div>
-				<form action="#" id="quickmsg-form" method="post">
-					<fieldset>
-						<label for="name" class="visually-hidden">Ваше имя</label>
-						<input type="text" id="name" name="name" class="form-control required" value="" placeholder="Ваше имя" required="required" aria-required="true" tabindex="1" />
-				
-						<label for="email" class="visually-hidden">Email</label>
-						<input type="email" id="email" name="email" class="form-control tel required" value="" placeholder="Email" required="required" aria-required="true" tabindex="2" />
-				
-						<label for="msg" class="visually-hidden">Комментарий</label>
-						<textarea name="msg" id="msg" cols="30" class="form-control required" rows="10" placeholder="Комментарий" required="required" aria-required="true" tabindex="3"></textarea>
-						<button type="submit" class="submit center-block" tabindex="4">ОТПРАВИТЬ</button>
-					</fieldset>
-				</form>
-				<button type="button" class="close" aria-label="Закрыть" tabindex="4"></button>
+				<div class="quickmsg__body">
+					<div class="title">ОТПРАВИТЬ БЫСТРОЕ СООБЩЕНИЕ:</div>
+					<form action="quickmsg.ajax.php" id="quickmsg-form" method="post">
+						<fieldset>
+							<label for="name" class="visually-hidden">Ваше имя</label>
+							<input type="text" id="name" name="name" class="form-control required" value="" placeholder="Ваше имя" required="required" aria-required="true" tabindex="1" />
+					
+							<label for="email" class="visually-hidden">Email</label>
+							<input type="email" id="email" name="email" class="form-control tel required" value="" placeholder="Email" required="required" aria-required="true" tabindex="2" />
+					
+							<label for="msg" class="visually-hidden">Комментарий</label>
+							<textarea name="msg" id="msg" cols="30" class="form-control required" rows="10" placeholder="Комментарий" required="required" aria-required="true" tabindex="3"></textarea>
+							<button type="submit" class="submit center-block" tabindex="4">ОТПРАВИТЬ</button>
+						</fieldset>
+					</form>
+					<button type="button" class="close" aria-label="Закрыть" tabindex="4"></button>
+				</div>
 			</div>
 		</div>
 		<div class="footer__body container">
