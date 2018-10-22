@@ -242,14 +242,15 @@ h3{font-size:1.6rem}
 ---------------------------*/
 
 .main{
-	aside{
+	img{
+		max-width: 100%;
 	}
 }
 
 /* =lastnews
 ---------------------------*/
 .lastnews{
-	margin-top: 50px;
+	margin-top: 40px;
 	&__wrapper{
 		background: $color6;
 		margin-top: 30px;
@@ -271,7 +272,7 @@ h3{font-size:1.6rem}
 			border-top: 1px solid $color3;
 			left: 50%;
 			bottom: -5px;
-			margin-left: -25px;
+			margin-left: -35px;
 		}
 	}
 }
