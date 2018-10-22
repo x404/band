@@ -1,6 +1,6 @@
 /*** reset ***********/
 html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}
-header, section, footer, aside, nav, article {display:block}
+header, section, footer, aside, , article {display:block}
 ul{list-style:none}
 
 
@@ -216,6 +216,14 @@ h3{font-size:1.6rem}
 			margin-right: 15px;
 			font-size: 18px;
 			text-transform: uppercase;
+			a{
+				position: relative;
+				padding-top: 2px;
+				white-space: nowrap;
+				&:hover{
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }

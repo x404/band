@@ -59,6 +59,71 @@
 ---------------------------*/
 
 
+/* =product
+---------------------------*/
+.products{
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	margin: 40px 0;
+	.product{
+		// margin-top: 20px;
+		margin-bottom: 20px;
+		text-align: center;
+		.box-default{
+			height: 265px;
+			@extend .flex-center;
+		}
+		img{
+			display: block;
+		}
+		&__bottom{
+			@extend .flex-center;
+			font-size: 18px;
+			font-weight: 700;
+			color: $color3;
+			.woocommerce-Price-currencySymbol{
+				font-weight: 400;
+			}
+		}
+		.add_to_cart_button{
+			@extend .flex-center;
+			background-color: $color6;
+			border-radius: 50%;
+			height: 35px;
+			margin-left: 11px;
+			width: 35px;
+			transition: background-color .3s;
+			img{
+				transition: filter .3s;
+			}
+			&:hover{
+				background-color: $color7;
+				img{
+					filter: grayscale(0) brightness(5)
+				}
+			}
+		}
+	}
+	.woocommerce-loop-product__link{
+		display: block;
+		color: $color1;
+		padding-left: 15px;
+		padding-right: 15px;
+		transition: color .3s;
+		&:hover{
+			color: $color3;
+			text-decoration: none;
+		}
+	}
+	.woocommerce-loop-product__title{
+		font-size: 18px;
+		font-family: 'Ubuntu Condensed', sans-serif;
+		margin: 20px 15px 15px;
+	}
+}
+/* =/product
+---------------------------*/
+
 /* =pagination
 ---------------------------*/
 .woocommerce-pagination{
