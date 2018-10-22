@@ -145,7 +145,16 @@ input[type="submit"]{
 	&__cart{
 		background: $color4;
 		font-size: 15px;
-		// padding: $p 0;
+		transition: .3s background-color;
+
+
+		// for full page
+		&:hover{
+			background-color: $color7;
+			.cart-contents{
+				filter: grayscale(1) brightness(10)
+			}
+		}
 	}
 	
 	.cart-contents{
@@ -159,12 +168,20 @@ input[type="submit"]{
 		.count{
 			margin-left: 3px;
 		}
+
+		&:hover{
+
+		}
 	}
 
 	.skype,
 	.email{
 		background-repeat: no-repeat;
 		background-position: left center;
+		transition: filter .3s;
+		&:hover{
+			filter: brightness(0.8);
+		}
 	}
 
 	.skype{

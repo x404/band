@@ -220,20 +220,20 @@ gulp.task('check-for-favicon-update', function(done) {
 gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	// переносим css файлы
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
-		config.templateDir + '/style.min.css'
+		config.templateDir + '/style.css'
 	])
 		.pipe(gulp.dest(config.destDirTheme));
 
-	var buildCss2 = gulp.src([ // Переносим CSS стили в продакшен
-		config.templateDir + '/css/selectize.css'
-	])
-		.pipe(gulp.dest(config.destDirTheme + '/css'));
+	// var buildCss2 = gulp.src([ // Переносим CSS стили в продакшен
+	// 	config.templateDir + '/css/selectize.css'
+	// ])
+	// 	.pipe(gulp.dest(config.destDirTheme + '/css'));
 
 
-	var buildPHP = gulp.src([ // Переносим CSS стили в продакшен
-		config.templateDir + '/css/ss'
-	])
-		.pipe(gulp.dest(config.destDirTheme + '/css'));
+	// var buildPHP = gulp.src([ // Переносим CSS стили в продакшен
+	// 	config.templateDir + '/css/style.css'
+	// ])
+	// 	.pipe(gulp.dest(config.destDirTheme + '/css'));
 
 
 	var buildFavicon = gulp.src('app/*.php').pipe(gulp.dest(config.destDir + '/'));
@@ -243,7 +243,6 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	var buildJs = gulp.src(config.templateDir + '/js/**/*').pipe(gulp.dest(config.destDirTheme+ '/js'));
 	var buildImages = gulp.src('app/images/**/*').pipe(gulp.dest(config.destDir + '/images'));
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest(config.destDir + '/tmp'));
-	// var buildFonts = gulp.src(config.templateDir + '/fonts/**/*').pipe(gulp.dest(config.destDirTheme + '/fonts')); // Переносим шрифты в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest(config.destDir + '/outdatedbrowser'));
 	var faviconData = gulp.src('app/faviconData.json').pipe(gulp.dest(config.destDir));
 
