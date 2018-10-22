@@ -3623,6 +3623,26 @@ h3 {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.cl-effect-11 a {
+  position: relative;
+  color: #0972b4;
+  text-shadow: none; }
+
+.cl-effect-11 a::before {
+  border-bottom: 2px solid #19bd9b;
+  color: #19bd9b;
+  content: attr(data-hover);
+  left: 0;
+  max-width: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: max-width 0.5s; }
+
+.cl-effect-11 a:hover::before,
+.cl-effect-11 a:focus::before {
+  max-width: 100%; }
+
 .cats {
   border-top: 1px solid #35495c;
   border-bottom: 1px solid #35495c;
