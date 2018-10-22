@@ -1,0 +1,59 @@
+.cats{
+	border-top: 1px solid $color3;
+	border-bottom: 1px solid $color3;
+	padding: 12px 0;
+	margin: 30px -15px 0;
+	padding-left: 16px;
+	p{
+
+	}
+
+	ul{
+		display: flex;
+		li{
+			line-height: normal;
+			margin-left: 17px;
+			padding-left: 10px;
+			position: relative;
+			&:before{
+				transition: .3s background-color;
+				@extend .before;
+				background-color: $color3;
+				border-radius: 50%;
+				height: 5px;
+				margin-top: -3px;
+				left: 0;
+				top: 50%;
+				width: 5px;
+			}
+			&:hover{
+				&:before{
+					background-color: $color7;
+				}
+			}
+		}
+	}
+	a{
+		transition: .3s color;
+		&:hover{
+			color: $color7;
+			text-decoration: none;
+		}
+	}
+}
+
+/* =about
+---------------------------*/
+.about{
+	font-weight: 600;
+	text-align: justify;
+	h1{
+		font-weight: normal;
+		margin-bottom: 15px;
+	}
+	p{
+		margin: 12px 0;
+	}
+}
+/* =/about
+---------------------------*/
