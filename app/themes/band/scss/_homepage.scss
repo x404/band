@@ -69,12 +69,26 @@
 		// margin-top: 20px;
 		margin-bottom: 20px;
 		text-align: center;
-		.box-default{
-			height: 265px;
-			@extend .flex-center;
+		.box{
+			&-default{
+				height: 265px;
+				@extend .flex-center;
+			}
+			&-overlay{
+				transform: translateX(100%);
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				overflow: hidden;
+				transition: all 1s cubic-bezier(.19, 1, .22, 1) 0s;
+			}
 		}
 		img{
-			display: block;
+			// display: block;
+			vertical-align: top;
 		}
 		&__bottom{
 			@extend .flex-center;
@@ -107,12 +121,18 @@
 	.woocommerce-loop-product__link{
 		display: block;
 		color: $color1;
+		overflow: hidden;
 		padding-left: 15px;
 		padding-right: 15px;
+		position: relative;
 		transition: color .3s;
 		&:hover{
 			color: $color3;
 			text-decoration: none;
+			.box-overlay {
+			    transform: translateX(0);
+			}
+
 		}
 	}
 	.woocommerce-loop-product__title{

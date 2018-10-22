@@ -3626,7 +3626,6 @@ h3 {
 /* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
 .cl-effect-11 a {
   position: relative;
-  color: #0972b4;
   text-shadow: none; }
 
 .cl-effect-11 a::before {
@@ -3697,8 +3696,18 @@ h3 {
     text-align: center; }
     .products .product .box-default {
       height: 265px; }
+    .products .product .box-overlay {
+      transform: translateX(100%);
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0s; }
     .products .product img {
-      display: block; }
+      vertical-align: top; }
     .products .product__bottom {
       font-size: 18px;
       font-weight: 700;
@@ -3721,12 +3730,16 @@ h3 {
   .products .woocommerce-loop-product__link {
     display: block;
     color: #000;
+    overflow: hidden;
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
     transition: color .3s; }
     .products .woocommerce-loop-product__link:hover {
       color: #35495c;
       text-decoration: none; }
+      .products .woocommerce-loop-product__link:hover .box-overlay {
+        transform: translateX(0); }
   .products .woocommerce-loop-product__title {
     font-size: 18px;
     font-family: 'Ubuntu Condensed', sans-serif;
