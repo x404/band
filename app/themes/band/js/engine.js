@@ -71,3 +71,16 @@ $(document).ready(function(){
 		init();
 	});	
 });
+
+
+// mobile menu
+document.querySelector('.quickmsg .close').addEventListener("click", function(){
+	$('.quickmsg').slideToggle();
+}, false);
+
+
+document.querySelector('.footer .mess').addEventListener("click", function(){
+	$('.quickmsg').slideToggle();
+}, false);
+
+// =/mobile menu

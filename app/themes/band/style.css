@@ -3600,9 +3600,10 @@ input[type="submit"] {
 ---------------------------*/
 .quickmsg {
   background-color: #d6f3ed;
-  border-bottom: 2px solid #4bcbb1;
-  padding: 50px 0 28px;
-  position: relative; }
+  position: relative;
+  transition: .3s;
+  display: none;
+  border-bottom: 2px solid #4bcbb1; }
   .quickmsg:after {
     background: url(images/arrowbottom.gif) no-repeat;
     bottom: -14px;
@@ -3619,13 +3620,14 @@ input[type="submit"] {
     height: 20px;
     position: absolute;
     right: 0;
-    top: -25px;
+    top: 20px;
     transition: .3s;
     width: 21px; }
     .quickmsg .close:hover {
       transform: rotate(90deg);
       filter: none; }
   .quickmsg .container {
+    padding: 50px 0 28px;
     position: relative;
     width: 525px; }
   .quickmsg .title {
@@ -3685,6 +3687,9 @@ input[type="submit"] {
       .footer .social a:hover {
         filter: none; }
     .footer .social .mess {
+      border: none;
+      background: none;
+      cursor: pointer;
       margin-left: 48px;
       margin-right: 48px; }
 
