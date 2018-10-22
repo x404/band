@@ -3387,7 +3387,8 @@ h3 {
   .tdu:hover {
     text-decoration: none; }
 
-.before, .lastnews .title:after, .cats ul li:before {
+.before, .lastnews .title:after, .cats ul li:before, .woocommerce-pagination ul.page-numbers li .prev:before,
+.woocommerce-pagination ul.page-numbers li .next:before {
   content: "";
   display: block;
   position: absolute; }
@@ -3501,7 +3502,8 @@ h3 {
       bottom: -5px;
       margin-left: -25px; }
 
-.flex-center, .new__item-nopic, .new__item-nopic .new__link {
+.flex-center, .new__item-nopic, .new__item-nopic .new__link, .woocommerce-pagination ul.page-numbers li a:not(.prev):not(.next),
+.woocommerce-pagination ul.page-numbers li .current {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -3657,6 +3659,53 @@ h3 {
     margin: 12px 0; }
 
 /* =/about
+---------------------------*/
+/* =pagination
+---------------------------*/
+.woocommerce-pagination {
+  margin: 40px 0;
+  font-size: 16px; }
+  .woocommerce-pagination ul.page-numbers {
+    display: flex;
+    justify-content: center; }
+    .woocommerce-pagination ul.page-numbers li {
+      margin-left: 15px;
+      margin-right: 15px; }
+      .woocommerce-pagination ul.page-numbers li .dots {
+        font-weight: 600; }
+      .woocommerce-pagination ul.page-numbers li .prev,
+      .woocommerce-pagination ul.page-numbers li .next {
+        display: block;
+        text-indent: -9999em;
+        position: relative; }
+        .woocommerce-pagination ul.page-numbers li .prev:before,
+        .woocommerce-pagination ul.page-numbers li .next:before {
+          background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAKVJREFUGJVd0KFugmEMheGH36AWCAmZ2RxIQkJC8Cj+iSWbBYXlTrgCEi6AO0BAgkAhcCA3tylmEExPrF/yhaqevm1z2kq/nLxjgjkOsiiwxBs2GNzDbeQPWKOTwyn2oRvR3ErwF684RsMjdngqonDFC86hn7FIEKqoZ/qWYDOtCn3CrEAtTLQDfKDET4EVugG+MMJ3ctsLcImJz/zOsf8vDTO34A+sCRvDotmkvgAAAABJRU5ErkJggg==") no-repeat left top;
+          height: 12px;
+          width: 7px;
+          top: 13px; }
+      .woocommerce-pagination ul.page-numbers li .prev {
+        margin-right: 25px; }
+        .woocommerce-pagination ul.page-numbers li .prev::before {
+          transform: rotate(180deg); }
+      .woocommerce-pagination ul.page-numbers li .next {
+        margin-left: 25px; }
+      .woocommerce-pagination ul.page-numbers li a:not(.prev):not(.next),
+      .woocommerce-pagination ul.page-numbers li .current {
+        height: 35px;
+        width: 35px; }
+      .woocommerce-pagination ul.page-numbers li a:not(.prev):not(.next) {
+        transition: .3s;
+        border-radius: 50%;
+        color: #35495c; }
+        .woocommerce-pagination ul.page-numbers li a:not(.prev):not(.next):hover {
+          background: #19bd9b;
+          color: #fff;
+          text-decoration: none; }
+    .woocommerce-pagination ul.page-numbers .current {
+      color: #19bd9b; }
+
+/* =/pagination
 ---------------------------*/
 /* =mobile-menu
 ---------------------------*/
