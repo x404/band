@@ -4199,15 +4199,15 @@ textarea.error {
   .close-menu {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    display: block;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-    right: 15px;
     background-color: #000;
+    background: none;
     border: none;
+    cursor: pointer;
+    display: block;
     height: 58px;
+    padding: 0;
     position: fixed;
+    right: 2px;
     text-align: center;
     top: 0;
     width: 58px;
@@ -4439,15 +4439,15 @@ textarea.error {
   .close-menu {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    display: block;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-    right: 15px;
     background-color: #000;
+    background: none;
     border: none;
+    cursor: pointer;
+    display: block;
     height: 58px;
+    padding: 0;
     position: fixed;
+    right: 2px;
     text-align: center;
     top: 0;
     width: 58px;
@@ -4520,14 +4520,19 @@ textarea.error {
 
 @media (max-width: 991px) {
   .filter .d-flex {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: flex-start !important; }
   .filter .widget {
     margin-right: 0; }
+    .filter .widget-title {
+      flex-shrink: 0;
+      width: 50px; }
     .filter .widget ul {
-      flex-wrap: wrap;
-      justify-content: center; }
+      flex-wrap: wrap; }
       .filter .widget ul li {
         margin-bottom: 5px; }
+    .filter .widget .yith-wcan-color {
+      margin-left: 18px; }
   .products {
     grid-template-columns: repeat(2, 50%); }
   .footer {
@@ -4562,6 +4567,15 @@ textarea.error {
     margin-left: 65px; }
   .top .tel:nth-child(2) {
     display: none; }
+  .top__contacts-left {
+    order: 2;
+    padding-left: 0;
+    padding-right: 80px; }
+    .top__contacts-left a:first-child {
+      margin-left: 0; }
+  .top__contacts-right {
+    order: 1;
+    padding-left: 10px; }
   .quickmsg .container {
     width: 90%; }
   .quickmsg .sending,
@@ -4579,6 +4593,8 @@ textarea.error {
     .top .tel {
       margin-left: 0 !important;
       display: block !important; }
+    .top__contacts-left {
+      padding-right: 0; }
   .cats {
     margin-right: 0;
     margin-left: 0; }
@@ -4587,13 +4603,8 @@ textarea.error {
       flex-wrap: wrap !important; }
   .filter .d-flex {
     justify-content: flex-start !important; }
-  .filter .widget-title {
-    flex-shrink: 0;
-    width: 50px; }
   .filter .widget ul {
-    justify-content: flex-start; }
-  .filter .yith-wcan-color {
-    margin-left: 18px; } }
+    justify-content: flex-start; } }
 
 @media (max-width: 575px) {
   .main-grid {
@@ -4613,14 +4624,25 @@ textarea.error {
     width: 100%; }
   .top__cart {
     margin-top: 10px; }
-  .filter .widget {
-    display: block; }
-    .filter .widget-title {
-      margin-bottom: 8px;
-      width: 100%; }
-    .filter .widget li {
-      margin-left: 0;
-      margin-right: 13px; } }
+  .top__contacts-left {
+    order: 1; }
+  .top__contacts-right {
+    order: 2; }
+  .filter {
+    text-align: center; }
+    .filter .d-flex {
+      display: block !important; }
+    .filter .widget {
+      margin: 15px 0;
+      display: block; }
+      .filter .widget-title {
+        margin-bottom: 8px;
+        width: 100%; }
+      .filter .widget ul {
+        justify-content: center; }
+      .filter .widget li {
+        margin-left: 0;
+        margin-right: 13px; } }
 
 @media (max-width: 490px) {
   .top__contacts {
@@ -4629,6 +4651,8 @@ textarea.error {
     margin-top: 0; }
   .top .d-flex {
     justify-content: flex-start; }
+  .top__contacts-right {
+    padding-left: 0; }
   .quickmsg .title {
     font-size: 20px; }
   .products {

@@ -142,15 +142,15 @@ $color_2: #000;
 
 	.close-menu{
 		@include transition;
-		display: block;
-		background: none;
-		cursor: pointer;
-		padding: 0;
-		right: 15px;
 		background-color: $color_2;
+		background: none;
 		border: none;
+		cursor: pointer;
+		display: block;
 		height: 58px;
+		padding: 0;
 		position: fixed;
+		right: 2px;
 		text-align: center;
 		top: 0;
 		width: 58px;

@@ -36,15 +36,22 @@
 	.filter{
 		.d-flex{
 			flex-wrap: wrap;
+			justify-content: flex-start !important;
 		}
 		.widget{
 			margin-right: 0;
+			&-title{
+				flex-shrink: 0;
+				width: 50px;
+			}			
 			ul{
 				flex-wrap: wrap;
-				justify-content: center;
 				li{
 					margin-bottom: 5px;
 				}
+			}
+			.yith-wcan-color{
+				margin-left: 18px;
 			}
 		}
 	}
@@ -109,6 +116,20 @@
 	}
 
 
+	.top__contacts-left{
+		order: 2;
+		padding-left: 0;
+		padding-right: 80px;
+		a:first-child{
+			margin-left: 0 ;
+		}
+	}
+
+	.top__contacts-right{
+		order: 1;
+		padding-left: 10px;
+	}
+
 	// quickmsg
 	.quickmsg{
 		.container{
@@ -138,6 +159,9 @@
 			margin-left: 0 !important;
 			display: block !important;
 		}
+		&__contacts-left{
+			padding-right: 0;
+		}
 	}
 	.cats{
 		margin-right: 0;
@@ -152,17 +176,11 @@
 		.d-flex{
 			justify-content: flex-start !important;
 		}
-		.widget-title{
-			flex-shrink: 0;
-			width: 50px;
-		}
+
 		.widget{
 			ul{
 				justify-content: flex-start;
 			}
-		}
-		.yith-wcan-color{
-			margin-left: 18px;
 		}
 	}
 }
@@ -202,14 +220,28 @@
 		&__cart{
 			margin-top: 10px;
 		}
+		&__contacts-left{
+			order: 1;
+		}
+		&__contacts-right{
+			order: 2
+		}
 	}
 
 	.filter{
+		text-align: center;
+		.d-flex{
+			display: block !important;
+		}
 		.widget{
+			margin: 15px 0;
 			display: block;
 			&-title{
 				margin-bottom: 8px;
 				width: 100%;
+			}
+			ul{
+				justify-content: center;
 			}
 			li{
 				margin-left: 0;
@@ -230,6 +262,9 @@
 		}
 		.d-flex{
 			justify-content: flex-start;
+		}
+		&__contacts-right{
+			padding-left: 0;
 		}
 	}
 	.quickmsg .title{
