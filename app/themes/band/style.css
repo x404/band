@@ -3336,6 +3336,22 @@ ul {
   font-weight: 400;
   src: local("Ubuntu Condensed"), local("UbuntuCondensed-Regular"), url("fonts/UbuntuCondensedRegular/ubuntu-condensed-v8-cyrillic_cyrillic-ext-regular.woff2") format("woff2"), url("fonts/UbuntuCondensedRegular/ubuntu-condensed-v8-cyrillic_cyrillic-ext-regular.woff") format("woff"); }
 
+/* fira-sans-condensed-regular - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Condensed Regular"), local("FiraSansCondensed-Regular"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-sans-condensed-600 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Fira Sans Condensed SemiBold"), local("FiraSansCondensed-SemiBold"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-600.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
 /* open-sans-regular - cyrillic_cyrillic-ext */
 @font-face {
   font-family: 'Open Sans';
@@ -3421,7 +3437,9 @@ input::-moz-focus-inner {
 
 /*** standart classes *****/
 a {
-  color: #020000; }
+  color: #000; }
+  a:hover {
+    color: #000; }
 
 h1,
 h2,
@@ -3538,8 +3556,10 @@ input[type="submit"] {
 .new__title,
 .cats p,
 .about h1,
-.widget-title {
-  font-family: 'Ubuntu Condensed', sans-serif; }
+.widget-title,
+.woocommerce-loop-product__title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 600; }
 
 /* =header
 ---------------------------*/
@@ -3986,7 +4006,6 @@ textarea.error {
         transform: translateX(0); }
   .products .woocommerce-loop-product__title {
     font-size: 18px;
-    font-family: 'Ubuntu Condensed', sans-serif;
     line-height: 1.2;
     margin: 20px 15px 15px; }
 
