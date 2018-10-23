@@ -254,6 +254,7 @@
 
 @media (max-width: 490px){
 	.top{
+		height: 70px;
 		&__contacts{
 			display: none !important;
 		}
@@ -265,6 +266,11 @@
 		}
 		&__contacts-right{
 			padding-left: 0;
+			height: 100%;
+			align-items: center;
+		}
+		.cart-contents{
+			height: 70px;
 		}
 	}
 	.quickmsg .title{

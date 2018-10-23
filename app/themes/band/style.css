@@ -4645,14 +4645,20 @@ textarea.error {
         margin-right: 13px; } }
 
 @media (max-width: 490px) {
-  .top__contacts {
-    display: none !important; }
-  .top__cart {
-    margin-top: 0; }
-  .top .d-flex {
-    justify-content: flex-start; }
-  .top__contacts-right {
-    padding-left: 0; }
+  .top {
+    height: 70px; }
+    .top__contacts {
+      display: none !important; }
+    .top__cart {
+      margin-top: 0; }
+    .top .d-flex {
+      justify-content: flex-start; }
+    .top__contacts-right {
+      padding-left: 0;
+      height: 100%;
+      align-items: center; }
+    .top .cart-contents {
+      height: 70px; }
   .quickmsg .title {
     font-size: 20px; }
   .products {
