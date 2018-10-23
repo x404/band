@@ -3362,14 +3362,12 @@ input::-moz-focus-inner {
 a {
   color: #020000; }
 
-h1 {
-  font-size: 2.5rem; }
-
-h2 {
-  font-size: 2.4rem; }
-
-h3 {
-  font-size: 1.6rem; }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal; }
 
 .center-block {
   margin-left: auto;
