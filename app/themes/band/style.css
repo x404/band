@@ -3537,7 +3537,8 @@ input[type="submit"] {
 .lastnews .title,
 .new__title,
 .cats p,
-.about h1 {
+.about h1,
+.widget-title {
   font-family: 'Ubuntu Condensed', sans-serif; }
 
 /* =header
@@ -3880,8 +3881,6 @@ textarea.error {
     .filter .widget:last-child {
       margin-right: 0; }
     .filter .widget-title {
-      font-family: 'Ubuntu Condensed', sans-serif;
-      font-weight: 600;
       font-size: 16px;
       margin-right: 12px; }
     .filter .widget li {
@@ -4076,7 +4075,7 @@ textarea.error {
     display: block;
     text-align: left; }
   .navbar-toggle {
-    background-color: #000;
+    background-color: #35495c;
     border: none;
     cursor: pointer;
     display: block;
@@ -4138,7 +4137,7 @@ textarea.error {
     cursor: pointer;
     padding: 0;
     left: 215px;
-    background-color: #000;
+    background-color: #35495c;
     border: none;
     height: 58px;
     position: fixed;
@@ -4152,8 +4151,8 @@ textarea.error {
       transform: rotate(90deg); }
   #navbar {
     transition: all .2s ease-out;
-    background-color: #000;
-    color: #000;
+    background-color: #35495c;
+    color: #35495c;
     display: block;
     left: 0;
     margin-top: 0;
@@ -4302,7 +4301,7 @@ textarea.error {
     display: block;
     text-align: left; }
   .navbar-toggle {
-    background-color: #000;
+    background-color: #35495c;
     border: none;
     cursor: pointer;
     display: block;
@@ -4364,7 +4363,7 @@ textarea.error {
     cursor: pointer;
     padding: 0;
     left: 215px;
-    background-color: #000;
+    background-color: #35495c;
     border: none;
     height: 58px;
     position: fixed;
@@ -4378,8 +4377,8 @@ textarea.error {
       transform: rotate(90deg); }
   #navbar {
     transition: all .2s ease-out;
-    background-color: #000;
-    color: #000;
+    background-color: #35495c;
+    color: #35495c;
     display: block;
     left: 0;
     margin-top: 0;

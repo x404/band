@@ -243,6 +243,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	var buildJs = gulp.src(config.templateDir + '/js/**/*').pipe(gulp.dest(config.destDirTheme+ '/js'));
 	var buildImages = gulp.src('app/images/**/*').pipe(gulp.dest(config.destDir + '/images'));
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest(config.destDir + '/tmp'));
+	var buildFonts = gulp.src(config.templateDir + '/fonts/**/*').pipe(gulp.dest(config.destDirTheme + '/fonts'));
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest(config.destDir + '/outdatedbrowser'));
 	var faviconData = gulp.src('app/faviconData.json').pipe(gulp.dest(config.destDir));
 

@@ -134,8 +134,11 @@ $(document).on('click', '.quickmsg .close', function(e){
 });
 
 
-document.querySelector('.footer .mess').addEventListener("click", function(){
+document.querySelector('.footer .mess').addEventListener('click', function(){
 	$('.quickmsg').slideToggle();
+	let $bottom = $(document).height();
+	$('body,html').animate({scrollTop: $bottom }, 800);
+
 }, false);
 
 // =/mobile menu
