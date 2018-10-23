@@ -148,9 +148,28 @@
 
 /* =product
 ---------------------------*/
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1em 0 1em -0.5em;
+	justify-content: space-around;
+	.product{
+		width: 25%;
+	}
+}
+
+
+@supports (display:grid) {
+	.products{
+		display: grid;
+		grid-template-columns: repeat(4, 25%);
+		.product{
+			width: 100%;
+		}
+	}
+}
+
 .products{
-	display: grid;
-	grid-template-columns: repeat(4, 25%);
 	margin: 40px 0 20px;
 	.product{
 		margin-bottom: 20px;
@@ -226,7 +245,7 @@
 		// font-family: 'Ubuntu Condensed', sans-serif;
 		line-height: 1.2;
 		margin: 20px 15px 15px;
-		
+
 	}
 }
 /* =/product

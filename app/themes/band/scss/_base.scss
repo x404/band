@@ -29,6 +29,16 @@ ul{list-style:none}
        url('fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+/* fira-sans-condensed-500 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Fira Sans Condensed Medium'), local('FiraSansCondensed-Medium'),
+       url('fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* fira-sans-condensed-600 - cyrillic_cyrillic-ext */
 @font-face {
   font-family: 'Fira Sans Condensed';
@@ -182,15 +192,18 @@ h5{
 	margin-right: auto;
 }
 
-.main-grid{
-	min-height: 100vh;
-	display: grid;
-	grid-template-areas: "top"
-								"header"
-								"main"
-								"lastnews"
-								"footer";
-	grid-template-rows: auto auto 1fr auto auto;
+
+@supports (display:grid) {
+	.main-grid{
+		min-height: 100vh;
+		display: grid;
+		grid-template-areas: "top"
+									"header"
+									"main"
+									"lastnews"
+									"footer";
+		grid-template-rows: auto auto 1fr auto auto;
+	}
 }
 
 
@@ -332,7 +345,7 @@ input[type="submit"]{
 .woocommerce-loop-product__title
 {
 	font-family: 'Fira Sans Condensed', sans-serif;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 /* =header
