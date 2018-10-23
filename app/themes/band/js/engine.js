@@ -8,38 +8,53 @@ $(document).ready(function(){
 		nextArrow: '',
 		responsive: [
 			{
-				breakpoint: 1399,
+				breakpoint: 1250,
 				settings: {
-					slidesToShow: 14,
-					slidesToScroll: 3
+					slidesToShow: 3,
+					slidesToScroll: 1
 				}
 			},
 			{
-				breakpoint: 991,
+				breakpoint: 992,
 				settings: {
-					slidesToShow: 11,
-					slidesToScroll: 2
+					slidesToShow: 2,
+					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 9,
-					slidesToScroll: 2
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '100px'
 				}
 			},
 			{
-				breakpoint: 650,
+				breakpoint: 500,
 				settings: {
-					slidesToShow: 5,
-					slidesToScroll: 2
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '70px'
 				}
 			},
 			{
-				breakpoint: 450,
+				breakpoint: 420,
 				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 2
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '50px'
+				}
+			},
+			{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '22px'
 				}
 			}
 		]
