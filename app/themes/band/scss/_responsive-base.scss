@@ -221,7 +221,17 @@
 
 
 @media (max-width: 490px){
-
+	.top{
+		&__contacts{
+			display: none !important;
+		}
+		&__cart{
+			margin-top: 0;
+		}
+		.d-flex{
+			justify-content: flex-end;
+		}
+	}
 	.quickmsg .title{
 		font-size: 20px;
 	}

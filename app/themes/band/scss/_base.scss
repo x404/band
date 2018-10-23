@@ -173,7 +173,10 @@ input[type="submit"]{
 
 		}
 	}
+}
 
+.top,
+.header{
 	.skype,
 	.email{
 		background-repeat: no-repeat;
@@ -197,6 +200,14 @@ input[type="submit"]{
 	}
 }
 
+.mainnav{
+	.tel{
+		background-image: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' width='20px' height='20px' viewBox='0 0 600 600' preserveAspectRatio='xMidYMid meet'%3E%3Cg id='layer101' fill='%23ffffff' stroke='none'%3E%3Cpath d='M162 569 c-108 -53 -162 -144 -162 -269 0 -125 54 -216 162 -269 52 -27 72 -31 138 -31 66 0 86 4 138 31 108 53 162 143 162 270 0 177 -123 299 -301 299 -65 0 -85 -4 -137 -31z m280 -126 c21 -19 23 -46 6 -60 -23 -18 -68 -24 -91 -11 -12 7 -29 11 -37 9 -27 -5 -77 -49 -93 -82 -13 -29 -13 -35 -1 -55 23 -35 1 -104 -34 -104 -51 0 -66 72 -31 150 32 72 65 106 130 139 69 34 123 40 151 14z'/%3E%3C/g%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: left center;
+		padding-left: 29px;
+	}
+}
 /* =/top
 ---------------------------*/
 
