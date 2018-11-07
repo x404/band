@@ -3961,6 +3961,20 @@ textarea.error {
         color: #19bd9b;
         filter: none;
         text-decoration: none; }
+  .filter .show-filter {
+    display: none;
+    background: #7d8a97;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    font-family: 'Fira Sans Condensed';
+    font-size: 16px;
+    padding: 7px 0;
+    width: 275px;
+    text-transform: uppercase; }
+    .filter .show-filter span {
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAQAAAAEnG+bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwcVBAbqvRgrAAAAVklEQVQI16XHoQ3CAAAAwQ9hAnR3qMWgq2EJ5oANGQNBUgSipodpWIBXf0lGL6O0q2ro0FBt/PUP9117bH9szNPsjpvZMycfK1Yfp2SyYDEpydnbRfoC1MY2SES3f1YAAAAASUVORK5CYII=") no-repeat right center;
+      padding-right: 12px; }
 
 /* =/filter
 ---------------------------*/
@@ -4665,16 +4679,94 @@ textarea.error {
         display: none !important; }
   .filter {
     text-align: center; }
+    .filter .show-filter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
     .filter .d-flex {
       display: block !important; }
     .filter .widget {
       margin: 15px 0;
       display: block; }
+      .filter .widget.yith-woo-ajax-reset-navigation {
+        display: none; }
       .filter .widget-title {
         margin-bottom: 8px;
-        width: 100%; }
+        background: #7d8a97;
+        border-radius: 3px;
+        border: none;
+        color: #fff;
+        font-family: 'Fira Sans Condensed';
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 7px 0;
+        width: 275px;
+        text-transform: uppercase; }
       .filter .widget ul {
-        justify-content: center; }
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left; }
+        .filter .widget ul.yith-wcan-list, .filter .widget ul.yith-wcan-color {
+          background: #ebedef;
+          padding: 15px 20px;
+          width: 275px;
+          display: block;
+          border-radius: 5px;
+          padding-top: 0;
+          padding-bottom: 0; }
+          .filter .widget ul.yith-wcan-list li, .filter .widget ul.yith-wcan-color li {
+            border-top: 1px solid #fff;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 12px 0; }
+            .filter .widget ul.yith-wcan-list li:first-child, .filter .widget ul.yith-wcan-color li:first-child {
+              border-top: none; }
+            .filter .widget ul.yith-wcan-list li a, .filter .widget ul.yith-wcan-color li a {
+              display: block !important;
+              padding-left: 0;
+              position: relative; }
+              .filter .widget ul.yith-wcan-list li a:before, .filter .widget ul.yith-wcan-color li a:before {
+                background: #fff;
+                border-radius: 50%;
+                border: 1px solid #35495c;
+                content: "";
+                display: block;
+                height: 17px;
+                left: auto;
+                margin-top: -8px;
+                opacity: 1;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 17px; }
+            .filter .widget ul.yith-wcan-list li.chosen a, .filter .widget ul.yith-wcan-color li.chosen a {
+              background: none; }
+              .filter .widget ul.yith-wcan-list li.chosen a:before, .filter .widget ul.yith-wcan-color li.chosen a:before {
+                border-color: #19bd9b; }
+              .filter .widget ul.yith-wcan-list li.chosen a:after, .filter .widget ul.yith-wcan-color li.chosen a:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                background: #19bd9b;
+                border-radius: 50%;
+                right: 0;
+                margin-right: 5px;
+                top: 50%;
+                margin-top: -3px; }
+        .filter .widget ul.yith-wcan-color a {
+          text-indent: 1px;
+          border: none;
+          background: none !important;
+          letter-spacing: normal;
+          width: auto;
+          height: auto; }
+          .filter .widget ul.yith-wcan-color a:before, .filter .widget ul.yith-wcan-color a:after {
+            display: none; }
       .filter .widget li {
         margin-left: 0;
         margin-right: 13px; } }

@@ -164,6 +164,22 @@
 		}
 	}
 
+	.show-filter{
+		display: none;
+		background: #7d8a97 ;
+		border-radius: 3px;
+		border:none;
+		color: #fff;
+		font-family: 'Fira Sans Condensed';
+		font-size: 16px;
+		padding: 7px 0;
+		width: 275px;
+		text-transform: uppercase;
+		span{
+			background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAQAAAAEnG+bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwcVBAbqvRgrAAAAVklEQVQI16XHoQ3CAAAAwQ9hAnR3qMWgq2EJ5oANGQNBUgSipodpWIBXf0lGL6O0q2ro0FBt/PUP9117bH9szNPsjpvZMycfK1Yfp2SyYDEpydnbRfoC1MY2SES3f1YAAAAASUVORK5CYII=") no-repeat right center;			
+			padding-right: 12px;
+		}
+	}
 }
 /* =/filter
 ---------------------------*/

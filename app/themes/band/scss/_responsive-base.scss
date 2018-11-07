@@ -281,18 +281,121 @@
 
 	.filter{
 		text-align: center;
+		.show-filter{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		.d-flex{
 			display: block !important;
 		}
 		.widget{
 			margin: 15px 0;
 			display: block;
+			&.yith-woo-ajax-reset-navigation{
+				display: none;
+			}
 			&-title{
 				margin-bottom: 8px;
-				width: 100%;
+				// width: 100%;
+
+				background: #7d8a97 ;
+				border-radius: 3px;
+				border:none;
+				color: #fff;
+				font-family: 'Fira Sans Condensed';
+				font-size: 16px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 7px 0;
+				width: 275px;
+				text-transform: uppercase;
 			}
 			ul{
 				justify-content: center;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: left;
+
+				&.yith-wcan-list,
+				&.yith-wcan-color{
+					background: #ebedef;
+					padding: 15px 20px;
+					width: 275px;
+					display: block;
+					border-radius: 5px;
+					padding-top: 0;
+					padding-bottom: 0;
+					li{
+						border-top: 1px solid #fff;
+						margin-bottom: 0;
+						margin-left: 0;
+						margin-right: 0;
+						padding: 12px 0;
+						&:first-child(){
+							border-top: none;
+						}
+
+						a{
+							display: block !important;
+							padding-left: 0;
+							position: relative;
+							&:before{
+								background: #fff;
+								border-radius: 50%;
+								border: 1px solid #35495c;
+								content: "";
+								display: block;
+								height: 17px;
+								left: auto;
+								margin-top: -8px;
+								opacity: 1;
+								position: absolute;
+								right: 0;
+								top: 50%;
+								width: 17px;
+							};
+							
+						}
+
+						&.chosen{
+							a{
+								background: none;
+								&:before{
+									border-color: $color7;
+								}
+								&:after{
+									content: "";
+									display: block;
+									position: absolute;
+									width: 7px;
+									height: 7px;
+									background: $color7;
+									border-radius: 50%;
+									right: 0;
+									margin-right: 5px;
+									top: 50%;
+									margin-top: -3px;
+								};
+							}
+						}
+					}
+				}
+
+				&.yith-wcan-color{
+					a{
+						text-indent: 1px;
+						border: none;
+						background: none !important;
+						letter-spacing: normal;
+						width: auto;
+						height: auto;
+						&:before,
+						&:after{
+							display: none;
+						}
+					}
+				}
 			}
 			li{
 				margin-left: 0;
