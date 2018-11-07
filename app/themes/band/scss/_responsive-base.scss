@@ -42,7 +42,7 @@
 			margin-right: 0;
 			&-title{
 				flex-shrink: 0;
-				width: 75px;
+				width: 78px;
 			}			
 			ul{
 				flex-wrap: wrap;
@@ -252,11 +252,7 @@
 @media (max-width: 550px){
 	.top{
 		flex-direction: row;
-		.d-flex{
-			// flex-wrap: wrap;
-		}
 		&__contacts{
-			// width: 100%;
 			.tel{
 				display: none !important;
 				&:first-child(){
@@ -273,7 +269,6 @@
 			}
 		}
 		&__cart{
-			// margin-top: 10px;
 			padding-bottom: 0;
 		}
 		&__contacts-left{
@@ -309,7 +304,6 @@
 			}
 			&-title{
 				margin-bottom: 8px;
-				// width: 100%;
 
 				background: #7d8a97 ;
 				border-radius: 3px;
@@ -322,6 +316,10 @@
 				padding: 7px 0;
 				width: 275px;
 				text-transform: uppercase;
+
+				&:after{
+					display: none;
+				}
 			}
 			ul{
 				justify-content: center;

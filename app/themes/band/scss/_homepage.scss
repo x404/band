@@ -56,6 +56,11 @@
 		}
 		&-title{
 			font-size: 16px;
+			position: relative;
+			&:after{
+				content: ":";
+				display: inline-block;
+			};
 		}
 		li{
 			margin-left: 13px;
@@ -219,7 +224,7 @@
 				@extend .flex-center;
 			}
 			&-overlay{
-				transform: translateX(100%);
+				transform: translateX(-100%);
 				width: 100%;
 				position: absolute;
 				left: 0;
@@ -231,7 +236,6 @@
 			}
 		}
 		img{
-			// display: block;
 			vertical-align: top;
 		}
 		&__bottom{

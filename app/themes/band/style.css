@@ -3898,7 +3898,11 @@ textarea.error {
     .filter .widget:last-child {
       margin-right: 0; }
     .filter .widget-title {
-      font-size: 16px; }
+      font-size: 16px;
+      position: relative; }
+      .filter .widget-title:after {
+        content: ":";
+        display: inline-block; }
     .filter .widget li {
       margin-left: 13px; }
       .filter .widget li.chosen a {
@@ -4003,7 +4007,7 @@ textarea.error {
     .products .product .box-default {
       height: 265px; }
     .products .product .box-overlay {
-      transform: translateX(100%);
+      transform: translateX(-100%);
       width: 100%;
       position: absolute;
       left: 0;
@@ -4548,7 +4552,7 @@ textarea.error {
     margin-right: 0; }
     .filter .widget-title {
       flex-shrink: 0;
-      width: 75px; }
+      width: 78px; }
     .filter .widget ul {
       flex-wrap: wrap; }
       .filter .widget ul li {
@@ -4710,6 +4714,8 @@ textarea.error {
         padding: 7px 0;
         width: 275px;
         text-transform: uppercase; }
+        .filter .widget-title:after {
+          display: none; }
       .filter .widget ul {
         justify-content: center;
         margin-left: auto;
