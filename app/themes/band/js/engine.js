@@ -131,6 +131,24 @@ $(document).on('click', '.quickmsg .close', function(e){
 });
 
 
+
+// filter toggle
+$(document).on('click', '.show-filter', function(e){
+	e.preventDefault();
+	$('.filter__body').show();
+	$(this).hide();
+});
+
+$(document).on('click', '.widget-title', function(e){
+	e.preventDefault();
+	// let $this = $(this);
+	if ($(window).width()<=550){
+		$(this).next().slideToggle()
+	}
+});
+// #filter toggle
+
+
 document.querySelector('.footer .mess').addEventListener('click', function(){
 	$('.quickmsg').slideToggle();
 	let $bottom = $(document).height();

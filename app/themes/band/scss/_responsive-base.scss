@@ -240,6 +240,15 @@
 	}
 }
 
+@media (min-width: 551px){
+	.filter .widget{
+		.yith-wcan-list,
+		.yith-wcan-color{
+			display: flex !important
+		}
+	}
+}
+
 @media (max-width: 550px){
 	.top{
 		flex-direction: row;
@@ -286,6 +295,9 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		.filter__body{
+			display: none;
+		}
 		.d-flex{
 			display: block !important;
 		}
@@ -322,7 +334,8 @@
 					background: #ebedef;
 					padding: 15px 20px;
 					width: 275px;
-					display: block;
+					display: none;
+					// display: block;
 					border-radius: 5px;
 					padding-top: 0;
 					padding-bottom: 0;

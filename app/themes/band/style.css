@@ -4655,6 +4655,11 @@ textarea.error {
     .cats .d-flex ul li:first-child {
       margin-left: 0; } }
 
+@media (min-width: 551px) {
+  .filter .widget .yith-wcan-list,
+  .filter .widget .yith-wcan-color {
+    display: flex !important; } }
+
 @media (max-width: 550px) {
   .top {
     flex-direction: row; }
@@ -4683,6 +4688,8 @@ textarea.error {
       display: block;
       margin-left: auto;
       margin-right: auto; }
+    .filter .filter__body {
+      display: none; }
     .filter .d-flex {
       display: block !important; }
     .filter .widget {
@@ -4712,7 +4719,7 @@ textarea.error {
           background: #ebedef;
           padding: 15px 20px;
           width: 275px;
-          display: block;
+          display: none;
           border-radius: 5px;
           padding-top: 0;
           padding-bottom: 0; }
