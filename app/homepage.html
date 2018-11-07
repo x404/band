@@ -21,8 +21,6 @@
 <meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
-
-
 <meta name="robots" content="noindex,nofollow" />
 
 <title>Главная</title>
@@ -33,9 +31,6 @@
 <script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
 <script src="/outdatedbrowser/detect.js"></script>
 
-<!--[if IE]>
-	<link href="/template/css/styles-ie.css" rel="stylesheet" type="text/css" />
-<![endif]-->
 </head>
 <body>
 
@@ -55,7 +50,7 @@
 			<div class="top__cart">
 				<ul id="site-header-cart">
 					<li>
-						<a href="#" class="cart-contents">Корзина <span class="count"> (0)</span></a>
+						<a href="#" class="cart-contents"><span class="title">Корзина</span> <span class="count"> (0)</span></a>
 					</li>
 				</ul>
 			</div>
@@ -113,62 +108,66 @@
 		<div class="container">
 			<!-- =filter -->
 			<div class="filter">
-				<div class="d-flex justify-content-center">
-					<div class="widget">
-						<p class="widget-title">ПОЛ:</p>
-						<ul class="yith-wcan-list">
-							<li>
-								<a href="#">Мужской</a>
-							</li>
-							<li>
-								<a href="#">Женский</a>
-							</li>
-						</ul>
+				<button type="button" class="show-filter">ПОКАЗАТЬ ФИЛЬТР</button>
+
+				<div class="filter__body">
+					<div class="d-flex justify-content-center">
+						<div class="widget">
+							<p class="widget-title">ПОЛ:</p>
+							<ul class="yith-wcan-list">
+								<li>
+									<a href="#">Мужской</a>
+								</li>
+								<li>
+									<a href="#">Женский</a>
+								</li>
+							</ul>
+						</div>
+						<div class="widget">
+							<p class="widget-title">МАТЕРИАЛ:</p>
+							<ul class="yith-wcan-list">
+								<li><a href="#" title="">Шамбала</a></li>
+								<li class="chosen"><a href="#" title="">Чан Лю</a></li>
+								<li><a href="#" title="">Кожаные</a></li>
+								<li><a href="#" title="">Из шнурка</a></li>
+								<li><a href="#" title="">Fashion</a></li>
+								<li><a href="#" title="">Винтажные </a></li>
+							</ul>
+						</div>					
 					</div>
-					<div class="widget">
-						<p class="widget-title">МАТЕРИАЛ:</p>
-						<ul class="yith-wcan-list">
-							<li><a href="#" title="">Шамбала</a></li>
-							<li class="chosen"><a href="#" title="">Чан Лю</a></li>
-							<li><a href="#" title="">Кожаные</a></li>
-							<li><a href="#" title="">Из шнурка</a></li>
-							<li><a href="#" title="">Fashion</a></li>
-							<li><a href="#" title="">Винтажные </a></li>
-						</ul>
-					</div>					
-				</div>
-				<div class="d-flex justify-content-center">
-					<div class="widget">
-						<p class="widget-title">КАМНИ:</p>
-						<ul class="yith-wcan-list">
-							<li><a href="#" title="">Змеевик</a></li>
-							<li><a href="#" title="">Малахит</a></li>
-							<li class="chosen"><a href="#" title="">Сердолик</a></li>
-							<li class="chosen"><a href="#" title="">Тигровый глаз</a></li>
-							<li><a href="#" title="">Жемчуг</a></li>
-							<li><a href="#" title="">Агат</a></li>
-							<li><a href="#" title="">Бирюза</a></li>
-							<li><a href="#" title="">Гранат</a></li>
-							<li><a href="#" title="">Опалит</a></li>
-						</ul>
+					<div class="d-flex justify-content-center">
+						<div class="widget">
+							<p class="widget-title">КАМНИ:</p>
+							<ul class="yith-wcan-list">
+								<li><a href="#" title="">Змеевик</a></li>
+								<li><a href="#" title="">Малахит</a></li>
+								<li class="chosen"><a href="#" title="">Сердолик</a></li>
+								<li class="chosen"><a href="#" title="">Тигровый глаз</a></li>
+								<li><a href="#" title="">Жемчуг</a></li>
+								<li><a href="#" title="">Агат</a></li>
+								<li><a href="#" title="">Бирюза</a></li>
+								<li><a href="#" title="">Гранат</a></li>
+								<li><a href="#" title="">Опалит</a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="d-flex justify-content-center">
-					<div class="widget">
-						<p class="widget-title">ЦВЕТ:</p>
-						<ul class="yith-wcan-color">
-							<li><a href="#" title="Черный" style="background-color: #000">Черный</a></li>
-							<li><a href="#" title="Голубой" style="background-color: #0083ff">Голубой</a></li>
-							<li class="chosen"><a href="#" title="Желтый" style="background-color: #ffea05">Желтый</a></li>
-							<li><a href="#" title="Серый" style="background-color: #35495c">Серый</a></li>
-							<li><a href="#" title="Красный" style="background-color: #ff0000">Красный</a></li>
-						</ul>
+					<div class="d-flex justify-content-center">
+						<div class="widget">
+							<p class="widget-title">ЦВЕТ:</p>
+							<ul class="yith-wcan-color">
+								<li><a href="#" title="Черный" style="background-color: #000">Черный</a></li>
+								<li class="chosen"><a href="#" title="Голубой" style="background-color: #0083ff">Голубой</a></li>
+								<li><a href="#" title="Желтый" style="background-color: #ffea05">Желтый</a></li>
+								<li><a href="#" title="Серый" style="background-color: #35495c">Серый</a></li>
+								<li><a href="#" title="Красный" style="background-color: #ff0000">Красный</a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="widget yith-woo-ajax-reset-navigation">
-					<div class="yith-wcan">
-						<a href="#" title="" class="yith-wcan-reset-navigation button">Очистить фильтр</a>
-					</div>					
+					<div class="widget yith-woo-ajax-reset-navigation">
+						<div class="yith-wcan">
+							<a href="#" title="" class="yith-wcan-reset-navigation button">Очистить фильтр</a>
+						</div>					
+					</div>
 				</div>
 			</div>
 			<!-- =/filter -->
@@ -178,7 +177,7 @@
 				<li class="product">
 					<a href="#" title="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 						<div class="box-default">
-							<img src="tmp/product-1.jpg" alt="" />							
+							<img src="tmp/product-1.jpg" alt="" />
 						</div>
 						<div class="box-overlay">
 							<img src="tmp/product-hover.jpg" alt="" />
@@ -425,7 +424,7 @@
 							<a href="#" title="" class="new__link">
 								<div class="new__top"> 
 									<div class="new__pic">
-										<img src="https://dummyimage.com/260x300/000/fff" alt="" />
+										<img src="https://dummyimage.com/260x300/000/fff" alt="" width="260" height="300" />
 										<!-- <img src="http://lorempixel.com/260/300/city/" alt="" /> -->
 									</div>
 									<div class="new__title">
@@ -445,7 +444,7 @@
 							<a href="#" title="" class="new__link">
 								<div class="new__top">
 									<div class="new__pic">
-										<img src="tmp/article-2.jpg" alt="" />
+										<img src="tmp/article-2.jpg" alt="" width="260" height="300" />
 									</div>
 									<div class="new__title">
 										<p>Заголовок в три строки здесь должен поместиться</p>
@@ -464,7 +463,7 @@
 							<a href="#" title="" class="new__link">
 								<div class="new__top">
 									<div class="new__pic">
-										<img src="https://dummyimage.com/260x300/000/fff" alt="" />
+										<img src="https://dummyimage.com/260x300/000/fff" alt="" width="260" height="300" />
 									</div>
 									<div class="new__title">
 										<p>Связанные одной нитью</p>
