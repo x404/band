@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/the_favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/the_favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/the_favicon/favicon-16x16.png">
+<link rel="manifest" href="/the_favicon/site.webmanifest">
+<link rel="mask-icon" href="/the_favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/the_favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="robots" content="noindex,nofollow" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Главная</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="/themes/band/style.css" />
+<script src="/themes/band/js/libs.min.js"></script>
+
+<link rel="stylesheet" href="../outdatedbrowser/outdatedbrowser.min.css" />
+<script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
+<script src="/outdatedbrowser/detect.js"></script>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body>
+
+<div class="main-grid">
+	<!-- =top -->
+	<div class="top d-flex justify-content-between">
+		<div class="top__contacts top__contacts-left d-flex">
+			<a href="tel:+380634069835" class="tel" title="">063 40 69 835</a>
+			<a href="tel:+380966000602" class="tel" title="">096 60 00 602</a>
+			<a href="tel:+380957300271" class="tel" title="">095 73 00 271</a>
+		</div>
+		<div class="d-flex top__contacts-right">
+			<div class="top__contacts d-flex">
+				<a href="skype:band_ua" class="skype" title="">band_ua</a>
+				<a href="mailto:info@band.in.ua" class="email">band.in.ua</a>
+			</div>
+			<div class="top__cart">
+				<ul id="site-header-cart">
+					<li>
+						<a href="#" class="cart-contents"><span class="title">Корзина</span> <span class="count"> (0)</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- =/top -->
+	
+	<!-- =header -->
+	<header class="header text-center">
+		<div class="logo">
+			<a href="/" title=""><img src="/themes/band/images/logo.png" alt="" /></a>
+		</div>
+
+		<!-- =nav -->
+		<div class="navmenu">
+			<div class="navmenu__inner">
+				<nav id="navbar" class="mainnav">
+					<div class="mainnav__list">
+						<ul class="nav nav-tabs menu cl-effect-11">
+							<!-- TemplateBeginEditable name="EditRegion5" -->
+							<li class="menu-item"><a href="../catatlog.html" title="" data-hover="ТОВАРЫ">ТОВАРЫ</a></li>
+							<li class="menu-item"><a href="../about.html" title="" data-hover="О НАС">О НАС</a></li>
+							<li class="menu-item"><a href="../delivery.html" title="" data-hover="ДОСТАВКА">ДОСТАВКА</a></li>
+							<li class="menu-item"><a href="../payment.html" title="" data-hover="ОПЛАТА">ОПЛАТА</a></li>
+							<li class="menu-item"><a href="../interesting.html" title="" data-hover="ИНТЕРЕСНО">ИНТЕРЕСНО</a></li>
+							<li class="menu-item"><a href="../contacts.html" title="" data-hover="КОНТАКТЫ">КОНТАКТЫ</a></li>
+							<!-- TemplateEndEditable -->
+						</ul>
+						<div class="show-sm">
+							<a href="tel:+380634069835" class="tel" title="">063 40 69 835</a>
+							<a href="tel:+380966000602" class="tel" title="">096 60 00 602</a>
+							<a href="tel:+380957300271" class="tel" title="">095 73 00 271</a>
+							<a href="skype:band_ua" class="skype" title="">band_ua</a>
+							<a href="mailto:info@band.in.ua" class="email">band.in.ua</a>
+						</div>
+					</div>
+				</nav>
+				
+				<button type="button" class="close-menu"><img src="/themes/band/images/close.png" alt="Закрыть меню" /></button>
+			</div>
+		</div>
+	
+		<button type="button" class="navbar-toggle" aria-label="Показать/Скрыть меню">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<!-- =/nav -->
+	</header>
+	<!-- =/header -->
+
+
+	<div class="main">
+		<div class="container">
+			<!-- =breadcrumbs -->
+			<div class="breadcrumbs">
+				<ul>
+					<li><a href="/" title="">Главная</a></li>
+					<!-- TemplateBeginEditable name="EditRegion7" -->
+					<li class="current">О нас</li>					
+					<!-- TemplateEndEditable -->
+				</ul>
+			</div>
+			<!-- =/breadcrumbs -->
+			
+			<!-- TemplateBeginEditable name="EditRegion8" -->
+			<main>
+				<h1>О нас</h1>
+				<p>Мы  создали интернет-магазин  BAND.IN.UA  желая предложить Вам действительно качественные изделия и безупречный сервис. Для нас эти вещи крайне важны и мы надеемся, что Вы разделяете нашу позицию. BAND.IN.UA для людей, которые знают толк в красивых уникальных аксессуарах, выполненных из натуральных материалов высокого качества.</p>
+			</main>			
+			<!-- TemplateEndEditable -->
+			<!-- =subcats -->
+			<div class="subcats">
+				<ul>
+					<li><a href="#" title="">Мужские браслеты</a></li>
+					<li><a href="#" title="">Женские браслеты</a></li>
+					<li><a href="#" title="">Браслеты для двоих</a></li>
+					<li><a href="#" title="">Браслеты бесконечность</a></li>
+					<li><a href="#" title="">Браслеты из кожи</a></li>
+					<li><a href="#" title="">Металлические браслеты</a></li>
+					<li><a href="#" title="">Кожа с серебром</a></li>
+					<li><a href="#" title="">Браслеты бесконечность</a></li>
+					<li><a href="#" title="">Браслеты с жемчугом</a></li>
+					<li><a href="#" title="">Кожа с серебром</a></li>
+					<li><a href="#" title="">Браслеты бесконечность</a></li>
+				</ul>
+			</div>
+			<!-- =/subcats -->
+			
+			<!-- =about --> 
+			<div class="about">
+				<h1 class="text-center">Интернет-магазин модных браслетов</h1>
+				<p><strong>	Стильные аксессуары</strong> – это неотъемлемая часть гардероба не только женщин, но и мужчин. Особенно, если это касается часов браслетов. Красивые браслеты могут стать гармоничным дополнением к одежде и добавить «изюминку» в выбранный Вами . Нужно знать только, где приобрести изысканный атрибут наивысшего качества и по доступной цене.</p>
+				<p>Наш интернет-магазин предлагает качественные оригинальные браслеты американского и европейского производства. На этом можно найти и подобрать подобный аксессуар без лишних хлопот. Здесь Вас ждут браслеты на любой вкус, купить можно в Украине по выгодным ценам.</p> 				
+				<p>Для тех, кто ищет памятный и оригинальный подарок близким или друзьям, стоит также заглянуть в наш магазин браслетов. Разнообразные виды, стилизации, выполненные из различного материала и отличающиеся высоким качеством, - станут находкой тех, кто понимает толк в выборе аксессуаров. Подобная мелочь не только украшает, но и создает хорошее настроение.</p>
+			</div>
+			<!-- =/about -->
+	
+			<!-- TemplateBeginEditable name="EditRegion3" -->
+			
+			<!-- TemplateEndEditable -->					
+		</div>
+	</div>
+	
+	<!-- TemplateBeginEditable name="EditRegion6" -->
+	<!-- TemplateEndEditable -->
+
+	<!-- =last news -->
+	<section class="lastnews">
+		<header class="text-center">
+			<h1 class="title">ИНТЕРЕСНО <sup>beta</sup></h1>
+		</header>
+		<div class="lastnews__wrapper">
+			<div class="container">
+				<div id="news-carousel">
+					<div>
+						<article class="new__item new__item-pic">
+							<a href="#" title="" class="new__link">
+								<div class="new__top"> 
+									<div class="new__pic">
+										<img src="https://dummyimage.com/260x300/000/fff" alt="" width="260" height="300" />
+										<!-- <img src="http://lorempixel.com/260/300/city/" alt="" /> -->
+									</div>
+									<div class="new__title">
+										<p>С него все и началось...</p>
+									</div>	
+								</div>
+								<div class="new__hover">
+									<div class="new__title">
+										<p>С него все и началось...</p>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div>
+						<article class="new__item new__item-pic">
+							<a href="#" title="" class="new__link">
+								<div class="new__top">
+									<div class="new__pic">
+										<img src="../tmp/article-2.jpg" alt="" width="260" height="300" />
+									</div>
+									<div class="new__title">
+										<p>Заголовок в три строки здесь должен поместиться</p>
+									</div>
+								</div>
+								<div class="new__hover">
+									<div class="new__title">
+										<p>Заголовок в три строки здесь должен поместиться</p>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div>
+						<article class="new__item new__item-pic">
+							<a href="#" title="" class="new__link">
+								<div class="new__top">
+									<div class="new__pic">
+										<img src="https://dummyimage.com/260x300/000/fff" alt="" width="260" height="300" />
+									</div>
+									<div class="new__title">
+										<p>Связанные одной нитью</p>
+									</div>
+								</div>
+								<div class="new__hover">
+									<div class="new__title">
+										<p>Связанные одной нитью</p>
+									</div>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div>
+						<article class="new__item new__item-nopic">
+							<a href="#" title="" class="new__link">
+								<div class="new__title">
+									<p>Связанные одной нитью</p>
+								</div>
+							</a>
+						</article>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<!-- =/last news -->
+
+	<!-- =footer -->
+	<footer class="footer">
+		<div class="quickmsg">
+			<div class="container">
+				<div class="quickmsg__body">
+					<div class="title">ОТПРАВИТЬ БЫСТРОЕ СООБЩЕНИЕ:</div>
+					<form action="../quickmsg.ajax.php" id="quickmsg-form" method="post">
+						<fieldset>
+							<label for="name" class="visually-hidden">Ваше имя</label>
+							<input type="text" id="name" name="name" class="form-control required" value="" placeholder="Ваше имя" required aria-required="true" tabindex="1" />
+					
+							<label for="email" class="visually-hidden">Email</label>
+							<input type="email" id="email" name="email" class="form-control tel required" value="" placeholder="Email" required aria-required="true" tabindex="2" />
+					
+							<label for="msg" class="visually-hidden">Комментарий</label>
+							<textarea name="msg" id="msg" cols="30" class="form-control required" rows="10" placeholder="Комментарий" required aria-required="true" tabindex="3"></textarea>
+							<button type="submit" class="submit center-block" tabindex="4">ОТПРАВИТЬ</button>
+						</fieldset>
+					</form>
+					<button type="button" class="close" aria-label="Закрыть" tabindex="4"></button>
+				</div>
+			</div>
+		</div>
+		<div class="footer__body container">
+			<div class="row">
+				<div class="copyright col-lg-3 col-sm-12">
+					<div class="d-flex">
+						<a href="/" title><img src="../themes/band/images/logo-small.svg" alt="Band"></a>
+						<p>
+							© 2013 -2018 «band»<br>
+							Все права защищены
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-12 social d-flex">
+					<a href="#" title="" target="_blank"><img src="../themes/band/images/icons/icon_pinterest.png" alt="" /></a>
+					<a href="#" title="" target="_blank"><img src="../themes/band/images/icons/icon_facebook.png" alt="" /></a>
+					<button type="button" class="mess"><img src="../themes/band/images/icons/icon_mess.png" alt="" /></button>
+					<a href="#" title="" target="_blank"><img src="../themes/band/images/icons/icon_twitter.png" alt="" /></a>
+					<a href="#" title="" target="_blank"><img src="../themes/band/images/icons/icon_inst.png" alt="" /></a>
+				</div>
+				<div class="col-lg-3 col-sm-12 creators">
+					<p>Дизайн сайта - <a href="https://kuzma.in.ua" title="Дизайн сайтов" target="_blank">Kuzma</a></p>
+					<p>Программирование - <a href="https://proverstka.com.ua" title="Создание сайтов Proverstka" target="_blank">Proverstka</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- =/footer -->
+</div>
+
+<div id="outdated"></div>
+<script type="text/javascript" src="../themes/band/js/slick.min.js"></script>
+<script src="/themes/band/js/engine.js"></script>
+</body>
+</html>
