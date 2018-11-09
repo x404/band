@@ -1,0 +1,91 @@
+.breadcrumbs{
+	padding-top: 12px;
+	border-top: 1px solid $color1;
+	margin-top: -1px;
+	ul{
+		display: flex;
+		justify-content: center;
+		li{
+			padding-right: 12px;
+			margin-right: 12px;
+			position: relative;
+			&.current{
+				color: $color10;
+				a, span{
+					color: currentColor;
+				}
+				&:after{
+					display: none;
+				}
+			}
+			&:after{
+				@extend .before;
+				width: 3px;
+				height: 7px;
+				background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAHCAQAAABnsD8iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwkTEw2cvk60AAAALklEQVQI1wXBsREAEBAAsBjA6S2oMpZT/AYKp7WJMSQcBZogYbhQvYSw6SYsmQ+2zgeYTM4KIQAAAABJRU5ErkJggg==") no-repeat center top;
+				right: 0;
+				top: 50%;
+				margin-top: -3px;
+			};
+		}
+	}
+}
+
+
+.title{
+
+}
+
+
+.main{
+	&.inner{
+		border-top: 1px solid $color11;
+		margin-top: 15px;
+
+		.title{
+			font-family: 'Fira Sans Condensed';
+			margin-bottom: 40px;
+			font-size: 24px;
+			position: relative;
+			text-transform: uppercase;
+			text-align: center;
+			&:after{
+				@extend .before;
+				width: 38px;
+				border-bottom: 1px solid #35495c;
+				left: 50%;
+				margin-left: -18px;
+			}
+		}
+	}
+
+	main{
+		font-size: 16px;
+		margin-top: 20px;
+		p{
+			line-height: 1.8;
+		}
+	}
+}
+
+.newest{
+	margin-left: -15px;
+	margin-right: -15px;
+	.product{
+		border: 1px solid $color12;
+		border-radius: 8px;
+		width: 262px;
+		margin-left: 15px;
+		margin-right: 15px;
+		margin-bottom: 0;
+		padding-bottom: 23px;
+		.woocommerce-loop-product__link{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.box-default{
+			height: 225px;
+		}
+	}
+}
+

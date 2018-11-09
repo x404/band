@@ -195,10 +195,13 @@
 .products {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -1em 0 1em -0.5em;
+	margin: 0 0 10px -5px;
 	justify-content: space-around;
 	.product{
 		width: 25%;
+	}
+	&.newest{
+		display: block;
 	}
 }
 

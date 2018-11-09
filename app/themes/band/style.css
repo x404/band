@@ -297,6 +297,86 @@ template {
 [hidden] {
   display: none; }
 
+/* fira-sans-condensed-regular - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans Condensed Regular"), local("FiraSansCondensed-Regular"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-sans-condensed-500 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Fira Sans Condensed Medium"), local("FiraSansCondensed-Medium"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-500.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* fira-sans-condensed-600 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Fira Sans Condensed SemiBold"), local("FiraSansCondensed-SemiBold"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-600.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-regular - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-regular.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-italic - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-italic.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-600 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-600italic - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600italic.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-700 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-700italic - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700italic.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
+/* open-sans-800 - cyrillic_cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-800.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-800.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
+
 *,
 *::before,
 *::after {
@@ -3329,86 +3409,6 @@ header, section, footer, aside, article {
 ul {
   list-style: none; }
 
-/* fira-sans-condensed-regular - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Fira Sans Condensed';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Fira Sans Condensed Regular"), local("FiraSansCondensed-Regular"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* fira-sans-condensed-500 - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Fira Sans Condensed';
-  font-style: normal;
-  font-weight: 500;
-  src: local("Fira Sans Condensed Medium"), local("FiraSansCondensed-Medium"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-500.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-500.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* fira-sans-condensed-600 - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Fira Sans Condensed';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Fira Sans Condensed SemiBold"), local("FiraSansCondensed-SemiBold"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-600.woff2") format("woff2"), url("fonts/FiraSansCondensed/fira-sans-condensed-v2-cyrillic_cyrillic-ext-600.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-regular - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-regular.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-italic - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-italic.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-600 - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-600italic - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600italic.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-600italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-700 - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-700italic - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700italic.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-700italic.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
-/* open-sans-800 - cyrillic_cyrillic-ext */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-800.woff2") format("woff2"), url("fonts/OpenSans/open-sans-v15-cyrillic_cyrillic-ext-800.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3472,7 +3472,7 @@ h5 {
 
 .before, .lastnews .title:after, .quickmsg:after, .quickmsg .sending:after,
 .quickmsg .thank:after, .cats ul li:before, .filter .widget .yith-wcan-color a:before, .filter .widget .yith-wcan-color a:after, .woocommerce-pagination ul.page-numbers li .prev:before,
-.woocommerce-pagination ul.page-numbers li .next:before {
+.woocommerce-pagination ul.page-numbers li .next:before, .breadcrumbs ul li:after, .main.inner .title:after {
   content: "";
   display: block;
   position: absolute; }
@@ -3583,6 +3583,8 @@ input[type="submit"] {
         white-space: nowrap; }
         .header .menu-item a:hover {
           text-decoration: none; }
+  .header .current-menu-item a:before {
+    max-width: 100%; }
 
 /* =/header
 ---------------------------*/
@@ -3987,10 +3989,12 @@ textarea.error {
 .products {
   display: flex;
   flex-wrap: wrap;
-  margin: -1em 0 1em -0.5em;
+  margin: 0 0 10px -5px;
   justify-content: space-around; }
   .products .product {
     width: 25%; }
+  .products.newest {
+    display: block; }
 
 @supports (display: grid) {
   .products {
@@ -4118,6 +4122,70 @@ textarea.error {
 
 /* =/about
 ---------------------------*/
+.breadcrumbs {
+  padding-top: 12px;
+  border-top: 1px solid #000;
+  margin-top: -1px; }
+  .breadcrumbs ul {
+    display: flex;
+    justify-content: center; }
+    .breadcrumbs ul li {
+      padding-right: 12px;
+      margin-right: 12px;
+      position: relative; }
+      .breadcrumbs ul li.current {
+        color: #7e7e7e; }
+        .breadcrumbs ul li.current a, .breadcrumbs ul li.current span {
+          color: currentColor; }
+        .breadcrumbs ul li.current:after {
+          display: none; }
+      .breadcrumbs ul li:after {
+        width: 3px;
+        height: 7px;
+        background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAHCAQAAABnsD8iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwkTEw2cvk60AAAALklEQVQI1wXBsREAEBAAsBjA6S2oMpZT/AYKp7WJMSQcBZogYbhQvYSw6SYsmQ+2zgeYTM4KIQAAAABJRU5ErkJggg==") no-repeat center top;
+        right: 0;
+        top: 50%;
+        margin-top: -3px; }
+
+.main.inner {
+  border-top: 1px solid #d6d6d6;
+  margin-top: 15px; }
+  .main.inner .title {
+    font-family: 'Fira Sans Condensed';
+    margin-bottom: 40px;
+    font-size: 24px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center; }
+    .main.inner .title:after {
+      width: 38px;
+      border-bottom: 1px solid #35495c;
+      left: 50%;
+      margin-left: -18px; }
+
+.main main {
+  font-size: 16px;
+  margin-top: 20px; }
+  .main main p {
+    line-height: 1.8; }
+
+.newest {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .newest .product {
+    border: 1px solid #7d8a97;
+    border-radius: 8px;
+    width: 262px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    padding-bottom: 23px; }
+    .newest .product .woocommerce-loop-product__link {
+      padding-left: 0;
+      padding-right: 0; }
+    .newest .product .box-default {
+      height: 225px; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
@@ -4358,6 +4426,9 @@ textarea.error {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+#newest-carousel {
+  display: flex; }
 
 /* =mobile-menu
 ---------------------------*/

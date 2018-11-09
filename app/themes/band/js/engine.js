@@ -61,6 +61,66 @@ $(document).ready(function(){
 	});
 
 
+	$('#newest-carousel').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: '',
+		nextArrow: '',
+		responsive: [
+			{
+				breakpoint: 1250,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '100px'
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '70px'
+				}
+			},
+			{
+				breakpoint: 420,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '50px'
+				}
+			},
+			{
+				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '22px'
+				}
+			}
+		]
+	});
+
+
 
 	// validate
 	var sending = '<div class="sending">Идет отправка ...</div>',
