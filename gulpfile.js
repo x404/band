@@ -269,7 +269,7 @@ gulp.task('default', ['watcher']);
 
 
 gulp.task('rsync', function() {
-return gulp.src('app/**')
+return gulp.src('app/**') 
 	.pipe(rsync({
 	        root: 'app/',
 	        hostname: 'username@yousite.com',
