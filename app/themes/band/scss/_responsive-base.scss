@@ -469,6 +469,15 @@
 
 
 @media (max-width: 410px){
+	.main{
+		main{
+			font-size: 14px;
+			text-align: justify;
+			p{
+				line-height: 1.6;
+			}
+		}
+	}
 	.top{
 		.cart-contents{
 			background-position: 12px center;
@@ -478,6 +487,13 @@
 				display: none !important;
 			}
 		}
+	}
+
+	.timeline{
+		font-size: 14px;
+	}
+	.cd-timeline-block{
+		margin-bottom: 50px;
 	}
 }
 

@@ -1,2 +1,23 @@
-@media (max-width: 1024px){
+@media (max-width: 991px){
+	.subcats ul li{
+		width: 33.3%;
+	}
+}
+
+
+@media (max-width: 767px){
+	.subcats ul li{
+		width: 50%;
+	}
+}
+
+
+@media (max-width: 420px){
+	.subcats ul{
+		display: block;
+		li{
+			text-align: center;
+			width: 100%;
+		}
+	}
 }

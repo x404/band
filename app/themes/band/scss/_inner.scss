@@ -1,5 +1,5 @@
 .breadcrumbs{
-	padding-top: 12px;
+	padding-top: 18px;
 	border-top: 1px solid $color1;
 	margin-top: -1px;
 	ul{
@@ -40,7 +40,7 @@
 .main{
 	&.inner{
 		border-top: 1px solid $color11;
-		margin-top: 15px;
+		// margin-top: 15px;
 
 		.title{
 			font-family: 'Fira Sans Condensed';
@@ -90,6 +90,9 @@
 			height: 225px;
 		}
 	}
+	.woocommerce-loop-product__title{
+		margin: 2px 15px 11px;
+	}
 }
 
 /* =newest
@@ -101,13 +104,14 @@
 .subcats{
 	border-top: 1px solid $color12;
 	border-bottom: 1px solid $color12;
-	padding: 20px;
+	padding: 20px 20px 22px;
 	margin-top: 50px;
+	margin-bottom: 35px;
 	ul{
 		display: flex;
 		flex-wrap: wrap;
 		li{
-			margin: 5px 0;
+			margin-top: 6px;
 			width: 25%;
 			a{
 				color: $color3;
