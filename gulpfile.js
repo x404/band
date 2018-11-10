@@ -236,7 +236,8 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	// 	.pipe(gulp.dest(config.destDirTheme + '/css'));
 
 
-	var buildFavicon = gulp.src('app/*.php').pipe(gulp.dest(config.destDir + '/'));
+	var buildPHP = gulp.src('app/*.php').pipe(gulp.dest(config.destDir + '/'));
+	var buildFavicon = gulp.src('app/the_favicon/*.*').pipe(gulp.dest(config.destDir + '/the_favicon')); 
 	var buildHtml = gulp.src('app/*.html').pipe(gulp.dest(config.destDir + '/'));
 	var buildHtaccess = gulp.src('app/.htaccess').pipe(gulp.dest(config.destDir));
 	var buildrobots = gulp.src('app/robots.txt').pipe(gulp.dest(config.destDir));
@@ -264,3 +265,20 @@ gulp.task('default', ['watcher']);
 // 	destDir : 'dist',
 // 	libsDir : 'app/libs'
 // };
+
+
+
+gulp.task('rsync', function() {
+return gulp.src('app/**')
+	.pipe(rsync({
+	        root: 'app/',
+	        hostname: 'username@yousite.com',
+	        destination: 'yousite/public_html/',
+	        // include: ['*.htaccess'], // Includes files to deploy
+	        exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
+	        recursive: true,
+	        archive: true,
+	        silent: false,
+	        compress: true
+	}))
+});
