@@ -15,6 +15,11 @@
 }
 
 
+@media (max-width: 1250px){
+
+}
+
+
 @media (max-width: 1180px){
 	.error-page{
 		.main{
@@ -66,6 +71,15 @@
 		li{
 			text-align: center;
 			width: 100%;
+		}
+	}
+
+	.blog{
+		margin-left: 0;
+		margin-right: 0;
+		.new__item{
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 }

@@ -2,6 +2,7 @@
 	padding-top: 18px;
 	border-top: 1px solid $color1;
 	margin-top: -1px;
+	margin-bottom: 20px;
 	ul{
 		display: flex;
 		justify-content: center;
@@ -11,6 +12,7 @@
 			position: relative;
 			&.current{
 				color: $color10;
+				margin-right: 0;
 				a, span{
 					color: currentColor;
 				}
@@ -32,15 +34,16 @@
 }
 
 
-.title{
-
-}
-
-
 .main{
 	&.inner{
 		border-top: 1px solid $color11;
 		// margin-top: 15px;
+
+		.filter{
+			border-top: 1px solid $color1;
+			margin-top: 18px;
+			padding-top: 15px;
+		}
 
 		.title{
 			font-family: 'Fira Sans Condensed';
