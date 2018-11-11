@@ -1,4 +1,52 @@
+@media (max-width: 1600px){
+	.error-page{
+		.main{
+			background-position: -200px 95px;
+		}
+	}
+}
+
+@media (max-width: 1400px){
+	.error-page{
+		.main{
+			background-position: -400px 95px;
+		}
+	}
+}
+
+
+@media (max-width: 1180px){
+	.error-page{
+		.main{
+			background-position: -500px 95px;
+		}
+	}
+}
+
+
+
+@media (max-width: 1024px){
+	.error-page{
+		.main{
+			background-position: -550px 95px;
+		}
+		main{
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+	}
+}
+
+
+
+
 @media (max-width: 991px){
+	.error-page{
+		.main{
+			background: none;
+		}
+	}
+
 	.subcats ul li{
 		width: 33.3%;
 	}

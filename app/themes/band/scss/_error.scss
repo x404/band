@@ -1,0 +1,21 @@
+.error-page{
+	.main{
+		background: url(images/404.png) no-repeat left 95px;
+	}
+	main{
+		padding: 280px 0 90px;
+		font-size: 18px;
+		.title{
+			margin-bottom: 25px !important;
+			&:after{
+				display: none !important;
+			}
+		}
+		.back{
+			color: $color3;
+			font-weight: 600;
+			display: inline-block;
+			margin-top: 10px;
+		}
+	}
+}

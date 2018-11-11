@@ -4609,6 +4609,22 @@ textarea.error {
     -webkit-transform: translateX(0);
     transform: translateX(0); } }
 
+.error-page .main {
+  background: url(images/404.png) no-repeat left 95px; }
+
+.error-page main {
+  padding: 280px 0 90px;
+  font-size: 18px; }
+  .error-page main .title {
+    margin-bottom: 25px !important; }
+    .error-page main .title:after {
+      display: none !important; }
+  .error-page main .back {
+    color: #35495c;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
@@ -5079,7 +5095,28 @@ textarea.error {
   .creators p {
     margin: 5px 0; } }
 
+@media (max-width: 1600px) {
+  .error-page .main {
+    background-position: -200px 95px; } }
+
+@media (max-width: 1400px) {
+  .error-page .main {
+    background-position: -400px 95px; } }
+
+@media (max-width: 1180px) {
+  .error-page .main {
+    background-position: -500px 95px; } }
+
+@media (max-width: 1024px) {
+  .error-page .main {
+    background-position: -550px 95px; }
+  .error-page main {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
+
 @media (max-width: 991px) {
+  .error-page .main {
+    background: none; }
   .subcats ul li {
     width: 33.3%; } }
 
