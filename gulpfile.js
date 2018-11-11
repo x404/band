@@ -18,7 +18,6 @@ var gulp 		= require('gulp'),
 	var realFavicon = require ('gulp-real-favicon');
 	var fs = require('fs');	
 
-
 var config = {
 	templateDir : 'app/themes/band',
 	destDir : 'dist',
@@ -260,25 +259,3 @@ gulp.task('default', ['watcher']);
 
 
 
-// var config = {
-// 	templateDir : 'app/template',
-// 	destDir : 'dist',
-// 	libsDir : 'app/libs'
-// };
-
-
-
-gulp.task('rsync', function() {
-return gulp.src('app/**') 
-	.pipe(rsync({
-	        root: 'app/',
-	        hostname: 'username@yousite.com',
-	        destination: 'yousite/public_html/',
-	        // include: ['*.htaccess'], // Includes files to deploy
-	        exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-	        recursive: true,
-	        archive: true,
-	        silent: false,
-	        compress: true
-	}))
-});
