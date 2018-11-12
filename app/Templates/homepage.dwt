@@ -24,6 +24,7 @@
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>Главная</title>
 <!-- TemplateEndEditable -->
+<script src="/themes/band/js/modernizr.js"></script>
 <link rel="stylesheet" href="/themes/band/style.css" />
 <script src="/themes/band/js/libs.min.js"></script>
 
