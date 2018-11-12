@@ -4168,6 +4168,9 @@ textarea.error {
       border-bottom: 1px solid #35495c;
       left: 50%;
       margin-left: -18px; }
+    .main.inner .title-big {
+      color: #35495c;
+      font-size: 30px; }
 
 .main main {
   font-size: 16px;
@@ -4477,9 +4480,6 @@ textarea.error {
   padding-bottom: 10px;
   margin-left: -15px;
   margin-right: -15px; }
-  .blog .title {
-    color: #35495c !important;
-    font-size: 30px !important; }
   .blog .new__item {
     background: #ebedef;
     overflow: hidden;
@@ -4488,6 +4488,61 @@ textarea.error {
     margin-right: 15px; }
     .blog .new__item-pic .new__title {
       background: #ebedef; }
+
+.text-contact {
+  padding-top: 1px; }
+  .text-contact p {
+    margin: 28px 0; }
+  .text-contact img {
+    margin-right: 20px; }
+
+.main .feedback {
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-top: 10px; }
+  .main .feedback p {
+    line-height: 1.4; }
+
+.feedback-form {
+  margin-top: 15px; }
+  .feedback-form .form-group {
+    margin-top: 12px; }
+  .feedback-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #35495c;
+    display: block;
+    margin-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%; }
+  .feedback-form .form-control,
+  .feedback-form label {
+    transition: .3s; }
+  .feedback-form input.form-control {
+    height: 40px; }
+    .feedback-form input.form-control:focus {
+      border-color: #19bd9b; }
+  .feedback-form textarea.form-control {
+    height: 150px; }
+  .feedback-form .form-group:hover label {
+    color: #19bd9b; }
+  .feedback-form .form-group:hover .form-control {
+    border-color: #19bd9b; }
+  .feedback-form .submit {
+    display: block;
+    border: 1px solid #35495c;
+    background: none;
+    border-radius: 8px;
+    margin: 35px auto 0;
+    padding: 15px 32px;
+    transition: .3s; }
+    .feedback-form .submit:hover {
+      color: #19bd9b;
+      border-color: #19bd9b;
+      background-color: #19bd9b; }
+
+.contact-page main {
+  margin-bottom: 65px; }
 
 .timeline {
   font-size: 16px;
@@ -5140,11 +5195,37 @@ textarea.error {
   .error-page .main {
     background: none; }
   .subcats ul li {
-    width: 33.3%; } }
+    width: 33.3%; }
+  .main .text-contact {
+    font-size: 14px; }
+  .feedback-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px; } }
 
 @media (max-width: 767px) {
   .subcats ul li {
     width: 50%; } }
+
+@media (max-width: 575px) {
+  .main .text-contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column; } }
+
+@media (max-width: 500px) {
+  .text-contact {
+    text-align: center; }
+    .text-contact a {
+      display: block; }
+    .text-contact img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 15px;
+      text-align: center; }
+  .feedback-form {
+    width: 100%; } }
 
 @media (max-width: 420px) {
   .subcats ul {
