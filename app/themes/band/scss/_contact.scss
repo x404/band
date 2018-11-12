@@ -14,14 +14,51 @@
 	font-size: 14px;
 	margin-bottom: 20px;
 	padding-top: 10px;
+	position: relative;
 	p{
 		line-height: 1.4;
 	}
+
+	.sending{
+		background: #fff;
+		border: 2px solid;
+		border-radius: 10px;
+		height: 165px;
+		font-size: 22px;
+		color: $color3;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 50%;
+		left: 1%;
+		padding-left: 10px;
+		padding-right: 10px;
+		box-shadow: 0 0 10px rgba(0,0,0,.5);
+		margin-top: -120px;
+		position: absolute;
+		width: 98%;
+		text-align: center;
+		.close{
+			right: 15px;
+			top: 15px;
+		}
+	}
+
+	&.process{
+		fieldset{
+			position: relative;
+			z-index: -1;
+			opacity: .5;
+			
+		}
+	}
+
 }
 
 
-.feedback-form{
+#feedback-form{
 	margin-top: 15px;
+	position: relative;
 	.form-group{
 		margin-top: 12px;
 	}
@@ -50,6 +87,7 @@
 	}
 	textarea.form-control{
 		height: 150px;
+		padding-top: 5px;
 	}
 
 	.form-group{

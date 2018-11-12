@@ -158,6 +158,47 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#feedback-form').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			// переходим в режим отправки
+			document.querySelector('.feedback').classList.add('process');
+
+			// формируем сообщение 1
+			let newEl = document.createElement('div');
+			newEl.classList.add('sending');
+			newEl.textContent = 'Идет отправка ...';
+			document.querySelector('#feedback-form').append(newEl)
+
+
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					// формируем сообщение 2
+					document.querySelector('.sending').innerHTML = thank;
+
+					// регистрируем событие закрытия модального окна по крестику
+					document.querySelector('#feedback-form .close').addEventListener('click', function(){
+						sending_remove()
+					}, false);
+
+					// запускаем таймер
+					startClock('feedback-form');
+				},
+				error: function(){
+					alert(errorTxt);
+					$('.quickmsg__body').show();
+					$('.quickmsg').find('.sending, .thank').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
 
 
 	// mobile-menu
@@ -244,11 +285,11 @@ document.querySelector('.footer .mess').addEventListener('click', function(){
 
 
 var timer;
-var sec = 5;
+var sec = 500;
 
 function showTime(form){
 	sec = sec-1;
-	if (sec <=0) {
+	if (sec <= 0) {
 		stopClock();
 		if (form == 'quickemail-form'){ // форма быстрого сообщения
 			$('.modal-email').fadeOut('normal', function(){
@@ -270,14 +311,12 @@ function showTime(form){
 		// 		$('#' + form + ' fieldset').show();
 		// 	})
 		// };
-		// if (form == 'faq-form'){ // форма быстрого сообщения
-		// 	$('.modal-callback').fadeOut('normal', function(){
-		// 		document.querySelector('.thank').remove();
-		// 		$('#' + form + ' .form-control').val('');
-		// 		$('#callback').modal('hide');
-		// 		$('#' + form + ' fieldset').show();
-		// 	})
-		// };
+
+		if (form == 'feedback-form'){ // форма обратной связи
+			$('.feedback .sending').fadeOut('normal', function(){
+				sending_remove();
+			})
+		};
 
 
 		// if (form == 'ordervacancy-form'){// форма подачи заявки на работу онлайн
@@ -303,6 +342,17 @@ function showTime(form){
 	}
 };
 
+function sending_remove(){
+	document.querySelector('.sending').remove();
+	document.querySelector('.feedback').classList.remove('process');
+	// опустошаем поля
+	let formcontrol = document.querySelectorAll('#feedback-form .form-control');
+	for (let i = 0; i < formcontrol.length; i++) {
+		let self = formcontrol[i];
+		self.value = '';
+	};
+}
+
 function recovery(){
 	$('.thank').remove();
 	$('.modal-vacancy .form-control').val('');
@@ -311,7 +361,7 @@ function recovery(){
 function stopClock(){
 	window.clearInterval(timer);
 	timer = null;
-	sec = 5;
+	sec = 500;
 }
 
 function startClock(form){

@@ -3704,6 +3704,24 @@ input[type="submit"] {
 ---------------------------*/
 /* =footer
 ---------------------------*/
+.quickmsg .close,
+.thank .close {
+  background: url(images/close2.png) no-repeat;
+  border: none;
+  display: block;
+  filter: grayscale(1) brightness(0.4);
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  transition: .3s;
+  width: 21px; }
+  .quickmsg .close:hover,
+  .thank .close:hover {
+    transform: rotate(90deg);
+    filter: none; }
+
 .quickmsg {
   background-color: #d6f3ed;
   position: relative;
@@ -3718,20 +3736,6 @@ input[type="submit"] {
     margin-left: -20px;
     width: 27px;
     z-index: 10; }
-  .quickmsg .close {
-    background: url(images/close2.png) no-repeat;
-    border: none;
-    display: block;
-    filter: grayscale(1) brightness(0.4);
-    height: 20px;
-    position: absolute;
-    right: 0;
-    top: 20px;
-    transition: .3s;
-    width: 21px; }
-    .quickmsg .close:hover {
-      transform: rotate(90deg);
-      filter: none; }
   .quickmsg .container {
     padding: 50px 0 28px;
     position: relative;
@@ -4499,15 +4503,43 @@ textarea.error {
 .main .feedback {
   font-size: 14px;
   margin-bottom: 20px;
-  padding-top: 10px; }
+  padding-top: 10px;
+  position: relative; }
   .main .feedback p {
     line-height: 1.4; }
+  .main .feedback .sending {
+    background: #fff;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 165px;
+    font-size: 22px;
+    color: #35495c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 1%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: -120px;
+    position: absolute;
+    width: 98%;
+    text-align: center; }
+    .main .feedback .sending .close {
+      right: 15px;
+      top: 15px; }
+  .main .feedback.process fieldset {
+    position: relative;
+    z-index: -1;
+    opacity: .5; }
 
-.feedback-form {
-  margin-top: 15px; }
-  .feedback-form .form-group {
+#feedback-form {
+  margin-top: 15px;
+  position: relative; }
+  #feedback-form .form-group {
     margin-top: 12px; }
-  .feedback-form .form-control {
+  #feedback-form .form-control {
     border-radius: 5px;
     border: 1px solid #35495c;
     display: block;
@@ -4515,20 +4547,21 @@ textarea.error {
     padding-left: 10px;
     padding-right: 10px;
     width: 100%; }
-  .feedback-form .form-control,
-  .feedback-form label {
+  #feedback-form .form-control,
+  #feedback-form label {
     transition: .3s; }
-  .feedback-form input.form-control {
+  #feedback-form input.form-control {
     height: 40px; }
-    .feedback-form input.form-control:focus {
+    #feedback-form input.form-control:focus {
       border-color: #19bd9b; }
-  .feedback-form textarea.form-control {
-    height: 150px; }
-  .feedback-form .form-group:hover label {
+  #feedback-form textarea.form-control {
+    height: 150px;
+    padding-top: 5px; }
+  #feedback-form .form-group:hover label {
     color: #19bd9b; }
-  .feedback-form .form-group:hover .form-control {
+  #feedback-form .form-group:hover .form-control {
     border-color: #19bd9b; }
-  .feedback-form .submit {
+  #feedback-form .submit {
     display: block;
     border: 1px solid #35495c;
     background: none;
@@ -4536,7 +4569,7 @@ textarea.error {
     margin: 35px auto 0;
     padding: 15px 32px;
     transition: .3s; }
-    .feedback-form .submit:hover {
+    #feedback-form .submit:hover {
       color: #19bd9b;
       border-color: #19bd9b;
       background-color: #19bd9b; }
@@ -5225,7 +5258,9 @@ textarea.error {
       margin-bottom: 15px;
       text-align: center; }
   .feedback-form {
-    width: 100%; } }
+    width: 100%; }
+  .main .feedback .sending {
+    font-size: 18px; } }
 
 @media (max-width: 420px) {
   .subcats ul {

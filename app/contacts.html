@@ -133,19 +133,19 @@
 						</div>
 						<div class="feedback col-lg-5 col-sm-12">
 							<p>Если у Вас возникли вопросы Вы можете написать нам, воспользовавшись формой ниже. Мы постараемся ответить Вам как можно быстрее.</p>
-							<form action="#" method="post" class="feedback-form">
+							<form action="#" method="post" id="feedback-form">
 								<fieldset>
 									<div class="form-group">
 										<label for="name">Имя</label>
-										<input type="email" class="form-control" id="name" />
+										<input type="text" name="name" class="form-control" id="name" />
 									</div>
 									<div class="form-group">
 										<label for="email">Email</label>
-										<input type="email" class="form-control" id="email" />
+										<input type="email" name="email" class="form-control" id="email" />
 									</div>
 									<div class="form-group">
-										<label for="msg">Ваше сообшение</label>
-										<textarea class="form-control" id="msg"></textarea>
+										<label for="msg">Ваше сообщение</label>
+										<textarea class="form-control" name="msg" id="msg"></textarea>
 									</div>
 									<input type="submit" class="submit" value="Отправить" />					
 								</fieldset>
