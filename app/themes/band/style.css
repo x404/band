@@ -4225,6 +4225,7 @@ textarea.error {
         padding-left: 16px;
         position: relative; }
         .subcats ul li a:hover {
+          color: #19bd9b;
           text-decoration: none; }
         .subcats ul li a:before {
           background: #35495c;
