@@ -419,6 +419,32 @@
 			}
 		}
 	}
+
+	.main{
+		main{
+			img{
+				display: block;
+				float: none !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+
+			p{
+				font-size: 15px;
+				line-height: 1.6;
+				text-align: justify;
+			}
+
+			ul{
+				margin-left: 0;
+			}
+
+			blockquote{
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		}
+	}
 }
 
 
