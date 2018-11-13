@@ -159,6 +159,10 @@
 		}
 	}
 
+	// breadcrumbs
+	.breadcrumbs{
+		text-align: center;
+	}
 }
 
 
@@ -420,24 +424,11 @@
 
 @media (max-width: 490px){
 	.top{
-		// height: 60px;
-		&__contacts{
-			// display: none !important;
-		}
 		&__cart{
 			margin-top: 0;
 		}
-		.d-flex{
-			// justify-content: flex-start;
-		}
-		&__contacts-right{
-			// padding-left: 0;
-			// height: 100%;
-			// align-items: center;
-		}
 		.cart-contents{
 			background-position: 20px center;
-			// height: 60px;
 			padding-top: 0;
 			padding-bottom: 0;
 		}

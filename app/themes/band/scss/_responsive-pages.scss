@@ -67,12 +67,33 @@
 		margin-right: auto;
 		width: 450px;
 	}
+
+	.prevnext{
+		font-size: 15px;
+	}
+
 }
 
 
 @media (max-width: 767px){
 	.subcats ul li{
 		width: 50%;
+	}
+
+	.prevnext{
+		a{
+			&:before{
+				margin-top: 0 !important;
+				top: 5px !important;
+			}
+		}
+		img{
+			display: none;
+		}
+		.prev,
+		.next{
+			width: 45%;
+		}
 	}
 }
 
@@ -126,5 +147,9 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+	}
+
+	.prevnext{
+		display: none !important;
 	}
 }

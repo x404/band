@@ -64,6 +64,8 @@
 			};
 			&:hover{
 				&:before{
+					// transform: translateX(-5px);
+
 					filter: none;
 				}
 			}
@@ -80,6 +82,11 @@
 				left: 0;
 				transform: rotate(180deg);
 			}
+			&:hover{
+				&:before{
+					left: -5px;
+				}				
+			};
 		}
 	}
 	.next{
@@ -89,6 +96,11 @@
 			&:before{
 				right: 0;
 			}
+			&:hover{
+				&:before{
+					right: -5px;
+				}				
+			};
 		}
 		img{
 			order: 1;
