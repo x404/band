@@ -3472,7 +3472,8 @@ h5 {
 
 .before, .lastnews .title:after, .quickmsg:after, .quickmsg .sending:after,
 .quickmsg .thank:after, .cats ul li:before, .filter .widget .yith-wcan-color a:before, .filter .widget .yith-wcan-color a:after, .woocommerce-pagination ul.page-numbers li .prev:before,
-.woocommerce-pagination ul.page-numbers li .next:before, .breadcrumbs ul li:after, .main.inner .title:after, .subcats ul li a:before {
+.woocommerce-pagination ul.page-numbers li .next:before, .breadcrumbs ul li:after, .main.inner .title:after, .subcats ul li a:before, .prevnext .prev a:before,
+.prevnext .next a:before {
   content: "";
   display: block;
   position: absolute; }
@@ -4492,6 +4493,64 @@ textarea.error {
     margin-right: 15px; }
     .blog .new__item-pic .new__title {
       background: #ebedef; }
+
+.prevnext {
+  border-top: 1px solid #7d8a97;
+  border-bottom: 1px solid #7d8a97;
+  margin-top: 55px;
+  padding: 48px 0;
+  font-size: 18px;
+  justify-content: space-between; }
+  .prevnext img {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid rgba(53, 73, 92, 0.48);
+    transition: border-color .3s; }
+  .prevnext a {
+    display: flex;
+    align-items: center;
+    transition: color .3s; }
+    .prevnext a:hover {
+      color: #19bd9b;
+      text-decoration: none; }
+      .prevnext a:hover img {
+        border-color: inherit; }
+  .prevnext .prev,
+  .prevnext .next {
+    width: 365px; }
+    .prevnext .prev a,
+    .prevnext .next a {
+      position: relative; }
+      .prevnext .prev a:before,
+      .prevnext .next a:before {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAWCAMAAAAhOpZRAAAAAXNSR0IB2cksfwAAADxQTFRFAAAAGb2aGb2bGL2aGb2bG7+aGbybIL+fGb2aGb2cGb2bGbybGL2bGb2aGr2cGr2bGb2bGr6bGLubGb2bHFPs9AAAABR0Uk5TAJDvYP8wsBDQ3+DP8K+fgHCgQMAD8XE/AAAAZElEQVR4nGWPWQ6AIBQDEcoioCze/64+AyUk8jWTUFrUoY3iAWDJDtAUH4DTUyKQKDYDFyNW8jfFiBRKFVk1TaRvorfKuN2xv+z3Zh3YBdus1YCb2wTD2ObTQvUAmX/ZUJW8Rr1R6gKzOUFZzgAAAABJRU5ErkJggg==") no-repeat;
+        filter: grayscale(1) brightness(0);
+        height: 22px;
+        margin-top: -11px;
+        top: 50%;
+        transition: .3s;
+        width: 12px; }
+      .prevnext .prev a:hover:before,
+      .prevnext .next a:hover:before {
+        filter: none; }
+  .prevnext .prev img {
+    margin-right: 25px; }
+  .prevnext .prev a {
+    padding-left: 35px; }
+    .prevnext .prev a:before {
+      left: 0;
+      transform: rotate(180deg); }
+  .prevnext .next {
+    text-align: right; }
+    .prevnext .next a {
+      padding-right: 35px; }
+      .prevnext .next a:before {
+        right: 0; }
+    .prevnext .next img {
+      order: 1;
+      margin-left: 25px; }
+    .prevnext .next p {
+      order: 0; }
 
 .text-contact {
   padding-top: 1px; }
