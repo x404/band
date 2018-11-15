@@ -16,7 +16,19 @@
 
 
 @media (max-width: 1250px){
-
+	.collection{
+		&__title{
+			$w: 350px;
+			$t: 90px;
+			margin-left: -$w/2;
+			height: $t;
+			margin-top: -$t/2;
+			width: $w;
+			h3{
+				font-size: 36px;
+			}
+		}
+	}
 }
 
 
@@ -72,6 +84,33 @@
 		font-size: 15px;
 	}
 
+
+	.collection{
+		&__title{
+			$w: 250px;
+			$t: 70px;
+			margin-left: -$w/2;
+			height: $t;
+			margin-top: -$t/2;
+			width: $w;
+			h3{
+				font-size: 28px;
+			}
+		}
+		&__link{
+			.more{
+				height: 40px;
+				width: 135px;
+				margin-left: -65px;
+			}
+			&:hover{
+				.more{
+					bottom: 35px;
+				}
+			};
+		}
+	}
+
 }
 
 
@@ -93,6 +132,21 @@
 		.prev,
 		.next{
 			width: 45%;
+		}
+	}
+
+
+	.collection{
+		&__title{
+			$w: 350px;
+			$t: 90px;
+			margin-left: -$w/2;
+			height: $t;
+			margin-top: -$t/2;
+			width: $w;
+			h3{
+				font-size: 32px;
+			}
 		}
 	}
 }
@@ -131,6 +185,23 @@
 }
 
 
+@media (max-width: 450px){
+	.collection{
+		&__title{
+			$w: 300px;
+			$t: 70px;
+			margin-left: -$w/2;
+			height: $t;
+			margin-top: -$t/2;
+			width: $w;
+			h3{
+				font-size: 26px;
+			}
+		}
+	}
+}
+
+
 @media (max-width: 420px){
 	.subcats ul{
 		display: block;
@@ -151,5 +222,38 @@
 
 	.prevnext{
 		display: none !important;
+	}
+}
+
+
+
+@media (max-width: 380px){
+	.collection{
+		&__item{
+			margin-bottom: 20px;
+		}
+		&__title{
+			$w: 240px;
+			$t: 60px;
+			margin-left: -$w/2;
+			height: $t;
+			margin-top: -$t/2;
+			width: $w;
+			h3{
+				font-size: 24px;
+			}
+		}
+		&__link{
+			.more{
+				height: 35px;
+				width: 125px;
+				font-size: 13px;
+			}
+			&:hover{
+				.more{
+					bottom: 25px;					
+				}
+			}
+		}
 	}
 }

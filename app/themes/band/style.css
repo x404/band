@@ -642,8 +642,8 @@ template {
 
 .container {
   width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -661,16 +661,16 @@ template {
 
 .container-fluid {
   width: 100%;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto; }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -8px;
-  margin-left: -8px; }
+  margin-right: -16px;
+  margin-left: -16px; }
 
 .no-gutters {
   margin-right: 0;
@@ -689,8 +689,8 @@ template {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 8px;
-  padding-left: 8px; }
+  padding-right: 16px;
+  padding-left: 16px; }
 
 .col {
   flex-basis: 0;
@@ -4177,6 +4177,8 @@ textarea.error {
     .main.inner .title-big {
       color: #35495c;
       font-size: 30px; }
+    .main.inner .title-30 {
+      font-size: 30px; }
 
 .main main {
   font-size: 16px;
@@ -4737,6 +4739,68 @@ textarea.error {
 
 .contact-page main {
   margin-bottom: 65px; }
+
+.collections {
+  margin-bottom: -15px; }
+
+.collection__item {
+  margin-bottom: 35px; }
+
+.collection__link {
+  position: relative;
+  display: block; }
+  .collection__link img {
+    display: block;
+    border-radius: 5px;
+    width: 100%; }
+  .collection__link .more {
+    width: 145px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -72px;
+    bottom: 75px;
+    opacity: 0;
+    transition: .4s; }
+  .collection__link:hover .collection__title {
+    height: calc(100% - 24px);
+    left: 12px;
+    margin-left: 0;
+    margin-top: 0;
+    top: 12px;
+    width: calc(100% - 24px); }
+  .collection__link:hover h3 {
+    transform: translateY(-28px); }
+  .collection__link:hover .more {
+    opacity: 1;
+    bottom: 55px; }
+
+.collection__title {
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  left: 50%;
+  margin-left: -220px;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  transition: .3s;
+  width: 440px;
+  z-index: 2; }
+  .collection__title h3 {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 400;
+    text-align: center;
+    transition: transform .3s; }
 
 .timeline {
   font-size: 16px;
@@ -5390,6 +5454,15 @@ textarea.error {
   .error-page .main {
     background-position: -400px 95px; } }
 
+@media (max-width: 1250px) {
+  .collection__title {
+    margin-left: -175px;
+    height: 90px;
+    margin-top: -45px;
+    width: 350px; }
+    .collection__title h3 {
+      font-size: 36px; } }
+
 @media (max-width: 1180px) {
   .error-page .main {
     background-position: -500px 95px; } }
@@ -5413,7 +5486,20 @@ textarea.error {
     margin-right: auto;
     width: 450px; }
   .prevnext {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .collection__title {
+    margin-left: -125px;
+    height: 70px;
+    margin-top: -35px;
+    width: 250px; }
+    .collection__title h3 {
+      font-size: 28px; }
+  .collection__link .more {
+    height: 40px;
+    width: 135px;
+    margin-left: -65px; }
+  .collection__link:hover .more {
+    bottom: 35px; } }
 
 @media (max-width: 767px) {
   .subcats ul li {
@@ -5425,7 +5511,14 @@ textarea.error {
     display: none; }
   .prevnext .prev,
   .prevnext .next {
-    width: 45%; } }
+    width: 45%; }
+  .collection__title {
+    margin-left: -175px;
+    height: 90px;
+    margin-top: -45px;
+    width: 350px; }
+    .collection__title h3 {
+      font-size: 32px; } }
 
 @media (max-width: 575px) {
   .main .text-contact {
@@ -5449,6 +5542,15 @@ textarea.error {
   .main .feedback .sending {
     font-size: 18px; } }
 
+@media (max-width: 450px) {
+  .collection__title {
+    margin-left: -150px;
+    height: 70px;
+    margin-top: -35px;
+    width: 300px; }
+    .collection__title h3 {
+      font-size: 26px; } }
+
 @media (max-width: 420px) {
   .subcats ul {
     display: block; }
@@ -5463,3 +5565,20 @@ textarea.error {
       margin-right: 0; }
   .prevnext {
     display: none !important; } }
+
+@media (max-width: 380px) {
+  .collection__item {
+    margin-bottom: 20px; }
+  .collection__title {
+    margin-left: -120px;
+    height: 60px;
+    margin-top: -30px;
+    width: 240px; }
+    .collection__title h3 {
+      font-size: 24px; }
+  .collection__link .more {
+    height: 35px;
+    width: 125px;
+    font-size: 13px; }
+  .collection__link:hover .more {
+    bottom: 25px; } }
