@@ -5131,6 +5131,11 @@ textarea.error {
 ::-ms-clear {
   display: none; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .collection__title,
+  .collection__title h3 {
+    transition: none; } }
+
 @media (max-width: 1249px) {
   .new__item {
     margin-left: auto;

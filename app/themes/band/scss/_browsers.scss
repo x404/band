@@ -15,4 +15,8 @@ _::-webkit-:host:not(:root:root), .header{
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.collection__title,
+	.collection__title h3{
+		transition: none;
+	}
 }
