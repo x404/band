@@ -1,0 +1,96 @@
+.main .card-page{
+	h1:not(.title){
+
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 1;
+		font-family: "Fira Sans Condensed";
+		margin-bottom: 0;
+	}
+	.articul{
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	.reviews-short{
+		margin-top: 15px;
+		font-size: 14px;
+		img{
+			display: block;
+		}
+	}
+	.review-count{
+		margin-left: 1rem;
+	}
+
+	.to-cart{
+		margin-top: 35px;
+		display: flex;
+		align-items: center;
+		.button{
+			background-color: #ebedef;
+			border-radius: 50%;
+			border: none;
+			cursor: pointer;
+			display: block;
+			height: 58px;
+			margin-left: 10px;
+			transition: .3s;
+			width: 58px;
+			&:hover{
+				background: $color7;
+				img{
+					filter: grayscale(0) brightness(5);
+				}
+			}
+		}
+	}
+	.price{
+		color: $color3;
+		font-size: 26px;
+		font-weight: 700;
+		margin-right: 5px;
+		span{
+			font-weight: 400;
+		}
+	}
+
+	.variations{
+		margin-top: 3.5rem;
+		&-title{
+			font-size: 16px;
+		}
+	}
+
+	.share{
+		margin-top: 3.5rem;
+	}
+
+	.text,
+	.reviews{
+		margin-top: 4rem;
+	}
+
+	.text{
+		table{
+			border-top: 1px solid $color12;
+			border-bottom: 1px solid $color12;
+			th,
+			td{
+				padding: 1.5rem 0;
+				text-align: center;
+			}
+			tr{
+				th{
+					border-bottom: 2px solid $color12;					
+				}
+			}
+
+			tr:nth-child(2n + 1){
+				td{
+					background-color: #f6f8fa
+				}
+			};
+		}
+	}
+}

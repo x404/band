@@ -4802,6 +4802,77 @@ textarea.error {
     text-align: center;
     transition: transform .3s; }
 
+.main .card-page h1:not(.title) {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1;
+  font-family: "Fira Sans Condensed";
+  margin-bottom: 0; }
+
+.main .card-page .articul {
+  font-size: 14px;
+  font-weight: 400; }
+
+.main .card-page .reviews-short {
+  margin-top: 15px;
+  font-size: 14px; }
+  .main .card-page .reviews-short img {
+    display: block; }
+
+.main .card-page .review-count {
+  margin-left: 1rem; }
+
+.main .card-page .to-cart {
+  margin-top: 35px;
+  display: flex;
+  align-items: center; }
+  .main .card-page .to-cart .button {
+    background-color: #ebedef;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: 58px;
+    margin-left: 10px;
+    transition: .3s;
+    width: 58px; }
+    .main .card-page .to-cart .button:hover {
+      background: #19bd9b; }
+      .main .card-page .to-cart .button:hover img {
+        filter: grayscale(0) brightness(5); }
+
+.main .card-page .price {
+  color: #35495c;
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 5px; }
+  .main .card-page .price span {
+    font-weight: 400; }
+
+.main .card-page .variations {
+  margin-top: 3.5rem; }
+  .main .card-page .variations-title {
+    font-size: 16px; }
+
+.main .card-page .share {
+  margin-top: 3.5rem; }
+
+.main .card-page .text,
+.main .card-page .reviews {
+  margin-top: 4rem; }
+
+.main .card-page .text table {
+  border-top: 1px solid #7d8a97;
+  border-bottom: 1px solid #7d8a97; }
+  .main .card-page .text table th,
+  .main .card-page .text table td {
+    padding: 1.5rem 0;
+    text-align: center; }
+  .main .card-page .text table tr th {
+    border-bottom: 2px solid #7d8a97; }
+  .main .card-page .text table tr:nth-child(2n + 1) td {
+    background-color: #f6f8fa; }
+
 .timeline {
   font-size: 16px;
   margin: 50px 0 80px;
