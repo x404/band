@@ -140,20 +140,24 @@
 							<form action="#" method="post">
 								<div class="to-cart">
 									<p class="price">550 <span class="woocommerce-Price-currencySymbol">грн</span></p>
-									<button type="submit" name="add-to-cart" value="" class="single_add_to_cart_button button alt"><img src="/themes/band/images/icons/cart.svg" width="27" height="28" alt="В корзину"></button>
+									<div class="submit-wrapper">
+										<button type="submit" name="add-to-cart" value="" class="single_add_to_cart_button button alt"><img src="/themes/band/images/icons/cart.svg" width="27" height="28" alt="В корзину"></button>
+										<div class="tooltip">В корзину</div>										
+									</div>
 								</div>
 								<div class="variations">
 									<p class="variations-title">Выбрать цвет:</p>
-									<select name="color" id="color">
-										<option value="red">Красный</option>
-										<option value="green">Зеленый</option>
-										<option value="yellow">Желтый</option>
-										<option value="green">Зеленый</option>
+									<select class="selectify" name="color[]" id="color">
+										<option value="#8a0000">#8a0000</option>
+										<option value="#004d0b">#004d0b</option>
+										<option value="#ffea05">#ffea05</option>
+										<option value="#a75437">#a75437</option>
+										<option value="#004d0b">#004d0b</option>
 									</select>
 								</div>
 								<div class="variations">
 									<p class="variations-title">Выбрать размер (см):</p>
-									<select name="size" id="size">
+									<select class="selectify" name="size[]" id="size">
 										<option value="16">16</option>
 										<option value="17">17</option>
 										<option value="19">19</option>
@@ -163,6 +167,17 @@
 								</div>
 								<div class="share">
 									<div class="share-title">Поделиться:</div>
+
+<script type="text/javascript">(function() {
+  if (window.pluso)if (typeof window.pluso.start == "function") return;
+  if (window.ifpluso==undefined) { window.ifpluso = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+  }})();</script>
+<div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,nocounter,theme=01" data-services="facebook,twitter,pinterest"></div>
 
 								</div>
 							</form>
@@ -472,6 +487,14 @@
 <script type="text/javascript" src="themes/band/js/slick.min.js"></script>
 <script src="/themes/band/js/engine.js"></script>
 <!-- InstanceBeginEditable name="EditRegion9" -->
+
+<script type="text/javascript" src="/themes/band/js/jquery.selectify.js"></script>
+<script>
+      $(document).ready(function(){
+        $(".selectify").selectify();
+      })
+</script>
+</body>
 <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

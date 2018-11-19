@@ -2,13 +2,7 @@
 // Originally by Fredi Bach
 // fredibach.ch
 // Updated by Steve Butterworth
-// https://github.com/stevebutterworth/jquery.selectify
-
-$.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
-    return function( elem ) {
-        return $(elem).text().match("^" + arg + "$");
-    };
-});
+// environmentjob.co.uk
 
 (function($) {
 
@@ -22,7 +16,6 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
       selectedTabs: [],
       formElement: undefined,
       multipleSelections: true,
-
       onChange: function() {}
         }
 
@@ -35,11 +28,11 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
 
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options);
-
+      
       if (plugin.settings.selectedTabs == 'all'){
         plugin.settings.selectedTabs = plugin.settings.tabElements;
       }
-
+      
       if (plugin.settings.formElement != undefined){
         if ($(plugin.settings.formElement).is("select")){
           $(plugin.settings.formElement).find(':selected').each(function(i, selected){
@@ -49,20 +42,16 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
           plugin.settings.selectedTabs = $(plugin.settings.formElement).val().split(',');
         }
       }
-
-      var nilElement = $(plugin.settings.formElement).find("option[value='']");
-      var nilTab;
-
+      
       $.each(plugin.settings.tabElements, function(index, value){
         var tab = document.createElement('span');
+        // console.log(value);
         if (plugin.settings.selectedTabs.indexOf(value) == -1){
           $(tab).html(value).addClass(plugin.settings.inactiveClass);
+          $(tab).css("background-color", value);
         } else {
           $(tab).html(value).addClass(plugin.settings.activeClass);
-        }
-        if(value == ''){
-          nilTab = $(tab);
-          nilTab.hide();
+          $(tab).css("background-color", value);
         }
         $(tab).click(function(){
           if($(plugin.settings.formElement).attr("multiple") == "multiple"){
@@ -70,20 +59,6 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
               $(this).removeClass(plugin.settings.activeClass).addClass(plugin.settings.inactiveClass);
             } else {
               $(this).removeClass(plugin.settings.inactiveClass).addClass(plugin.settings.activeClass);
-            }
-          }
-          else if(nilElement.length != 0){
-            var clicked_item = $(this)
-            $.each($(element).find('span'), function(index, value){
-              if($(value)[0] != clicked_item[0]){
-                $(value).removeClass(plugin.settings.activeClass);
-                $(value).addClass(plugin.settings.inactiveClass);
-              }
-            });
-            clicked_item.toggleClass(plugin.settings.activeClass);
-            clicked_item.toggleClass(plugin.settings.inactiveClass);
-            if($(this).parent().find("." + plugin.settings.activeClass).length == 0){
-              nilTab.removeClass(plugin.settings.inactiveClass).addClass(plugin.settings.activeClass);
             }
           }
           else{
@@ -102,17 +77,24 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
 
     plugin.onChange = function(){
       if (plugin.settings.formElement != undefined){
-        var vals = $.map(plugin.getAllSelected(), function(val, i){
-          return $(plugin.settings.formElement + " option:contains_exact('" + val + "')").attr('value');
-        })
-        var previous_value = $(plugin.settings.formElement).val()
-        $(plugin.settings.formElement).val(vals);
-        if(previous_value != vals){
-          $(plugin.settings.formElement).trigger("change");
+        if ($(plugin.settings.formElement).is("select")){
+          $(plugin.settings.formElement).find('option').each(function(){
+            $(this).removeAttr('selected');
+            $(plugin.settings.formElement).trigger("change");
+          });
+          var selection = plugin.getAllSelected();
+          $(plugin.settings.formElement).find('option').each(function(){
+            if (selection.indexOf($(this).text()) !== -1){
+              $(this).attr('selected','selected');
+              $(plugin.settings.formElement).trigger("change");
+            }
+          });
+        } else {
+          $(plugin.settings.formElement).val(plugin.getAllSelected());
         }
       }
       plugin.settings.onChange(plugin.getAllSelected());
-    }
+        }
 
     plugin.getAllSelected = function() {
       var values = [];
@@ -122,8 +104,8 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
         }
       });
       return values;
-    }
-
+        }
+    
     plugin.selectAll = function() {
       var cnt = 0;
       $element.find(plugin.settings.elementType).each(function(){
@@ -136,7 +118,7 @@ $.expr[':'].contains_exact = $.expr.createPseudo(function(arg) {
         plugin.onChange();
       }
         }
-
+    
     plugin.deselectAll = function() {
       var cnt = 0;
       $element.find(plugin.settings.elementType).each(function(){
@@ -180,7 +162,7 @@ jQuery(document).ready(function($) {
   $.fn.selectify = function(){
     return this.each(function() {
       var $this = $(this);
-      var options = $this.find("option").map(function(){ return $(this).text(); });
+      var options = $this.find("option").map(function(){ return $(this).val(); });
       var tabs_id = "tab_selectify_" + $this.attr('id');
       $this.after("<div class='select_tabs' id='"+ tabs_id +"'></div>");
       $this.hide();
