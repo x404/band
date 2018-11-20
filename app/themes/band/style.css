@@ -5005,6 +5005,100 @@ textarea.error {
     height: 38px;
     border: 1px solid #c2c2c2; }
 
+.commentlist {
+  list-style: none;
+  margin-left: 0 !important; }
+  .commentlist .comment {
+    margin: 3rem 0; }
+    .commentlist .comment .meta {
+      color: #35495c; }
+      .commentlist .comment .meta .woocommerce-review__published-date {
+        margin-left: 5px; }
+    .commentlist .comment .description {
+      margin-top: 1rem; }
+    .commentlist .comment .woocommerce-review__author {
+      color: #35495c;
+      font-size: 1.8rem; }
+    .commentlist .comment .woocommerce-review__dash {
+      display: none; }
+    .commentlist .comment .woocommerce-review__published-date {
+      margin-left: 0 !important;
+      display: block;
+      font-size: 1.4rem; }
+    .commentlist .comment .star-rating {
+      float: right;
+      overflow: hidden;
+      position: relative;
+      height: 17px;
+      line-height: 1;
+      font-size: 1em;
+      width: 95px;
+      font-family: star;
+      top: 34px; }
+      .commentlist .comment .star-rating:before {
+        background: url(images/star.png) repeat-x;
+        content: "";
+        height: 17px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+      .commentlist .comment .star-rating span {
+        background: url(images/star-full.png) repeat-x;
+        float: left;
+        left: 0;
+        overflow: hidden;
+        padding-top: 1.5em;
+        position: absolute;
+        top: 0; }
+
+.comment-respond {
+  margin-top: 50px; }
+  .comment-respond .comment-reply-title {
+    font-size: 18px;
+    text-transform: uppercase; }
+  .comment-respond .comment-form-rating {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+
+#review_form label {
+  display: block;
+  font-size: 14px;
+  margin-top: 10px; }
+
+#review_form input:not(.submit),
+#review_form textarea {
+  border: 1px solid #35495c;
+  border-radius: 5px;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px; }
+  #review_form input:not(.submit):focus,
+  #review_form textarea:focus {
+    border: 2px solid #35495c;
+    outline: none; }
+
+#review_form input:not(.submit) {
+  height: 40px; }
+
+#review_form textarea {
+  height: 125px; }
+
+#review_form .submit {
+  width: 145px;
+  height: 53px;
+  border-radius: 10px;
+  border: 1px solid #35495c;
+  background-color: #ffffff;
+  margin-top: 30px;
+  transition: .3s;
+  font-size: 14px;
+  float: right; }
+  #review_form .submit:hover {
+    background-color: #35495c;
+    color: #fff; }
+
 .timeline {
   font-size: 16px;
   margin: 50px 0 80px;
