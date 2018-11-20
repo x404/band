@@ -2,7 +2,7 @@
 	padding-top: 18px;
 	border-top: 1px solid $color1;
 	margin-top: -1px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	ul{
 		display: flex;
 		flex-wrap: wrap;
@@ -38,8 +38,6 @@
 .main{
 	&.inner{
 		border-top: 1px solid $color11;
-		// margin-top: 15px;
-
 		.filter{
 			border-top: 1px solid $color1;
 			margin-top: 18px;
@@ -48,31 +46,31 @@
 
 		.title{
 			font-family: 'Fira Sans Condensed';
+			font-size: 30px;
 			margin-bottom: 40px;
-			font-size: 24px;
 			position: relative;
-			text-transform: uppercase;
 			text-align: center;
+			text-transform: uppercase;
 			&:after{
 				@extend .before;
-				width: 38px;
 				border-bottom: 1px solid #35495c;
 				left: 50%;
 				margin-left: -18px;
+				width: 38px;
 			}
 			&-big{
-				color: #35495c;
-				font-size: 30px;
+				// color: #35495c;
+				// font-size: 30px;
 			}
 			&-30{
-				font-size: 30px;
+				// font-size: 30px;
 			}
 		}
 	}
 
 	main{
 		font-size: 16px;
-		margin-top: 20px;
+		margin-top: 15px;
 		p{
 			line-height: 1.8;
 		}
@@ -237,6 +235,9 @@
 				&:hover{
 					color: $color7;
 					text-decoration: none;
+					&:before{
+						background-color: $color7
+					}
 				}
 				&:before{
 					background: $color3;
