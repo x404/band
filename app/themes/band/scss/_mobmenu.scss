@@ -27,50 +27,51 @@ $color_2: #000;
 
 
 @media (max-width: 767px){
-		.navmenu{
-			height: 100%;
-			margin-left: 0;
-			margin-right: 0;
-			max-width: 100%;
-			min-height: 656px;
-			overflow: hidden;
-			padding-left: 0;
-			padding-right: 0;
+	.navmenu{
+		height: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
+		min-height: 656px;
+		overflow: hidden;
+		padding-left: 0;
+		padding-right: 0;
+		position: fixed;
+		right: -300px;
+		top: 0;
+		transition: .3s;
+		width: 300px;
+		z-index: -1;
+
+		&__inner{
 			position: fixed;
-			right: -300px;
 			top: 0;
-			transition: .3s;
+			bottom: 0;
 			width: 300px;
-			z-index: -1;
-
-			&__inner{
-				position: fixed;
-				top: 0;
-				bottom: 0;
-				width: 300px;
-				transition: .3s; 
-				overflow: auto;
-				height: 100%;
-			}
-
-			a,
-			span{
-				font-weight: normal;
-			}
-
+			transition: .3s; 
+			overflow: auto;
+			height: 100%;
 		}
-		.mainnav{
-			padding-left: 0;
-			padding-right: 0;
-			margin-left: 0;
-			padding-top: 7px;
-			overflow: hidden;
-			li{
-				span{
-					border-bottom: none !important;
-				}
+
+		a,
+		span{
+			font-weight: normal;
+		}
+	}
+
+	.mainnav{
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		padding-top: 7px;
+		overflow: hidden;
+		li{
+			span{
+				border-bottom: none !important;
 			}
-		}	
+		}
+	}
+
 	.header .skype{
 		padding-left: 26px;
 	}
@@ -111,6 +112,7 @@ $color_2: #000;
 
 		.close-menu{
 			display: block;
+			right: 15px;
 		}
 		.mobinfo{
 			padding-left: 1rem;
@@ -190,7 +192,7 @@ $color_2: #000;
 			& > li.active > a{
 				text-decoration: underline;				
 			}
-			li{ // 1 level
+			& > li{ // 1 level
 				padding: 0;
 				border-bottom: 1px solid #fff;
 
@@ -223,6 +225,56 @@ $color_2: #000;
 						&:hover{
 							color : #fff;
 						}
+					}
+				}
+
+				&.current-menu-item{
+					& > a,
+					& > span{
+						color: #19bd9b;
+					}
+				}
+
+				// level2
+				&.folder{
+					& > a,
+					& > span{
+						position: relative;
+						&:after{
+							background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIlJREFUeNpi+P//vw0QBwMxAzbMxMDA4ALEa4A4iQEbAKoSB+Lt/yEgBd0EGIMXiHdAFSVjUwDCfEC8C90kdEcJQa37A8T5QCyBzeUCQHwXalIfuiQTEHdBJecBsRGyJCMQ98N0YnMDTLIfahJcAQcQ9yJJYoRDEVSyF2oNhgIfIM7FJgnCAAEGAKmlN490MQwsAAAAAElFTkSuQmCC") no-repeat right top;
+							content: "";
+							display: block;
+							height: 12px;
+							position: absolute;
+							right: 20px;
+							top: 22px;
+							z-index: 99;
+							width: 8px;
+							transition: transform .3s;
+						}
+					}
+					.open{
+						&:after{
+							transform: rotate(90deg)
+						}						
+					}
+				}
+				.submenu{
+					display: none;
+				}
+				ul{
+					padding-left: 25px;
+					padding-bottom: 10px;
+					li{
+						margin: 10px 0;
+						&:first-child{
+							margin-top: 0;
+						}
+						a, span{
+							padding: 5px 0;
+						}
+
+
 					}
 				}
 

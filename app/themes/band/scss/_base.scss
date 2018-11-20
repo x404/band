@@ -239,56 +239,17 @@ input[type="submit"]{
 			font-size: 18px;
 			position: relative;
 			text-transform: uppercase;
-			&.folder{
-				&:hover{
-					.submenu{
-						opacity: 1;
-						z-index: 99;
-					}
-				}
-			}
+		
 			a{
-				transition: .3s;
 				position: relative;
 				padding-top: 2px;
+				transition: .3s;
 				white-space: nowrap;
 				&:hover{
 					text-decoration: none;
 				}
 			}
-			.submenu{
-				left: -15px;
-				padding-top: 45px;				
-				top: 0;
-				opacity: 0;
-				z-index: -1;
-				position: absolute;
-				transition: opacity .3s;
-			}
-			ul{
-				background-color: $color2;
-				box-shadow: 2px 3px 7px rgba(53, 73, 92, 0.32);
-				border-top: 3px solid $color7;
-				padding: 5px 18px;
-				text-align: left;
-				text-transform: none;
-				width: 120px;
-				li{
-					margin: 10px 0;
-					&.active{
-						color: $color7;
-						a, span{
-							color: $color7;
-						}
-					}
-				}
-				a{
-					color: $color3;
-					&:hover{
-						color: $color7;
-					}
-				}
-			}
+	
 		}
 	}
 

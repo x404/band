@@ -254,6 +254,16 @@ $(document).on('click', '.quickmsg .close', function(e){
 	$('.quickmsg').slideToggle();
 });
 
+$(document).on('click', '.nav .folder > a ', function(e){
+	e.preventDefault();
+	let $this = $(this);
+	$this.toggleClass('open');
+	$this.next().slideToggle()
+});
+
+
+
+
 
 
 // filter toggle
@@ -265,7 +275,6 @@ $(document).on('click', '.show-filter', function(e){
 
 $(document).on('click', '.widget-title', function(e){
 	e.preventDefault();
-	// let $this = $(this);
 	if ($(window).width()<=550){
 		$(this).next().slideToggle()
 	}
