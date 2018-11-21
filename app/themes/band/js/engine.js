@@ -128,6 +128,9 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		prevArrow: '',
 		nextArrow: '',
+		asNavFor: '#gallery-main',
+		infinite: false,
+		focusOnSelect: true
 	})
 
 	$('#gallery-main').slick({
@@ -137,6 +140,8 @@ $(document).ready(function(){
 		dots: true,
 		prevArrow: '',
 		nextArrow: '',
+		asNavFor: '#gallery-thumbs',
+		infinite: false
 	})
 
 

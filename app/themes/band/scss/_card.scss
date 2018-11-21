@@ -176,15 +176,23 @@
 	}
 	.slick{
 		&-slide{
-			margin-bottom: 14px;				
+			cursor: pointer;
+			margin-bottom: 14px;
 			img{
 				border: 2px solid rgba(0,0,0,0);
 				border-radius: 10px;
+				transition: border .3s;
+			}
+			&:hover{
+				img{
+					border-color: $color3;
+				}				
 			}
 		}
+
 		&-current{
 			img{
-				border-color: $color3;				
+				border-color: $color3;
 			}
 		}
 	}

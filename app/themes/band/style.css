@@ -5010,10 +5010,14 @@ textarea.error {
     border-radius: 10px;
     display: block; }
   #gallery-thumbs .slick-slide {
+    cursor: pointer;
     margin-bottom: 14px; }
     #gallery-thumbs .slick-slide img {
       border: 2px solid rgba(0, 0, 0, 0);
-      border-radius: 10px; }
+      border-radius: 10px;
+      transition: border .3s; }
+    #gallery-thumbs .slick-slide:hover img {
+      border-color: #35495c; }
   #gallery-thumbs .slick-current img {
     border-color: #35495c; }
 
