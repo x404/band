@@ -168,7 +168,71 @@
 	}
 }
 
+#gallery-thumbs{
+	width: 113px;
+	img{
+		border-radius: 10px;
+		display: block;
+	}
+	.slick{
+		&-slide{
+			margin-bottom: 14px;				
+			img{
+				border: 2px solid rgba(0,0,0,0);
+				border-radius: 10px;
+			}
+		}
+		&-current{
+			img{
+				border-color: $color3;				
+			}
+		}
+	}
+}
 
+
+#gallery-main{
+	margin-left: 28px;
+	width: 615px;
+
+	.slick{
+		&-dots{
+			display: flex;
+			justify-content: center;
+			padding-left: 0 !important;
+
+			li{
+				padding-left: 0 ;
+				margin: 0 4px;
+				button{
+					background: #ebedef;
+					border-radius: 50%;
+					border: none;
+					cursor: pointer;
+					display: block;
+					height: 9px;
+					padding: 0 !important;
+					text-indent: -9999em;
+					width: 9px;
+				}
+				&:before{
+					display: none !important
+				}
+				&.slick-active{
+					button{
+						background-color: $color3;
+					}
+				}
+			}
+		}
+	}
+
+	img{
+		display: block;
+		height: 614px;
+		width: 614px;
+	}
+}
 
 .select_tabs{
 	display: flex;

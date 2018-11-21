@@ -121,6 +121,24 @@ $(document).ready(function(){
 	});
 
 
+	$('#gallery-thumbs').slick({
+		vertical: true,
+		verticalSwiping: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		prevArrow: '',
+		nextArrow: '',
+	})
+
+	$('#gallery-main').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		dots: true,
+		prevArrow: '',
+		nextArrow: '',
+	})
+
 
 	// validate
 	var sending = '<div class="sending">Идет отправка ...</div>',

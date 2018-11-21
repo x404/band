@@ -224,9 +224,10 @@
 			top: 0;
 			transition: opacity .3s;
 			img{
+				border-radius: 5px;
+				display: block;
 				height: 100%;
 				width: 100%;
-				display: block;
 			}
 		}
 
