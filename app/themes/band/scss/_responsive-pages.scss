@@ -29,6 +29,16 @@
 			}
 		}
 	}
+
+
+	#gallery-main{
+		width: 480px;
+		img{
+			margin-top: 10%;
+			width: auto;
+			height: auto
+		}
+	}
 }
 
 
@@ -111,6 +121,15 @@
 		}
 	}
 
+
+	#gallery-main{
+		margin-left: 50px;
+	}
+	#gallery-thumbs{
+		.slick-track{
+			transform: translate3d(0px, 0px, 0px) !important;			
+		}
+	}
 }
 
 
@@ -149,6 +168,25 @@
 			}
 		}
 	}
+
+	// card
+	#gallery-thumbs{
+		display: none;
+	}
+
+	#gallery-main{
+		margin-left: auto;
+		margin-right: auto;
+		img{
+			margin-top: 0;
+		}
+	}
+
+	.card__reviews{
+		margin-top: 30px;
+	}
+
+
 }
 
 
@@ -157,6 +195,14 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+	}
+
+
+	#gallery-main{
+		width: 100%;
+		img{
+			width: 360px;
+		}
 	}
 }
 
