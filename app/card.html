@@ -158,11 +158,11 @@
 								</div>
 
 								<div id="gallery-main">
-									<div><img src="tmp/pic-1.jpg" alt=""></div>
-									<div><img src="tmp/pic2.jpg" alt=""></div>
-									<div><img src="tmp/pic3.jpg" alt=""></div>
-									<div><img src="tmp/pic4.jpg" alt=""></div>
-									<div><img src="tmp/pic5.jpg" alt=""></div>
+									<div><img src="tmp/~pic-1.jpg" alt=""  class="cloudzoom" data-cloudzoom="zoomImage: 'tmp/pic-1.jpg', zoomSizeMode:'image', maxMagnification:4"></div>
+									<div><img src="tmp/pic2.jpg" alt="" class="cloudzoom" data-cloudzoom="zoomImage: 'tmp/pic2.jpg', zoomSizeMode:'image', maxMagnification:4"></div>
+									<div><img src="tmp/pic3.jpg" alt="" class="cloudzoom" data-cloudzoom="zoomImage: 'tmp/pic3.jpg', zoomSizeMode:'image', maxMagnification:4"></div>
+									<div><img src="tmp/pic4.jpg" alt="" class="cloudzoom" data-cloudzoom="zoomImage: 'tmp/pic4.jpg', zoomSizeMode:'image', maxMagnification:4"></div>
+									<div><img src="tmp/pic5.jpg" alt="" class="cloudzoom" data-cloudzoom="zoomImage: 'tmp/pic5.jpg', zoomSizeMode:'image', maxMagnification:4"></div>
 								</div>
 							</div>
 						</div>
@@ -278,21 +278,6 @@
 												</p>
 												<div class="description">
 													<p>Lorem ipsum  dolor sit amet, consectetur adipiscing elit. Nam urna ipsum, consectetur at malesuada et, facilisis at felis. </p>
-												</div>
-											</div>
-										</div>
-									</li>
-
-									<li class="comment">
-										<div class="comment_container">
-											<div class="comment-text">
-												<div class="star-rating"><span style="width:25%">Rated <strong class="rating">4</strong> out of 5</span></div>
-												<p class="meta">
-													<strong class="woocommerce-review__author">Виктор Андреевич</strong>
-													<span class="woocommerce-review__dash">–</span> <time class="woocommerce-review__published-date" datetime="2013-06-07T11:52:25+00:00"> 29.01.2018 18:06</time>
-												</p>
-												<div class="description">
-													<p>В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. </p>
 												</div>
 											</div>
 										</div>
@@ -629,6 +614,15 @@
 <!-- InstanceBeginEditable name="EditRegion9" -->
 
 <script type="text/javascript" src="/themes/band/js/jquery.selectify.js"></script>
+
+
+<link rel="stylesheet" property="stylesheet" href="/themes/band/css/cloudzoom.css">
+<script src="/themes/band/js/cloudzoom.js"></script>
+<script>
+	CloudZoom.quickStart();
+</script>
+
+
 <script>
       $(document).ready(function(){
         $(".selectify").selectify();

@@ -223,10 +223,13 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	])
 		.pipe(gulp.dest(config.destDirTheme));
 
-	// var buildCss2 = gulp.src([ // Переносим CSS стили в продакшен
-	// 	config.templateDir + '/css/selectize.css'
-	// ])
-	// 	.pipe(gulp.dest(config.destDirTheme + '/css'));
+
+
+	var buildCss2 = gulp.src([ // Переносим CSS стили в продакшен
+		config.templateDir + '/css/selectize.css'
+		config.templateDir + '/css/cloudzoom.css',
+	])
+		.pipe(gulp.dest(config.destDirTheme + '/css'));
 
 
 	// var buildPHP = gulp.src([ // Переносим CSS стили в продакшен
@@ -240,7 +243,18 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	var buildHtml = gulp.src('app/*.html').pipe(gulp.dest(config.destDir + '/'));
 	var buildHtaccess = gulp.src('app/.htaccess').pipe(gulp.dest(config.destDir));
 	var buildrobots = gulp.src('app/robots.txt').pipe(gulp.dest(config.destDir));
-	var buildJs = gulp.src(config.templateDir + '/js/**/*').pipe(gulp.dest(config.destDirTheme+ '/js'));
+
+
+	var buildJs = gulp.src([ // Переносим CSS стили в продакшен
+		config.templateDir + '/js/engine.js',
+		config.templateDir + '/js/jquery.selectify.js',
+		config.templateDir + '/js/libs.min.js',
+		config.templateDir + '/js/slick.min.js',
+		config.templateDir + '/js/cloudzoomn.js'
+	])
+	.pipe(gulp.dest(config.destDirTheme + '/js'));
+
+
 	var buildImages = gulp.src('app/images/**/*').pipe(gulp.dest(config.destDir + '/images'));
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest(config.destDir + '/tmp'));
 	var buildFonts = gulp.src(config.templateDir + '/fonts/**/*').pipe(gulp.dest(config.destDirTheme + '/fonts'));
