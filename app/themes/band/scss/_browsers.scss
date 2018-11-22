@@ -10,6 +10,10 @@ _::-webkit-:host:not(:root:root), .header{
 
 // edge
 @supports (-ms-ime-align:auto) {
+	.collection__title,
+	.collection__title h3{
+		transition: none;
+	}
 }
 
 

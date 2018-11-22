@@ -317,7 +317,7 @@ document.querySelector('.footer .mess').addEventListener('click', function(){
 
 
 var timer;
-var sec = 500;
+var sec = 5;
 
 function showTime(form){
 	sec = sec-1;
@@ -393,7 +393,7 @@ function recovery(){
 function stopClock(){
 	window.clearInterval(timer);
 	timer = null;
-	sec = 500;
+	sec = 5;
 }
 
 function startClock(form){

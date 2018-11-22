@@ -3937,6 +3937,7 @@ textarea.error {
       border: 2px solid #fff;
       display: block;
       height: 19px;
+      overflow: hidden;
       text-indent: 9999em;
       letter-spacing: -9999px;
       width: 19px;
@@ -5277,7 +5278,8 @@ textarea.error {
       margin-left: 15px;
       font-size: 27px;
       position: relative;
-      top: -2px; }
+      top: -2px;
+      white-space: nowrap; }
   .cart_totals .cart__bottom {
     margin-top: 70px; }
     .cart_totals .cart__bottom .back {
@@ -5671,6 +5673,11 @@ textarea.error {
 ::-ms-clear {
   display: none; }
 
+@supports (-ms-ime-align: auto) {
+  .collection__title,
+  .collection__title h3 {
+    transition: none; } }
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .main-grid {
     display: block !important; }
@@ -6035,7 +6042,7 @@ textarea.error {
 
 @media (max-width: 1400px) {
   .error-page .main {
-    background-position: -400px 95px; } }
+    background-position: -280px 95px; } }
 
 @media (max-width: 1250px) {
   .collection__title {
