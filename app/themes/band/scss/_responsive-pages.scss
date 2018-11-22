@@ -353,6 +353,16 @@
 			display: block;
 		}
 	}
+
+	// collections
+	.visual{
+		img{
+			height: 200px;
+			width: auto;
+			object-fit: cover;
+			object-position: center
+		}
+	}
 }
 
 
@@ -394,7 +404,6 @@
 			}
 		}
 	}
-
 
 	// cart
 	.cart_totals{
