@@ -15,6 +15,23 @@ _::-webkit-:host:not(:root:root), .header{
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.main-grid{
+		display: block !important;
+	}
+
+	.filter__body{
+		overflow: hidden;
+	}
+
+	.prevnext{
+		.prev,
+		.next{
+			img{
+				width: 111px !important;
+			}
+		}
+	}
+
 	.collection__title,
 	.collection__title h3{
 		transition: none;

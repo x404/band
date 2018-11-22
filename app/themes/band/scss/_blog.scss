@@ -60,11 +60,15 @@
 			};
 			&:hover{
 				&:before{
-					// transform: translateX(-5px);
-
 					filter: none;
 				}
 			}
+		}
+
+		img{
+			display: block;
+			height: 86px;
+			width: 86px;
 		}
 	}
 

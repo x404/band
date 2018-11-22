@@ -4712,6 +4712,11 @@ textarea.error {
       .prevnext .prev a:hover:before,
       .prevnext .next a:hover:before {
         filter: none; }
+    .prevnext .prev img,
+    .prevnext .next img {
+      display: block;
+      height: 86px;
+      width: 86px; }
   .prevnext .prev img {
     margin-right: 25px; }
   .prevnext .prev a {
@@ -5667,6 +5672,13 @@ textarea.error {
   display: none; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .main-grid {
+    display: block !important; }
+  .filter__body {
+    overflow: hidden; }
+  .prevnext .prev img,
+  .prevnext .next img {
+    width: 111px !important; }
   .collection__title,
   .collection__title h3 {
     transition: none; } }
@@ -6091,7 +6103,7 @@ textarea.error {
     margin-top: 0 !important;
     top: 5px !important; }
   .prevnext img {
-    display: none; }
+    display: none !important; }
   .prevnext .prev,
   .prevnext .next {
     width: 45%; }
