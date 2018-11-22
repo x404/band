@@ -11,6 +11,17 @@
     cursor:crosshair;
     z-index: 9999;
 }
+
+
+.cloudzoom-lens-thick {
+    border: 1px solid #fff;
+    width: 150px !important;
+    height: 150px !important;
+    cursor: crosshair;
+}
+
+
+
 /* CSS for zoom window. */
 .cloudzoom-zoom {
     border:1px solid #888;
