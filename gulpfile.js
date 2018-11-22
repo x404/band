@@ -226,8 +226,8 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 
 
 	var buildCss2 = gulp.src([ // Переносим CSS стили в продакшен
-		config.templateDir + '/css/selectize.css'
-		config.templateDir + '/css/cloudzoom.css',
+		config.templateDir + '/css/selectize.css',
+		config.templateDir + '/css/cloudzoom.css'
 	])
 		.pipe(gulp.dest(config.destDirTheme + '/css'));
 
@@ -250,7 +250,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 		config.templateDir + '/js/jquery.selectify.js',
 		config.templateDir + '/js/libs.min.js',
 		config.templateDir + '/js/slick.min.js',
-		config.templateDir + '/js/cloudzoomn.js'
+		config.templateDir + '/js/cloudzoom.js'
 	])
 	.pipe(gulp.dest(config.destDirTheme + '/js'));
 

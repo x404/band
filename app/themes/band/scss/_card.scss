@@ -1,6 +1,5 @@
 .main .card-page{
 	h1:not(.title){
-
 		font-weight: 400;
 		font-size: 30px;
 		line-height: 1;
@@ -58,9 +57,9 @@
 	}
 
 	.to-cart{
-		margin-top: 35px;
-		display: flex;
 		align-items: center;
+		display: flex;
+		margin-top: 35px;
 		.button{
 			background-color: #ebedef;
 			border-radius: 50%;
@@ -164,6 +163,17 @@
 					background-color: #f6f8fa
 				}
 			};
+		}
+	}
+
+
+	#gallery-thumbs{
+		.slick-list,
+		.slick-track{
+			height: 630px !important;
+		}
+		.slick-track{
+			transform: translate3d(0px, 0px, 0px) !important;
 		}
 	}
 }

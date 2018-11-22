@@ -125,11 +125,14 @@
 	#gallery-main{
 		margin-left: 50px;
 	}
-	#gallery-thumbs{
-		.slick-track{
-			transform: translate3d(0px, 0px, 0px) !important;			
+
+
+	.card-page{
+		.breadcrumbs{
+			display: none;
 		}
 	}
+
 }
 
 
@@ -201,7 +204,89 @@
 	#gallery-main{
 		width: 100%;
 		img{
+			margin-left: auto;
+			margin-right: auto;
 			width: 360px;
+		}
+	}
+
+	.card-page{
+		.description,
+		.articul
+		{
+			text-align: center;
+		}
+		.articul{
+			margin: 10px 0;
+		}
+
+		.to-cart{
+			justify-content: center;
+		}
+		.variations{
+			.select_tabs{
+				justify-content: center
+			}
+			&-title{
+				text-align: center;
+			}
+		}
+
+		.reviews-short{
+			justify-content: center;
+		}
+
+		.text{
+			text-align: justify;
+		}
+	}
+
+	.commentlist .comment{
+		margin: 2rem 0;
+		&-text{
+			display: flex;
+			flex-direction: column;
+			.meta{
+				order: 0;
+			}
+			.star-rating{
+				top: 0;
+				order: 1;
+				align-self: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.description{
+				order : 2;
+			}
+		}
+		.star-rating{
+			float: none;
+		}
+		.meta{
+			text-align: center;
+		}
+	}
+
+	.comment-respond{
+		text-align: center;
+		.comment-form-rating{
+			p{
+				text-align: center;				
+			}
+		}
+	}
+
+	#review_form{
+		label{
+			text-align: left;
+		}
+		#submit{
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			width: 150px;
+			display: block;
 		}
 	}
 }

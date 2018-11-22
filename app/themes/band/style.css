@@ -4929,9 +4929,9 @@ textarea.error {
       bottom: -10px; }
 
 .main .card-page .to-cart {
-  margin-top: 35px;
+  align-items: center;
   display: flex;
-  align-items: center; }
+  margin-top: 35px; }
   .main .card-page .to-cart .button {
     background-color: #ebedef;
     border-radius: 50%;
@@ -5003,6 +5003,13 @@ textarea.error {
     border-bottom: 2px solid #7d8a97; }
   .main .card-page .text table tr:nth-child(2n + 1) td {
     background-color: #f6f8fa; }
+
+.main .card-page #gallery-thumbs .slick-list,
+.main .card-page #gallery-thumbs .slick-track {
+  height: 630px !important; }
+
+.main .card-page #gallery-thumbs .slick-track {
+  transform: translate3d(0px, 0px, 0px) !important; }
 
 @media (min-width: 1250px) {
   .card__right {
@@ -5973,8 +5980,8 @@ textarea.error {
     bottom: 35px; }
   #gallery-main {
     margin-left: 50px; }
-  #gallery-thumbs .slick-track {
-    transform: translate3d(0px, 0px, 0px) !important; } }
+  .card-page .breadcrumbs {
+    display: none; } }
 
 @media (max-width: 767px) {
   .subcats ul li {
@@ -6012,7 +6019,55 @@ textarea.error {
   #gallery-main {
     width: 100%; }
     #gallery-main img {
-      width: 360px; } }
+      margin-left: auto;
+      margin-right: auto;
+      width: 360px; }
+  .card-page .description,
+  .card-page .articul {
+    text-align: center; }
+  .card-page .articul {
+    margin: 10px 0; }
+  .card-page .to-cart {
+    justify-content: center; }
+  .card-page .variations .select_tabs {
+    justify-content: center; }
+  .card-page .variations-title {
+    text-align: center; }
+  .card-page .reviews-short {
+    justify-content: center; }
+  .card-page .text {
+    text-align: justify; }
+  .commentlist .comment {
+    margin: 2rem 0; }
+    .commentlist .comment-text {
+      display: flex;
+      flex-direction: column; }
+      .commentlist .comment-text .meta {
+        order: 0; }
+      .commentlist .comment-text .star-rating {
+        top: 0;
+        order: 1;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px; }
+      .commentlist .comment-text .description {
+        order: 2; }
+    .commentlist .comment .star-rating {
+      float: none; }
+    .commentlist .comment .meta {
+      text-align: center; }
+  .comment-respond {
+    text-align: center; }
+    .comment-respond .comment-form-rating p {
+      text-align: center; }
+  #review_form label {
+    text-align: left; }
+  #review_form #submit {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    display: block; } }
 
 @media (max-width: 500px) {
   .text-contact {
