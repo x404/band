@@ -1,0 +1,139 @@
+.woocommerce-cart{
+	.woocommerce-cart-form__contents{
+		font-size: 16px;
+		width: 100%;
+		th,
+		td{
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		tr{
+			th{
+				border-bottom: 1px solid $color12;
+				color: $color3; 
+				text-align: center;
+			}
+			td{
+				border-bottom: 1px solid $color6;
+			}
+		}
+
+		.product{
+			&-name{
+				text-align: left;
+				padding-left: 15px;
+			}
+
+			&-thumbnail,
+			&-price,
+			&-param,
+			&-quantity,
+			&-subtotal
+			{
+				text-align: center;
+			}
+
+			&-remove{
+				text-align: center;
+				width: 100px;
+				.remove{
+					color: $color3;
+					font-size: 30px;
+					font-weight: 700;
+					text-indent: -9999em;
+					&:hover{
+						color: $color7;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		.qty{
+			height: 35px;
+			width: 55px;
+			text-align: center;
+		}
+
+		.screen-reader-text,
+		.woocommerce-Price-currencySymbol
+		{
+			display: none !important;
+		}
+	}
+}
+
+.cart_totals{
+	line-height: 1;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	th,
+	td{
+		padding: 0;
+		margin: 0;
+	}
+
+	.shop_table{
+		align-self: flex-end;
+		margin-right: 90px;
+	}
+
+	.order-total{
+		color: $color3;
+		font-size: 20px;
+		font-weight: 400;
+		.amount{
+			margin-left: 15px;
+			font-size: 27px;
+			position: relative;
+			top: -2px;
+		}
+	}
+
+
+	.cart__bottom{
+		margin-top: 70px;
+		.back{
+			padding-left: 22px;
+			padding-right: 22px;
+			&:hover{
+				background-color: $color6;
+				border-color: $color6;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.back,
+	.wc-proceed-to-checkout .checkout-button{
+		align-items: center;
+		border-radius: 8px;
+		border: 1px solid $color3;	
+		display: flex;
+		font-size: 14px;
+		height: 53px;
+		margin-right: 28px;
+		justify-content: center;
+		text-transform: uppercase;
+		transition: .3s;
+	}
+
+
+	.wc-proceed-to-checkout{
+		.checkout-button{
+			align-items: center;
+			background-color: $color3;
+			color: $color2;
+			width: 175px;
+			&:hover{
+				color: $color3;
+				background-color: $color2;
+				text-decoration: none;
+			}
+		}
+
+	}
+}
