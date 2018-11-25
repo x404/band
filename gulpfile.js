@@ -39,7 +39,7 @@ gulp.task('scss', function(){
 gulp.task('css-libs', ['scss'], function () {
 	return gulp.src(config.templateDir + '/style.css') // Выбираем файл для минификации
 		.pipe(cleancss())  // Сжимаем
-		// .pipe(rename({ suffix: '.min' }))  // Добавляем суффикс .min
+		.pipe(rename({ suffix: '.min' }))  // Добавляем суффикс .min
 		.pipe(gulp.dest(config.templateDir + '/')) // Выгружаем в папку app/css
 		.pipe(browserSync.reload({ stream: true })) // Обновляем CSS на странице при изменении
 })
@@ -219,7 +219,8 @@ gulp.task('check-for-favicon-update', function(done) {
 gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 	// переносим css файлы
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
-		config.templateDir + '/style.css'
+		config.templateDir + '/style.css',
+		config.templateDir + '/style.min.css'
 	])
 		.pipe(gulp.dest(config.destDirTheme));
 
@@ -250,7 +251,8 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function () {
 		config.templateDir + '/js/jquery.selectify.js',
 		config.templateDir + '/js/libs.min.js',
 		config.templateDir + '/js/slick.min.js',
-		config.templateDir + '/js/cloudzoom.js'
+		config.templateDir + '/js/cloudzoom.js',
+		config.templateDir + '/js/modernizr.js',
 	])
 	.pipe(gulp.dest(config.destDirTheme + '/js'));
 
