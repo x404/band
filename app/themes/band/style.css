@@ -3472,7 +3472,7 @@ h5 {
 
 .before, .lastnews .title:after, .quickmsg:after, .quickmsg .sending:after,
 .quickmsg .thank:after, .cats ul li:before, .filter .widget .yith-wcan-color a:before, .filter .widget .yith-wcan-color a:after, .woocommerce-pagination ul.page-numbers li .prev:before,
-.woocommerce-pagination ul.page-numbers li .next:before, .breadcrumbs ul li:after, .main.inner .title:after, .subcats ul li a:before, .prevnext .prev a:before,
+.woocommerce-pagination ul.page-numbers li .next:before, .breadcrumbs ul li:after, .main.inner .title:after, .newest .product .box-hover:before, .subcats ul li a:before, .prevnext .prev a:before,
 .prevnext .next a:before, .main .card-page .submit-wrapper .tooltip:after, #tab_selectify_color span:hover:before, #tab_selectify_color span:hover:after, #tab_selectify_color span.active:before, #tab_selectify_color span.active:after {
   content: "";
   display: block;
@@ -3627,8 +3627,8 @@ input[type="submit"] {
   justify-content: center; }
 
 .new__item {
-  height: 300px;
   border-radius: 10px;
+  height: 300px;
   text-align: center;
   width: 260px; }
   .new__item-pic {
@@ -3673,13 +3673,13 @@ input[type="submit"] {
 
 .new__title {
   color: #35495c;
-  font-size: 24px;
-  padding-left: 25px;
-  padding-right: 25px;
-  display: flex;
   align-items: center;
+  display: flex;
+  font-size: 24px;
   justify-content: center;
   line-height: 1.3;
+  padding-left: 25px;
+  padding-right: 25px;
   transition: .3s; }
 
 .new__pic img {
@@ -3727,10 +3727,10 @@ input[type="submit"] {
 
 .quickmsg {
   background-color: #d6f3ed;
-  position: relative;
-  transition: .3s;
+  border-bottom: 2px solid #4bcbb1;
   display: none;
-  border-bottom: 2px solid #4bcbb1; }
+  position: relative;
+  transition: .3s; }
   .quickmsg:after {
     background: url(images/arrowbottom.gif) no-repeat;
     bottom: -14px;
@@ -4133,10 +4133,10 @@ textarea.error {
 /* =/about
 ---------------------------*/
 .breadcrumbs {
-  padding-top: 18px;
   border-top: 1px solid #000;
+  margin-bottom: 15px;
   margin-top: -1px;
-  margin-bottom: 15px; }
+  padding-top: 18px; }
   .breadcrumbs ul {
     display: flex;
     flex-wrap: wrap;
@@ -4153,12 +4153,12 @@ textarea.error {
         .breadcrumbs ul li.current:after {
           display: none; }
       .breadcrumbs ul li:after {
-        width: 3px;
-        height: 7px;
         background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAHCAQAAABnsD8iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwkTEw2cvk60AAAALklEQVQI1wXBsREAEBAAsBjA6S2oMpZT/AYKp7WJMSQcBZogYbhQvYSw6SYsmQ+2zgeYTM4KIQAAAABJRU5ErkJggg==") no-repeat center top;
+        height: 7px;
+        margin-top: -3px;
         right: 0;
         top: 50%;
-        margin-top: -3px; }
+        width: 3px; }
 
 .main.inner {
   border-top: 1px solid #d6d6d6; }
@@ -4287,37 +4287,37 @@ textarea.error {
   margin-left: -15px;
   margin-right: -15px; }
   .newest .product {
-    border: 1px solid #7d8a97;
     border-radius: 8px;
-    width: 262px;
+    border: 1px solid #7d8a97;
+    margin-bottom: 0;
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 0;
-    position: relative; }
+    position: relative;
+    width: 262px; }
     .newest .product .woocommerce-loop-product__link {
+      height: 335px;
       padding-left: 0;
       padding-right: 0;
-      height: 335px;
       z-index: 5; }
     .newest .product .box-default {
       height: 225px; }
     .newest .product .box-hover {
-      border: 2px solid #35495c;
-      border-radius: 8px;
       bottom: 0;
       left: 0;
       opacity: 0;
       position: absolute;
       right: 0;
-      margin-left: -1px;
-      margin-right: -1px;
-      margin-top: -1px;
-      margin-bottom: -1px;
+      margin: -1px;
       top: 0;
       transition: opacity .3s; }
       .newest .product .box-hover img {
-        border-radius: 5px;
+        border-radius: 8px;
         display: block;
+        height: 100%;
+        width: 100%; }
+      .newest .product .box-hover:before {
+        border-radius: 8px;
+        border: 2px solid #35495c;
         height: 100%;
         width: 100%; }
     .newest .product .woocommerce-loop-product__title {
@@ -4383,7 +4383,7 @@ textarea.error {
           width: 6px;
           top: 7px; }
 
-/* =subcat
+/* =/subcat
 ---------------------------*/
 /* =mobile-menu
 ---------------------------*/
@@ -4448,8 +4448,8 @@ textarea.error {
     cursor: pointer;
     display: block;
     height: 60px;
-    right: 0;
     position: fixed;
+    right: 0;
     text-align: center;
     top: 0;
     width: 60px;
@@ -4830,8 +4830,8 @@ textarea.error {
 
 .visual {
   margin-bottom: -20px;
-  position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .visual img {
     max-width: 100%;
     height: auto; }
@@ -4847,19 +4847,19 @@ textarea.error {
     border-radius: 5px;
     width: 100%; }
   .collection__link .more {
-    width: 145px;
-    height: 53px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    display: flex;
     align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    bottom: 75px;
+    display: flex;
+    height: 53px;
     justify-content: center;
-    position: absolute;
     left: 50%;
     margin-left: -72px;
-    bottom: 75px;
     opacity: 0;
-    transition: .4s; }
+    position: absolute;
+    transition: .4s;
+    width: 145px; }
   .collection__link:hover .collection__title {
     height: calc(100% - 24px);
     left: 12px;
@@ -5191,9 +5191,9 @@ textarea.error {
 #review_form textarea {
   border: 1px solid #35495c;
   border-radius: 5px;
-  width: 100%;
   padding-left: 5px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  width: 100%; }
   #review_form input:not(.submit):focus,
   #review_form textarea:focus {
     border: 2px solid #35495c;
@@ -5206,15 +5206,15 @@ textarea.error {
   height: 125px; }
 
 #review_form .submit {
-  width: 145px;
-  height: 53px;
+  background-color: #ffffff;
   border-radius: 10px;
   border: 1px solid #35495c;
-  background-color: #ffffff;
+  float: right;
+  font-size: 14px;
+  height: 53px;
   margin-top: 30px;
   transition: .3s;
-  font-size: 14px;
-  float: right; }
+  width: 145px; }
   #review_form .submit:hover {
     background-color: #35495c;
     color: #fff; }
@@ -5251,6 +5251,7 @@ textarea.error {
         color: #19bd9b;
         text-decoration: none; }
   .woocommerce-cart .woocommerce-cart-form__contents .qty {
+    padding: 1px 0;
     height: 35px;
     width: 55px;
     text-align: center; }
@@ -5275,8 +5276,8 @@ textarea.error {
     font-size: 20px;
     font-weight: 400; }
     .cart_totals .order-total .amount {
-      margin-left: 15px;
       font-size: 27px;
+      margin-left: 15px;
       position: relative;
       top: -2px;
       white-space: nowrap; }
@@ -5533,8 +5534,8 @@ textarea.error {
     cursor: pointer;
     display: block;
     height: 60px;
-    right: 0;
     position: fixed;
+    right: 0;
     text-align: center;
     top: 0;
     width: 60px;
@@ -5722,6 +5723,7 @@ textarea.error {
     z-index: -1; } }
 
 @media (max-width: 1249px) {
+  .newest .product,
   .new__item {
     margin-left: auto;
     margin-right: auto; }
@@ -5890,8 +5892,8 @@ textarea.error {
     .filter .d-flex {
       display: block !important; }
     .filter .widget {
-      margin: 15px 0;
-      display: block; }
+      display: block;
+      margin: 15px 0; }
       .filter .widget.yith-woo-ajax-reset-navigation {
         display: none; }
       .filter .widget-title {
@@ -5917,12 +5919,10 @@ textarea.error {
         text-align: left; }
         .filter .widget ul.yith-wcan-list, .filter .widget ul.yith-wcan-color {
           background: #ebedef;
-          padding: 15px 20px;
+          padding: 0 20px;
           width: 275px;
           display: none;
-          border-radius: 5px;
-          padding-top: 0;
-          padding-bottom: 0; }
+          border-radius: 5px; }
           .filter .widget ul.yith-wcan-list li, .filter .widget ul.yith-wcan-color li {
             border-top: 1px solid #fff;
             margin-bottom: 0;
@@ -5955,23 +5955,23 @@ textarea.error {
                 border-color: #19bd9b; }
               .filter .widget ul.yith-wcan-list li.chosen a:after, .filter .widget ul.yith-wcan-color li.chosen a:after {
                 content: "";
-                display: block;
-                position: absolute;
-                width: 7px;
-                height: 7px;
                 background: #19bd9b;
                 border-radius: 50%;
-                right: 0;
+                display: block;
+                height: 7px;
                 margin-right: 5px;
+                margin-top: -3px;
+                position: absolute;
+                right: 0;
                 top: 50%;
-                margin-top: -3px; }
+                width: 7px; }
         .filter .widget ul.yith-wcan-color a {
-          text-indent: 1px;
-          border: none;
           background: none !important;
+          border: none;
+          height: auto;
           letter-spacing: normal;
-          width: auto;
-          height: auto; }
+          text-indent: 1px;
+          width: auto; }
           .filter .widget ul.yith-wcan-color a:before, .filter .widget ul.yith-wcan-color a:after {
             display: none; }
       .filter .widget li {
@@ -6068,7 +6068,9 @@ textarea.error {
     background-position: -550px 95px; }
   .error-page main {
     padding-top: 50px;
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+  .qty input {
+    border: 1px solid #ccc; } }
 
 @media (max-width: 991px) {
   .error-page .main {
@@ -6100,6 +6102,8 @@ textarea.error {
     margin-left: 50px; }
   .card-page .breadcrumbs {
     display: none; }
+  .card-page .card__reviews {
+    margin-top: 25px; }
   .woocommerce-cart .woocommerce-cart-form__contents {
     font-size: 14px; } }
 
@@ -6285,15 +6289,15 @@ textarea.error {
   .collection__item {
     margin-bottom: 20px; }
   .collection__title {
-    margin-left: -120px;
     height: 60px;
+    margin-left: -120px;
     margin-top: -30px;
     width: 240px; }
     .collection__title h3 {
       font-size: 24px; }
   .collection__link .more {
+    font-size: 13px;
     height: 35px;
-    width: 125px;
-    font-size: 13px; }
+    width: 125px; }
   .collection__link:hover .more {
     bottom: 25px; } }

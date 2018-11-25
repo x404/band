@@ -1,8 +1,8 @@
 .breadcrumbs{
-	padding-top: 18px;
 	border-top: 1px solid $color1;
-	margin-top: -1px;
 	margin-bottom: 15px;
+	margin-top: -1px;
+	padding-top: 18px;
 	ul{
 		display: flex;
 		flex-wrap: wrap;
@@ -23,12 +23,12 @@
 			}
 			&:after{
 				@extend .before;
-				width: 3px;
-				height: 7px;
 				background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAHCAQAAABnsD8iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiCwkTEw2cvk60AAAALklEQVQI1wXBsREAEBAAsBjA6S2oMpZT/AYKp7WJMSQcBZogYbhQvYSw6SYsmQ+2zgeYTM4KIQAAAABJRU5ErkJggg==") no-repeat center top;
+				height: 7px;
+				margin-top: -3px;
 				right: 0;
 				top: 50%;
-				margin-top: -3px;
+				width: 3px;
 			};
 		}
 	}
@@ -183,40 +183,42 @@
 	margin-left: -15px;
 	margin-right: -15px;
 	.product{
-		border: 1px solid $color12;
 		border-radius: 8px;
-		width: 262px;
+		border: 1px solid $color12;
+		margin-bottom: 0;
 		margin-left: 15px;
 		margin-right: 15px;
-		margin-bottom: 0;
 		position: relative;
+		width: 262px;
 
 		.woocommerce-loop-product__link{
+			height: 335px;
 			padding-left: 0;
 			padding-right: 0;
-			height: 335px;
 			z-index: 5;
 		}
 		.box-default{
 			height: 225px;
 		}
 		.box-hover{
-			border: 2px solid $color3;
-			border-radius: 8px;
 			bottom: 0;
 			left: 0;
 			opacity: 0;
 			position: absolute;
 			right: 0;
-			margin-left: -1px;
-			margin-right: -1px;
-			margin-top: -1px;
-			margin-bottom: -1px;
+			margin: -1px;
 			top: 0;
 			transition: opacity .3s;
 			img{
-				border-radius: 5px;
+				border-radius: 8px;
 				display: block;
+				height: 100%;
+				width: 100%;
+			}
+			&:before{
+				@extend .before;
+				border-radius: 8px;
+				border: 2px solid $color3;
 				height: 100%;
 				width: 100%;
 			}
@@ -266,7 +268,6 @@
 		margin: 2px 15px 11px;
 	}
 }
-
 /* =newest
 ---------------------------*/
 
@@ -310,5 +311,5 @@
 		}
 	}
 }
-/* =subcat
+/* =/subcat
 ---------------------------*/

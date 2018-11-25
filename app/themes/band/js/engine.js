@@ -333,44 +333,11 @@ function showTime(form){
 			})
 		};
 
-
-		// if (form == 'callback-form'){ // форма быстрого сообщения
-		// 	$('.modal-callback').fadeOut('normal', function(){
-		// 		document.querySelector('.modal-callback .modal-dialog').classList.remove('send');
-		// 		document.querySelector('.thank').remove();
-		// 		$('#' + form + ' .form-control').val('');
-		// 		$('#callback').modal('hide');
-		// 		$('#' + form + ' fieldset').show();
-		// 	})
-		// };
-
 		if (form == 'feedback-form'){ // форма обратной связи
 			$('.feedback .sending').fadeOut('normal', function(){
 				sending_remove();
 			})
 		};
-
-
-		// if (form == 'ordervacancy-form'){// форма подачи заявки на работу онлайн
-		// 	$('.modal-vacancy').fadeOut('normal', function(){
-		// 		$('#ordervacancy').modal('hide');
-		// 		setTimeout( function(){
-		// 			document.querySelector('#ordervacancy .modal-dialog').classList.remove('send');
-		// 		}, 2000);
-		// 		recovery();
-		// 	})
-		// };
-
-
-		// if (form == 'sendfriend-form'){ // заявка другу
-		// 	$('.modal-vacancy').fadeOut('normal', function(){
-		// 		$('#sendfriend').modal('hide');
-		// 		setTimeout( function(){
-		// 			document.querySelector('#sendfriend .modal-dialog').classList.remove('send');
-		// 		}, 2000);
-		// 		recovery();
-		// 	})
-		// };	
 	}
 };
 

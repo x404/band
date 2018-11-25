@@ -53,10 +53,14 @@
 
 
 @media (max-width: 1249px){
+
+	.newest .product,
 	.new__item{
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+
 
 	.products{
 		grid-template-columns: repeat(3, 33.3%)
@@ -80,12 +84,6 @@
 	}
 }
 
-@media (max-width: 1199px){
-}
-
-@media (max-width: 1024px){
-}
-
 @media (max-width: 991px){
 	.filter{
 		.d-flex{
@@ -103,9 +101,6 @@
 				li{
 					margin-bottom: 5px;
 				}
-			}
-			.yith-wcan-color{
-				// margin-left: 18px;
 			}
 		}
 	}
@@ -141,10 +136,6 @@
 }
 
 @media (max-width: 920px){
-	.top .tel:nth-child(3){
-		// display: none;
-	}
-
 	.top{
 		.skype,
 		.email{
@@ -353,8 +344,8 @@
 			display: block !important;
 		}
 		.widget{
-			margin: 15px 0;
 			display: block;
+			margin: 15px 0;
 			&.yith-woo-ajax-reset-navigation{
 				display: none;
 			}
@@ -387,13 +378,10 @@
 				&.yith-wcan-list,
 				&.yith-wcan-color{
 					background: #ebedef;
-					padding: 15px 20px;
+					padding: 0 20px;
 					width: 275px;
 					display: none;
-					// display: block;
 					border-radius: 5px;
-					padding-top: 0;
-					padding-bottom: 0;
 					li{
 						border-top: 1px solid #fff;
 						margin-bottom: 0;
@@ -434,16 +422,16 @@
 								}
 								&:after{
 									content: "";
-									display: block;
-									position: absolute;
-									width: 7px;
-									height: 7px;
 									background: $color7;
 									border-radius: 50%;
-									right: 0;
+									display: block;
+									height: 7px;
 									margin-right: 5px;
-									top: 50%;
 									margin-top: -3px;
+									position: absolute;
+									right: 0;
+									top: 50%;
+									width: 7px;
 								};
 							}
 						}
@@ -452,12 +440,12 @@
 
 				&.yith-wcan-color{
 					a{
-						text-indent: 1px;
-						border: none;
 						background: none !important;
-						letter-spacing: normal;
-						width: auto;
+						border: none;
 						height: auto;
+						letter-spacing: normal;
+						text-indent: 1px;
+						width: auto;
 						&:before,
 						&:after{
 							display: none;

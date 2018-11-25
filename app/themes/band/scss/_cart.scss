@@ -52,6 +52,7 @@
 		}
 
 		.qty{
+			padding: 1px 0;
 			height: 35px;
 			width: 55px;
 			text-align: center;
@@ -86,8 +87,8 @@
 		font-size: 20px;
 		font-weight: 400;
 		.amount{
-			margin-left: 15px;
 			font-size: 27px;
+			margin-left: 15px;
 			position: relative;
 			top: -2px;
 			white-space: nowrap;
@@ -135,6 +136,5 @@
 				text-decoration: none;
 			}
 		}
-
 	}
 }

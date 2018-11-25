@@ -3,8 +3,8 @@
 }
 .visual{
 	margin-bottom: -20px;
-	position: relative;
 	overflow: hidden;
+	position: relative;
 	img{
 		max-width: 100%;
 		height: auto;
@@ -24,19 +24,19 @@
 		}
 
 		.more{
-			width: 145px;
-			height: 53px;
-			border-radius: 10px;
-			background-color: #ffffff;
-			display: flex;
 			align-items: center;
+			background-color: #ffffff;
+			border-radius: 10px;
+			bottom: 75px;
+			display: flex;
+			height: 53px;
 			justify-content: center;
-			position: absolute;
 			left: 50%;
 			margin-left: -72px;
-			bottom: 75px;
 			opacity: 0;
+			position: absolute;
 			transition: .4s;
+			width: 145px;
 		}
 
 		&:hover{
