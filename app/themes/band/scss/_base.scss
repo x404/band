@@ -4,9 +4,6 @@ header, section, footer, aside, , article {display:block}
 ul{list-style:none}
 
 
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic,cyrillic-ext');
-
-
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -32,12 +29,6 @@ body{
 	font-display: swap;
 	font-size: 14px;
 }
-
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	//ie11
-}
-
 
 
 input::-moz-focus-inner{
