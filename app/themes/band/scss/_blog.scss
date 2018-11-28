@@ -1,4 +1,4 @@
-.blog{
+.listnews{
 	padding-bottom: 10px;
 	margin-left: -15px;
 	margin-right: -15px;
@@ -16,12 +16,14 @@
 	}
 }
 
-.prevnext{
+.prevnext,
+.post-navigation .nav-links{
 	border-top: 1px solid $color12;
 	border-bottom: 1px solid $color12;
 	margin-top: 55px;
 	padding: 48px 0;
 	font-size: 18px;
+	display: flex;
 	justify-content: space-between;
 	$x: 35px;
 	img{
@@ -44,7 +46,10 @@
 	}
 
 	.prev,
-	.next{
+	.next,
+	.nav-previous,
+	.nav-next
+	{
 		width: 365px;
 		a{
 			position: relative;
@@ -72,7 +77,9 @@
 		}
 	}
 
-	.prev{
+	.prev,
+	.nav-previous
+	{
 		img{
 			margin-right: 25px;
 		}
@@ -89,7 +96,10 @@
 			};
 		}
 	}
-	.next{
+
+	.next,
+	.nav-next,
+	{
 		text-align: right;
 		a{
 			padding-right: $x;
@@ -109,5 +119,11 @@
 		p{
 			order: 0;
 		}
+	}
+}
+
+.empty-prev{
+	.nav-links{
+		justify-content: flex-end;
 	}
 }

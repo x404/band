@@ -2,7 +2,8 @@
 	.header{
 		.menu{
 			&-item{
-				&.folder{
+				&.folder,
+				&.menu-item-has-children{
 					&:hover{
 						.submenu{
 							opacity: 1;

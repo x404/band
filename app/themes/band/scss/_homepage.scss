@@ -298,15 +298,18 @@
 
 /* =pagination
 ---------------------------*/
-.woocommerce-pagination{
+.woocommerce-pagination,
+.pagination{ 
 	margin: 20px 0;
 	font-size: 16px;
-	ul.page-numbers{
+	ul.page-numbers,
+	.nav-links{
 		display: flex;
 		justify-content: center;
 		li{
 			margin-left: 10px;
 			margin-right: 10px;
+		}
 			.dots{
 				font-weight: 600;
 			}
@@ -350,9 +353,15 @@
 					text-decoration: none;
 				}
 			}
-		}
 		.current{
 			color: $color7;
+		}
+	}
+
+	.nav-links{
+		a{
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 	}
 }

@@ -96,7 +96,8 @@
 		width: 450px;
 	}
 
-	.prevnext{
+	.prevnext,
+	.post-navigation{
 		font-size: 15px;
 	}
 
@@ -158,7 +159,8 @@
 		width: 50%;
 	}
 
-	.prevnext{
+	.prevnext,
+	.post-navigation{
 		a{
 			&:before{
 				margin-top: 0 !important;
@@ -169,7 +171,9 @@
 			display: none !important;
 		}
 		.prev,
-		.next{
+		.next,
+		.nav-previous,
+		.nav-next{
 			width: 45%;
 		}
 	}
@@ -445,7 +449,7 @@
 		}
 	}
 
-	.blog{
+	.listnews{
 		margin-left: 0;
 		margin-right: 0;
 		.new__item{
@@ -454,7 +458,8 @@
 		}
 	}
 
-	.prevnext{
+	.prevnext,
+	.post-navigation{
 		display: none !important;
 	}
 }

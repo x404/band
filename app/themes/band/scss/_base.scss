@@ -240,15 +240,30 @@ input[type="submit"]{
 					text-decoration: none;
 				}
 			}
-	
+			.menu-item{
+				text-transform: none;
+				a{
+					&:before{
+						display: none !important;
+					}
+				}
+			}	
 		}
 	}
 
-	.current-menu-item{
+	.current-menu-item,
+	.current-menu-parent
+	{
 		a{
 			&:before{
 				max-width: 100%;
 			};
+		}
+
+		.current-menu-item{
+			a{
+				color: $color7;
+			}
 		}
 	}
 }
@@ -355,7 +370,7 @@ $r: 10px;
 	}
 	
 	&__link{
-		
+		width: 100%;
 		&:hover{
 			text-decoration: none;
 			.new__top{

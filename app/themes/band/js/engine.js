@@ -54,6 +54,15 @@ $(document).ready(function(){
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					centerMode: true,
+					centerPadding: '35px'
+				}
+			},
+			{
+				breakpoint: 350,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
 					centerPadding: '22px'
 				}
 			}
@@ -110,6 +119,15 @@ $(document).ready(function(){
 			},
 			{
 				breakpoint: 380,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
+					centerPadding: '42px'
+				}
+			},
+			{
+				breakpoint: 350,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -317,7 +335,7 @@ document.querySelector('.footer .mess').addEventListener('click', function(){
 
 
 var timer;
-var sec = 5;
+var sec = 500;
 
 function showTime(form){
 	sec = sec-1;
@@ -360,7 +378,7 @@ function recovery(){
 function stopClock(){
 	window.clearInterval(timer);
 	timer = null;
-	sec = 5;
+	sec = 500;
 }
 
 function startClock(form){

@@ -1,3 +1,16 @@
+/*
+Theme Name: Band
+Theme URI: 
+Author: proverstka.com.ua
+Author URI: https://proverstka.com.ua/
+Description:
+Version: 1.0
+License: 
+License URI:
+Text Domain: Band
+Tags: 
+*/
+
 @import 'normalize';
 @import 'colors';
 @import 'fonts';
@@ -19,18 +32,12 @@
 @import "bootstrap/transitions";	
 @import "bootstrap/tables";
 @import "bootstrap/modal";
-// @import "card";
 @import "bootstrap/button-group";
 @import "bootstrap/utilities";
-// @import "bootstrap/utilities/display";
-// @import "bootstrap/utilities/flex";
-// @import "bootstrap/utilities/text";
-
 
 
 @import 'elements';
 @import 'flex';
-// @import 'sprite';
 @import 'base';
 @import 'homepage';
 @import 'inner';
@@ -42,9 +49,6 @@
 @import 'collections';
 @import 'card';
 @import 'cart';
-// @import 'modal';
-// @import 'nav';
-// @import 'transitions';
 @import 'timeline';
 @import 'error';
 @import 'mobmenu'; 
