@@ -6,7 +6,8 @@
 		font-family: "Fira Sans Condensed";
 		margin-bottom: 0;
 	}
-	.articul{
+	.articul,
+	.sku_wrapper{
 		font-size: 14px;
 		font-weight: 400;
 	}
@@ -56,6 +57,10 @@
 		}
 	}
 
+	.woo-variation-product-gallery{
+		max-width: 100%;
+	}
+
 	.to-cart{
 		align-items: center;
 		display: flex;
@@ -76,6 +81,9 @@
 					filter: grayscale(0) brightness(5);
 				}
 			}
+			&.disabled{
+				opacity: 0;
+			}
 		}
 	}
 	.price{
@@ -83,8 +91,16 @@
 		font-size: 26px;
 		font-weight: 700;
 		margin-right: 5px;
-		span{
+		// span
+		.woocommerce-Price-currencySymbol{
 			font-weight: 400;
+			visibility: hidden;
+			&:before{
+				content: "грн";
+				display: inline;
+				visibility: visible;
+				margin-left: 5px;
+			}
 		}
 	}
 
@@ -174,6 +190,22 @@
 		}
 		.slick-track{
 			transform: translate3d(0px, 0px, 0px) !important;
+		}
+	}
+
+
+	.star-rating{
+		background: url(images/star.png) repeat-x;
+		position: relative;
+		width: 95px;
+		height: 17px;
+		text-indent: -9999em;
+		overflow: hidden;
+		& > span{
+			background: url(images/star-full.png) repeat-x;
+			position: absolute;
+			left: 0;
+			top: 0;
 		}
 	}
 }
@@ -270,23 +302,79 @@
 	margin-top: 12px;
 }
 
-.select_tabs span{
-	display: block;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  margin-right: 12px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  white-space: nowrap;
-  text-align: center;
-  transition: .3s;
+ul.variable-items-wrapper{
+	margin-top: 12px !important;
+}
+
+.select_tabs,
+ul.variable-items-wrapper{
+	li.variable-item{
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		border: none !important; 	
+		padding: 0 !important;
+		margin: 0 12px 0 0  !important;
+		width: 32px !important;
+		height: 32px !important;
+	}
+	span{
+		&:after{
+			box-shadow: none !important;			
+		}
+		display: block;
+		border-radius: 50%;
+		width: 32px !important;
+		height: 32px !important;
+		// margin-right: 12px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		user-select: none;
+		cursor: pointer;
+		white-space: nowrap;
+		text-align: center;
+		transition: .3s;
+
+	}
 }
 
 
-#tab_selectify_size{
+.variable-items-wrapper [data-wvstooltip]{
+	&:after,
+	&:before
+	{
+		// content: "";
+		display: none !important;
+	}
+}
+
+
+ul.button-variable-wrapper{
+	li.variable-item{
+		.variable-item-span{
+			display: flex !important;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid $color3;
+			color: #35495c;
+			font-size: 16px;
+			&:hover{
+				background-color: $color3;
+				color: $color2;					
+			}		
+		}
+		&.selected{
+			span{
+				background-color: $color3;
+				color: $color2;			
+			}
+		}
+	}
+}
+
+#tab_selectify_size,
+#tab_selectify_pa_sizes
+{
+	.selected span,
 	span{
 		display: flex;
 		align-items: center;
@@ -303,7 +391,51 @@
 	}
 }
 
-#tab_selectify_color{
+
+ul.color-variable-wrapper{
+	li.variable-item{
+		&.selected .variable-item-span{
+			&:before{
+				display: block !important;				
+			}
+		}
+
+		.variable-item-span{
+			&:before{
+				left: calc(50% - 1px) !important;
+				top: calc(50% - 1px) !important;
+				background: $color2 !important;
+				width: 2px !important;
+				height: 2px !important;
+			}
+		}
+
+		&.selected .variable-item-span,
+		.variable-item-span:hover{
+			&:before, 
+			&:after{
+				@extend .before;
+				display: block !important;
+				z-index: 2;
+			}
+
+			&:after{
+				border-radius: 50%;
+				left: calc(50% - 19px) !important;
+				top: calc(50% - 19px) !important;
+				width: 38px !important;
+				height: 38px !important;
+				border: 1px solid #c2c2c2 !important;
+				border-radius: 50% !important
+			}
+		}
+	}	
+}
+
+
+#tab_selectify_color,
+#tab_selectify_pa_colors
+{
 	span{
 		text-indent: -9999em;
 		position: relative;
@@ -340,14 +472,9 @@
 	list-style: none;
 	margin-left: 0 !important;
 
-	.comment{
+	.comment,
+	.review{
 		margin: 3rem 0;
-		&_container{
-
-		}
-		&-text{
-			
-		}
 
 		.meta{
 			color: #35495c;
@@ -408,6 +535,52 @@
 		}
 	}
 }
+
+
+.comment-form-rating{
+	.stars{
+		margin-top: .5rem;
+		background: url(images/star.png) repeat-x left top;
+		width: 95px;
+		height: 17px;
+		position: relative;
+		span{
+			display: flex;
+		}
+		a{
+			display: block;
+			height: 17px;
+			$w: 19px;
+			width: $w;
+			overflow: hidden;
+			text-indent: -100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			&:hover{
+				background: url(images/star-full.png) repeat-x left top !important;				
+			}
+			&.active{
+				background: url(images/star-full.png) repeat-x left top;				
+			}
+		}
+		@for $i from 1 through 5 {
+			a:nth-child(#{$i}),
+			
+			{
+				width: 19px*$i;
+				z-index: 6-$i
+			}
+		}
+
+		&:hover{
+			a.active{
+				background: none;
+			}
+		}
+	}
+}
+
 
 .comment-respond{
 	margin-top: 50px;

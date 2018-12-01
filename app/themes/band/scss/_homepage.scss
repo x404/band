@@ -199,6 +199,9 @@
 	justify-content: space-around;
 	.product{
 		width: 25%;
+		.added_to_cart{
+			display: none;
+		}
 	}
 	&.newest{
 		display: block;
@@ -241,6 +244,7 @@
 		img{
 			vertical-align: top;
 		}
+
 		&__bottom{
 			@extend .flex-center;
 			font-size: 18px;
@@ -248,6 +252,14 @@
 			color: $color3;
 			.woocommerce-Price-currencySymbol{
 				font-weight: 400;
+				visibility: hidden;
+				margin-right: -5px;
+				&:before{
+					margin-left: 3px;
+					content:"грн";
+					display: inline;
+					visibility: visible;
+				}
 			}
 		}
 		.add_to_cart_button{
@@ -261,6 +273,7 @@
 			img{
 				transition: filter .3s;
 			}
+			&.loading,
 			&:hover{
 				background-color: $color7;
 				img{
