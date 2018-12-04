@@ -261,6 +261,11 @@
 					visibility: visible;
 				}
 			}
+			.price{
+				.amount{
+					font-size: 18px;
+				}
+			}
 		}
 		.add_to_cart_button{
 			@extend .flex-center;

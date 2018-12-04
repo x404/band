@@ -3664,7 +3664,7 @@ input[type="submit"] {
       border-top: 1px solid #35495c;
       left: 50%;
       bottom: -5px;
-      margin-left: -35px; }
+      margin-left: -25px; }
 
 .flex-center, .new__item-nopic, .new__item-nopic .new__link, .quickmsg .sending,
 .quickmsg .thank, .products .product .box-default, .products .product__bottom, .products .product .add_to_cart_button, .woocommerce-pagination ul.page-numbers a:not(.prev):not(.next),
@@ -3674,7 +3674,8 @@ input[type="submit"] {
 .pagination ul.page-numbers a:not(.prev):not(.next),
 .pagination ul.page-numbers .current,
 .pagination .nav-links a:not(.prev):not(.next),
-.pagination .nav-links .current {
+.pagination .nav-links .current, #review_form .sending,
+#review_form .thank {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -4100,6 +4101,8 @@ textarea.error {
           content: "грн";
           display: inline;
           visibility: visible; }
+      .products .product__bottom .price .amount {
+        font-size: 18px; }
     .products .product .add_to_cart_button {
       background-color: #ebedef;
       border-radius: 50%;
@@ -5544,8 +5547,29 @@ ul.color-variable-wrapper li.variable-item .variable-item-span:hover:after {
   .comment-form-rating .stars:hover a.active {
     background: none; }
 
+.allcomments {
+  display: none; }
+
+.togglecomments .showcomments {
+  background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALBAMAAABbgmoVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX////y8/SGkp1dbX3X295CVWfJztQ1SVyutr68wsnevM5KAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IMBBIkKAY1VD0AAAA8SURBVAjXY2BgYBBgAAEmQzDFEgymGFwVGBgEBQXFghgYykGggWHmzJkzgsFqhSFKTR3A+kLAHMYJDAwALmQI1Aw0pFMAAAAASUVORK5CYII=") no-repeat right center;
+  border: none;
+  color: #35495c;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 15px;
+  cursor: pointer;
+  transition: .3s color; }
+  .togglecomments .showcomments:hover {
+    background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALBAMAAABbgmoVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX////w+/h118NHyq/R8usowaLC7eQZvZuj5dey6d7WpHa7AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IMBBIiGQGx84EAAAA8SURBVAjXY2BgYBBgAAEmQzDFEgymGFwVGBgEBQXFghgYykGggWHmzJkzgsFqhSFKTR3A+kLAHMYJDAwALmQI1Aw0pFMAAAAASUVORK5CYII=") no-repeat right center;
+    color: #19bd9b; }
+
 .comment-respond {
-  margin-top: 50px; }
+  margin-top: 20px; }
   .comment-respond .comment-reply-title {
     font-size: 18px;
     text-transform: uppercase; }
@@ -5590,6 +5614,25 @@ ul.color-variable-wrapper li.variable-item .variable-item-span:hover:after {
   #review_form .submit:hover {
     background-color: #35495c;
     color: #fff; }
+
+#review_form .sending,
+#review_form .thank {
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #35495c;
+  box-shadow: 0 0 15px #35495c;
+  font-size: 24px;
+  height: 140px;
+  left: 20px;
+  margin-top: 120px;
+  position: absolute;
+  width: 360px;
+  z-index: 50; }
+  #review_form .sending.ajax-error,
+  #review_form .thank.ajax-error {
+    text-align: center;
+    font-size: 20px;
+    border-color: red; }
 
 .woocommerce-cart .woocommerce-cart-form__contents {
   font-size: 16px;
@@ -6436,7 +6479,10 @@ ul.color-variable-wrapper li.variable-item .variable-item-span:hover:after {
     #gallery-main img {
       margin-top: 10%;
       width: auto;
-      height: auto; } }
+      height: auto; }
+  #review_form .sending,
+  #review_form .thank {
+    width: 285px; } }
 
 @media (max-width: 1180px) {
   .error-page .main {
@@ -6485,7 +6531,12 @@ ul.color-variable-wrapper li.variable-item .variable-item-span:hover:after {
   .card-page .card__reviews {
     margin-top: 25px; }
   .woocommerce-cart .woocommerce-cart-form__contents {
-    font-size: 14px; } }
+    font-size: 14px; }
+  #review_form .sending,
+  #review_form .thank {
+    left: 50%;
+    margin-left: -180px;
+    width: 360px; } }
 
 @media (max-width: 767px) {
   .subcats ul li {
@@ -6672,7 +6723,13 @@ ul.color-variable-wrapper li.variable-item .variable-item-span:hover:after {
       margin-right: 0; }
   .prevnext,
   .post-navigation {
-    display: none !important; } }
+    display: none !important; }
+  #review_form .sending,
+  #review_form .thank {
+    font-size: 18px;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px; } }
 
 @media (max-width: 380px) {
   .collection__item {

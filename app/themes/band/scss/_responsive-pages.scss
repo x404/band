@@ -12,6 +12,13 @@
 			background-position: -280px 95px;
 		}
 	}
+
+	#review_form{
+		.sending,
+		.thank{
+			
+		}
+	}
 }
 
 
@@ -37,6 +44,13 @@
 			margin-top: 10%;
 			width: auto;
 			height: auto
+		}
+	}
+
+	#review_form{
+		.sending,
+		.thank{
+			width: 285px;
 		}
 	}
 }
@@ -148,6 +162,15 @@
 	// cart
 	.woocommerce-cart .woocommerce-cart-form__contents{
 		font-size: 14px;
+	}
+
+	#review_form{
+		.sending,
+		.thank{
+			left: 50%;
+			margin-left: -180px;
+			width: 360px;
+		}
 	}
 }
 
@@ -462,6 +485,18 @@
 	.post-navigation{
 		display: none !important;
 	}
+
+
+	#review_form{
+		.sending,
+		.thank{
+			font-size: 18px;
+			left: 50%;
+			margin-left: -150px;
+			width: 300px;
+		}
+	}
+
 }
 
 

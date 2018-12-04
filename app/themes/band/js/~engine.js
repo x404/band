@@ -1,7 +1,7 @@
-jQuery(document).ready(function(){
+$(document).ready(function(){
 
 	// карусель
-	jQuery('#news-carousel').slick({
+	$('#news-carousel').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		prevArrow: '',
@@ -54,6 +54,15 @@ jQuery(document).ready(function(){
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					centerMode: true,
+					centerPadding: '35px'
+				}
+			},
+			{
+				breakpoint: 350,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
 					centerPadding: '22px'
 				}
 			}
@@ -61,7 +70,7 @@ jQuery(document).ready(function(){
 	});
 
 
-	jQuery('#newest-carousel').slick({
+	$('#newest-carousel').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		prevArrow: '',
@@ -114,6 +123,15 @@ jQuery(document).ready(function(){
 					slidesToShow: 1,
 					slidesToScroll: 1,
 					centerMode: true,
+					centerPadding: '42px'
+				}
+			},
+			{
+				breakpoint: 350,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerMode: true,
 					centerPadding: '22px'
 				}
 			}
@@ -121,7 +139,7 @@ jQuery(document).ready(function(){
 	});
 
 
-	jQuery('#gallery-thumbs').slick({
+	$('#gallery-thumbs').slick({
 		vertical: true,
 		verticalSwiping: true,
 		slidesToShow: 5,
@@ -133,7 +151,7 @@ jQuery(document).ready(function(){
 		focusOnSelect: true
 	})
 
-	jQuery('#gallery-main').slick({
+	$('#gallery-main').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
@@ -152,27 +170,27 @@ jQuery(document).ready(function(){
 	var thank2 = '<div class="thank text-center"><p>Ваша заявка успешно отправлена</p><button type="button" class="close" aria-label="Закрыть" tabindex="5"></button></div>';
 	var errorTxt = 'Возникла ошибка при отправке заявки!';
 
-	jQuery('#quickmsg-form').validate({
+	$('#quickmsg-form').validate({
 		submitHandler: function(form){
-			var strSubmit=jQuery(form).serialize();
-			jQuery('.quickmsg').addClass('process');
-			jQuery('.quickmsg__body').after(sending);
-			jQuery('.quickmsg__body').hide();
+			var strSubmit=$(form).serialize();
+			$('.quickmsg').addClass('process');
+			$('.quickmsg__body').after(sending);
+			$('.quickmsg__body').hide();
 	
 
 			$.ajax({
 				type: "POST",
-				url: jQuery(form).attr('action'),
+				url: $(form).attr('action'),
 				data: strSubmit,
 				success: function(){
-					jQuery('.quickmsg .sending').remove();
-					jQuery('.quickmsg__body').after(thank);
+					$('.quickmsg .sending').remove();
+					$('.quickmsg__body').after(thank);
 					// startClock('quickemail-form');
 				},
 				error: function(){
 					alert(errorTxt);
-					jQuery('.quickmsg__body').show();
-					jQuery('.quickmsg').find('.sending, .thank').remove();
+					$('.quickmsg__body').show();
+					$('.quickmsg').find('.sending, .thank').remove();
 				}
 			})
 			.fail(function(error){
@@ -181,9 +199,9 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	jQuery('#feedback-form').validate({
+	$('#feedback-form').validate({
 		submitHandler: function(form){
-			var strSubmit=jQuery(form).serialize();
+			var strSubmit=$(form).serialize();
 			// переходим в режим отправки
 			document.querySelector('.feedback').classList.add('process');
 
@@ -196,7 +214,7 @@ jQuery(document).ready(function(){
 
 			$.ajax({
 				type: "POST",
-				url: jQuery(form).attr('action'),
+				url: $(form).attr('action'),
 				data: strSubmit,
 				success: function(){
 					// формируем сообщение 2
@@ -212,8 +230,8 @@ jQuery(document).ready(function(){
 				},
 				error: function(){
 					alert(errorTxt);
-					jQuery('.quickmsg__body').show();
-					jQuery('.quickmsg').find('.sending, .thank').remove();
+					$('.quickmsg__body').show();
+					$('.quickmsg').find('.sending, .thank').remove();
 				}
 			})
 			.fail(function(error){
@@ -225,10 +243,10 @@ jQuery(document).ready(function(){
 
 
 	// mobile-menu
-	jQuery('#navbar').each(function(){
-		var $this = jQuery(this),
-			$link = jQuery('.navbar-toggle'),
-			$close = jQuery('.close-menu'),
+	$('#navbar').each(function(){
+		var $this = $(this),
+			$link = $('.navbar-toggle'),
+			$close = $('.close-menu'),
 
 			init = function(){
 				$link.on('click', openMenu);
@@ -236,12 +254,12 @@ jQuery(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				jQuery('body').addClass('o-menu');
+				$('body').addClass('o-menu');
 
 			},
 			closeMenu = function(e){
 				e.preventDefault();
-				jQuery('body').removeClass('o-menu');
+				$('body').removeClass('o-menu');
 			};
 		init();
 	});	
@@ -250,20 +268,20 @@ jQuery(document).ready(function(){
 	
 
 
-	var $timeline_block = jQuery('.cd-timeline-block');
+	var $timeline_block = $('.cd-timeline-block');
 
 	//hide timeline blocks which are outside the viewport
 	$timeline_block.each(function(){
-		if(jQuery(this).offset().top > jQuery(window).scrollTop()+jQuery(window).height()*0.75) {
-			jQuery(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+			$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
 		}
 	});
 
 	//on scolling, show/animate timeline blocks when enter the viewport
-	jQuery(window).on('scroll', function(){
+	$(window).on('scroll', function(){
 		$timeline_block.each(function(){
-			if( jQuery(this).offset().top <= jQuery(window).scrollTop()+jQuery(window).height()*0.75 && jQuery(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-				jQuery(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+				$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
 			}
 		});
 	});
@@ -272,14 +290,14 @@ jQuery(document).ready(function(){
 
 
 // mobile menu
-jQuery(document).on('click', '.quickmsg .close', function(e){
+$(document).on('click', '.quickmsg .close', function(e){
 	e.preventDefault();
-	jQuery('.quickmsg').slideToggle();
+	$('.quickmsg').slideToggle();
 });
 
-jQuery(document).on('click', '.nav .folder > a ', function(e){
+$(document).on('click', '.nav .folder > a ', function(e){
 	e.preventDefault();
-	let $this = jQuery(this);
+	let $this = $(this);
 	$this.toggleClass('open');
 	$this.next().slideToggle()
 });
@@ -290,25 +308,25 @@ jQuery(document).on('click', '.nav .folder > a ', function(e){
 
 
 // filter toggle
-jQuery(document).on('click', '.show-filter', function(e){
+$(document).on('click', '.show-filter', function(e){
 	e.preventDefault();
-	jQuery('.filter__body').show();
-	jQuery(this).hide();
+	$('.filter__body').show();
+	$(this).hide();
 });
 
-jQuery(document).on('click', '.widget-title', function(e){
+$(document).on('click', '.widget-title', function(e){
 	e.preventDefault();
-	if (jQuery(window).width()<=550){
-		jQuery(this).next().slideToggle()
+	if ($(window).width()<=550){
+		$(this).next().slideToggle()
 	}
 });
 // #filter toggle
 
 
 document.querySelector('.footer .mess').addEventListener('click', function(){
-	jQuery('.quickmsg').slideToggle();
-	let $bottom = jQuery(document).height();
-	jQuery('body,html').animate({scrollTop: $bottom }, 800);
+	$('.quickmsg').slideToggle();
+	let $bottom = $(document).height();
+	$('body,html').animate({scrollTop: $bottom }, 800);
 
 }, false);
 
@@ -317,24 +335,24 @@ document.querySelector('.footer .mess').addEventListener('click', function(){
 
 
 var timer;
-var sec = 5;
+var sec = 500;
 
 function showTime(form){
 	sec = sec-1;
 	if (sec <= 0) {
 		stopClock();
 		if (form == 'quickemail-form'){ // форма быстрого сообщения
-			jQuery('.modal-email').fadeOut('normal', function(){
+			$('.modal-email').fadeOut('normal', function(){
 				document.querySelector('.modal-email .modal-dialog').classList.remove('send');
 				document.querySelector('.thank').remove();
-				jQuery('#' + form + ' .form-control').val('');
-				jQuery('#quickemail').modal('hide');
-				jQuery('#' + form + ' fieldset').show();
+				$('#' + form + ' .form-control').val('');
+				$('#quickemail').modal('hide');
+				$('#' + form + ' fieldset').show();
 			})
 		};
 
 		if (form == 'feedback-form'){ // форма обратной связи
-			jQuery('.feedback .sending').fadeOut('normal', function(){
+			$('.feedback .sending').fadeOut('normal', function(){
 				sending_remove();
 			})
 		};
@@ -353,14 +371,14 @@ function sending_remove(){
 }
 
 function recovery(){
-	jQuery('.thank').remove();
-	jQuery('.modal-vacancy .form-control').val('');
+	$('.thank').remove();
+	$('.modal-vacancy .form-control').val('');
 };
 
 function stopClock(){
 	window.clearInterval(timer);
 	timer = null;
-	sec = 5;
+	sec = 500;
 }
 
 function startClock(form){
