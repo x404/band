@@ -286,6 +286,14 @@
 		li{
 			margin-top: 6px;
 			width: 25%;
+			&.current-menu-parent{
+				a{
+					color: $color7;	
+					&:before{
+						background: $color7;
+					}				
+				}
+			}
 			a{
 				color: $color3;
 				padding-left: 16px;
