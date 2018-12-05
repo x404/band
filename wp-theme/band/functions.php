@@ -554,20 +554,20 @@ function band_widgets_init() {
 		'name'          => 'SEO текст для ИНТЕРЕСНО',
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<div class="about">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h1 class="title text-center">',
-		'after_title'   => '</h1>',
+		'before_widget' => '<section class="about">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<header><h1 class="text-center">',
+		'after_title'   => '</header></h1>',
 	));
 
 	register_sidebar( array(
 		'name'          => 'SEO текст для ГЛАВНОЙ',
 		'id'            => 'sidebar-2',
 		'description'   => '',
-		'before_widget' => '<div class="about">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h1 class="text-center">',
-		'after_title'   => '</h1>',
+		'before_widget' => '<section class="about">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<header><h1 class="text-center">',
+		'after_title'   => '</header></h1>',
 	));
 
 

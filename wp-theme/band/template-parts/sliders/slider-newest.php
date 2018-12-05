@@ -10,7 +10,8 @@
 
 ?>
 
-<?php if( is_page(32) || is_page(30) || is_page(34) ){ ?>
+
+<?php if( is_page(32) || is_page(30) || is_page(34) || is_category() || is_page(44) || $post->post_parent == '44' ){ ?>
 <section class="newest products">
 	<header>
 		<h2 class="title">НАШИ НОВИНКИ</h2>

@@ -212,16 +212,12 @@ function related_upsell_products() {
 	}
 }
 
-// Use WC 2.0 variable price format, now include sale price strikeout
-// add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
-// add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 
-// function wc_wc20_variation_price_format( $price, $product ) {
-// // Main Price
-// $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
-// $price = wc_price( $prices[1] );
+add_image_size( 'my_cart_image_size', 100, 80, true );
+add_filter( 'woocommerce_cart_item_thumbnail', function( $image, $cart_item, $cart_item_key ){
+    $product = $cart_item['data'];
+    return $product->get_image( 'my_cart_image_size' );
+}, 3, 100 );
 
 
-// return $price;
-// }
 ?>

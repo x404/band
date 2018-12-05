@@ -34,6 +34,11 @@
 			{
 				text-align: center;
 			}
+			&-thumbnail{
+				img{
+					height: auto !important;
+				}
+			}
 
 			&-remove{
 				text-align: center;

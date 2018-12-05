@@ -38,8 +38,8 @@
 <?php if( get_field('seotext') ): ?>
 <?php ?>
 	<!-- =seotext -->
-	<div class="about">
+	<section> class="about">
 		<?php the_field('seotext'); ?>
-	</div>
+	</section>
 	<!-- =/seotext -->
 <?php endif; ?>

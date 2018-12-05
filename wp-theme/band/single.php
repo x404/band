@@ -11,14 +11,7 @@ get_header(); ?>
 
 	<div class="main inner">
 		<div class="container">
-		<?php
 
-		if (get_post_type() == 'product'){ 
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content', get_post_type() );
-			endwhile;
-			?>
-		} else { ?>
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 			<main>
 				<?php // Start the loop.
@@ -45,8 +38,9 @@ get_header(); ?>
 				) );
 
 				if (empty($previous_post)){ ?></div> <?php }
-		} ?>
+		 ?>
 
+			<?php get_template_part( 'template-parts/sliders/slider', 'popular' );?>
 			<?php get_template_part( 'template-parts/general/bottom', 'none' ); ?>
 		</div>
 	</div>

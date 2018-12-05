@@ -42,7 +42,7 @@ get_header();
 					the_posts_pagination();
 				?>
 			</section>
-
+			<?php get_template_part( 'template-parts/sliders/slider', 'newest' );?>
 			<?php get_template_part( 'template-parts/general/interest', 'none' ); ?>
 		</div>
 	</div>
