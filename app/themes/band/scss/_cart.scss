@@ -59,10 +59,12 @@
 }
 
 
-		abbr{
-			border-bottom:  !important;
-			text-decoration: none !important;
-		}
+abbr{
+	border-bottom:  !important;
+	text-decoration: none !important;
+}
+
+
 .woocommerce-cart{
 	.woocommerce-cart-form__contents{
 		font-size: 16px;
@@ -182,10 +184,13 @@
 			}
 		}
 	}
-
-
 }
 
+
+.cart-empty,
+.return-to-shop{
+	text-align: center;
+}
 
 #billing_nova_poshta_region,
 #billing_nova_poshta_city,
@@ -222,6 +227,10 @@
 	}
 
 	.order-total{
+		td{
+			font-weight: 700;
+			border-bottom: none;			
+		}
 		color: $color3;
 		font-size: 20px;
 		font-weight: 400;

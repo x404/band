@@ -49,20 +49,11 @@
 		 	<?php
 		    	global $woocommerce; 
 		    	$basket_count = $woocommerce->cart->cart_contents_count;
-		    	if ($basket_count == 0){
-		    ?>
-			<div class="basket-btn">
-			    <span class="basket-btn__label">Корзина</span>
-			    <span class="basket-btn__counter">(<?php echo sprintf($basket_count); ?>)</span>
-			</div>		    
-		    <?php
-		    	} else {
 		    ?>
 			<a href="<?php echo $woocommerce->cart->get_cart_url() ?>" class="basket-btn">
 			    <span class="basket-btn__label">Корзина</span>
 			    <span class="basket-btn__counter">(<?php echo sprintf($basket_count); ?>)</span>
 			</a>
-		    <?php } ?>
 
 			</div>
 		</div>

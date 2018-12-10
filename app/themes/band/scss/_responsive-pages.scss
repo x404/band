@@ -521,15 +521,27 @@
 			td{
 				padding-left: 0;
 				text-align: right !important;
-				display: block !important;
+				display: flex !important;
 				font-size: 14px;
+				align-items: center;
 				&:before{
 					font-size: 14px;
 					content: attr(data-title);
-					float: left;
 					font-weight: 700;
-					padding-left: 15px;
-					padding-right: 15px;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				&.product-name{
+					justify-content: space-between;
+					&:before{
+						width: 40%	
+					}
+					span{
+						width: 55%;
+					}
+				}
+				.woocommerce-Price-currencySymbol{
+					display: inline !important
 				}
 			}
 			&.cart_item{
@@ -537,6 +549,7 @@
 			}
 			&.order-total{
 				td{
+					justify-content: center;
 					text-align: center !important;
 					.amount{
 						margin-left: 5px;
@@ -547,6 +560,7 @@
 			&.woocommerce-shipping-totals{
 				td{
 					text-align: center !important;
+					display: block !important;
 				}
 			}
 		}
