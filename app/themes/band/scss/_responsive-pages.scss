@@ -497,6 +497,60 @@
 		}
 	}
 
+
+
+	// checkout
+	.main .woocommerce form .woocommerce-billing-fields .form-row,
+	.woocommerce-additional-fields .notes{
+		display: block !important;
+		label{
+			margin-bottom: 5px;
+		}
+		input.input-text {
+			height: 40px;
+		}
+	}
+
+	.checkout-list .woocommerce-checkout-review-order-table{
+		display: block !important;
+		th{
+			display: none !important;
+		}
+		tr{
+			display: block;
+			td{
+				padding-left: 0;
+				text-align: right !important;
+				display: block !important;
+				font-size: 14px;
+				&:before{
+					font-size: 14px;
+					content: attr(data-title);
+					float: left;
+					font-weight: 700;
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+			&.cart_item{
+				border-bottom: 1px solid #7d8a97
+			}
+			&.order-total{
+				td{
+					text-align: center !important;
+					.amount{
+						margin-left: 5px;
+					}
+				}
+			}
+
+			&.woocommerce-shipping-totals{
+				td{
+					text-align: center !important;
+				}
+			}
+		}
+	}
 }
 
 

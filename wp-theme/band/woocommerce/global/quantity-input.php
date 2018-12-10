@@ -42,7 +42,8 @@ if ( $max_value && $min_value === $max_value ) {
 			size="4"
 			pattern="<?php echo esc_attr( $pattern ); ?>"
 			inputmode="<?php echo esc_attr( $inputmode ); ?>"
-			aria-labelledby="<?php echo esc_attr( $labelledby ); ?>" />
+			/>
 	</div>
 	<?php
 }
+

@@ -72,7 +72,9 @@ function band_scripts() {
     wp_enqueue_script( 'band-modernizr', get_template_directory_uri() . '/js/modernizr.js');
     wp_enqueue_script( 'band-libs', get_template_directory_uri() . '/js/libs.min.js');
     wp_enqueue_script( 'band-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '', true );
+	wp_enqueue_script( 'band-selectify', get_template_directory_uri() . '/js/selectize.min.js', array(), '', true );
     wp_enqueue_script( 'band-engine', get_template_directory_uri() . '/js/engine.js', array(), '', true );
+
 
     // outdatebrowser
     wp_enqueue_script( 'outdatedbrowser', '/outdatedbrowser/outdatedbrowser.min.js');

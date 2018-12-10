@@ -38,7 +38,7 @@
 <?php if( get_field('seotext') ): ?>
 <?php ?>
 	<!-- =seotext -->
-	<section> class="about">
+	<section class="about">
 		<?php the_field('seotext'); ?>
 	</section>
 	<!-- =/seotext -->

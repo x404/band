@@ -33,6 +33,10 @@ get_header(); ?>
 			</main>
 
 			<?php get_template_part( 'template-parts/sliders/slider', 'newest' );?>
+			<?php if( is_page(24) || is_page(25)) {
+					get_template_part( 'template-parts/sliders/slider', 'popular' );
+				}
+			?>
 			<?php get_template_part( 'template-parts/general/bottom', 'none' ); ?>
 		</div>
 	</div>

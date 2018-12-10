@@ -20,6 +20,7 @@ var gulp 		= require('gulp'),
 
 var config = {
 	templateDir : 'app/themes/band',
+	wptheme : '../www/wp-content/themes/band',
 	destDir : 'dist',
 	destDirTheme: 'dist/themes/band',
 	libsDir : 'app/libs'
@@ -30,7 +31,7 @@ var config = {
 gulp.task('scss', function(){
 	return gulp.src(config.templateDir + '/scss/**/*.scss') // Берем источник
 		.pipe(sass().on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
-		.pipe(gulp.dest(config.templateDir + '/'))  // Выгружаем результата в папку app/css
+		.pipe(gulp.dest(config.wptheme + '/'))  // Выгружаем результата в папку app/css
 		.pipe(browserSync.reload({ stream: true }))
 });
 

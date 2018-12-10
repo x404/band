@@ -220,4 +220,37 @@ add_filter( 'woocommerce_cart_item_thumbnail', function( $image, $cart_item, $ca
 }, 3, 100 );
 
 
+
+// change currency symbols
+add_filter( 'woocommerce_currency_symbol', 'change_currency_symbol', 10, 2 );
+function change_currency_symbol( $symbols, $currency ) {
+	return 'грн';
+}
+
+
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
+add_filter( 'woocommerce_is_attribute_in_product_name', '__return_false' );
+
+//remove_action('woocommerce_cart_collaterals', 'woocommerce_cart_totals',10)
+
+
+function wc_cart_totals_shipping_method_label_dub( $method ) {
+	$label = $method->get_label();
+
+	if ( $method->cost >= 0 && $method->get_method_id() !== 'free_shipping' ) {
+		if ( WC()->cart->display_prices_including_tax() ) {
+			$label .=  wc_price( $method->cost + $method->get_shipping_tax() );
+			if ( $method->get_shipping_tax() > 0 && ! wc_prices_include_tax() ) {
+				$label .= ' <small class="tax_label">' . WC()->countries->inc_tax_or_vat() . '</small>';
+			}
+		} else {
+			$label .= wc_price( $method->cost );
+			if ( $method->get_shipping_tax() > 0 && wc_prices_include_tax() ) {
+				$label .= ' <small class="tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';
+			}
+		}
+	}
+
+	return apply_filters( 'woocommerce_cart_shipping_method_full_label', $label, $method );
+}
 ?>

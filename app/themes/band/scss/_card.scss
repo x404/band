@@ -94,18 +94,19 @@
 		// span
 		.woocommerce-Price-currencySymbol{
 			font-weight: 400;
-			visibility: hidden;
+			// visibility: hidden;
+			margin-left: 5px;
 			&:before{
-				content: "грн";
-				display: inline;
-				visibility: visible;
-				margin-left: 5px;
+				// content: "грн";
+				// display: inline;
+				// visibility: visible;
+				// margin-left: 5px;
 			}
 		}
 	}
 
 	.quantity{
-		display: none;
+		display: none !important;
 	}
 
 	.variations{
