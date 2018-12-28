@@ -36,8 +36,6 @@ add_filter( 'woocommerce_product_tabs', 'band_remove_product_tabs', 98 );
 
 
 
-
-
 // delivery
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
  

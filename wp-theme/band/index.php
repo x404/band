@@ -51,7 +51,6 @@ get_header(); ?>
                 endif;
                 ?>
 		</section>
-
 		<?php get_template_part( 'template-parts/general/bottom', 'none' ); ?>
 	</div>
 </div>

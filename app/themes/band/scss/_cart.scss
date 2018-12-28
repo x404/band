@@ -1,5 +1,6 @@
 .woocommerce-cart,
-.woocommerce-checkout-review-order-table
+.woocommerce-checkout-review-order-table,
+.woocommerce-table
 {
 	.variation{
 		font-size: 13px;
@@ -146,6 +147,7 @@ abbr{
 				margin-left: 27px;
 				top: 0;
 				a{
+					color: #ebedef;
 					background: $color;
 					position: absolute;
 					display: block;

@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div class="main inner">
+	<div class="main inner">adfad
 		<div class="container">
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 			<section class="listnews" role="main">

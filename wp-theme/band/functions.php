@@ -18,7 +18,7 @@ add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 add_action( 'after_setup_theme', function() {
 	add_theme_support( 'woocommerce' );
@@ -70,9 +70,22 @@ function band_scripts() {
 	// style.css, modernizr, libs, slick, engine
     wp_enqueue_style( 'band-style', get_stylesheet_uri() );
     wp_enqueue_script( 'band-modernizr', get_template_directory_uri() . '/js/modernizr.js');
-    wp_enqueue_script( 'band-libs', get_template_directory_uri() . '/js/libs.min.js');
+    // wp_enqueue_script( 'band-libs', get_template_directory_uri() . '/js/libs.min.js');
+    
+
+    // wp_enqueue_script( 'band-libs1', get_template_directory_uri() . '/js/src/');
+    wp_enqueue_script( 'band-libs2', get_template_directory_uri() . '/js/src/jquery.validate.js');
+    wp_enqueue_script( 'band-libs3', get_template_directory_uri() . '/js/src/util.js');
+    wp_enqueue_script( 'band-libs4', get_template_directory_uri() . '/js/src/tab.js');
+    wp_enqueue_script( 'band-libs5', get_template_directory_uri() . '/js/src/popper.min.js');
+
+
+
+
+
+
     wp_enqueue_script( 'band-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '', true );
-	wp_enqueue_script( 'band-selectify', get_template_directory_uri() . '/js/selectize.min.js', array(), '', true );
+	wp_enqueue_script( 'band-selectify', get_template_directory_uri() . '/js/jquery.selectify.js', array(), '', true );
     wp_enqueue_script( 'band-engine', get_template_directory_uri() . '/js/engine.js', array(), '', true );
 
 
@@ -556,7 +569,7 @@ function band_widgets_init() {
 		'name'          => 'SEO текст для ИНТЕРЕСНО',
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<section class="about">',
+		'before_widget' => '<section class="about %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<header><h1 class="text-center">',
 		'after_title'   => '</header></h1>',
@@ -566,14 +579,30 @@ function band_widgets_init() {
 		'name'          => 'SEO текст для ГЛАВНОЙ',
 		'id'            => 'sidebar-2',
 		'description'   => '',
-		'before_widget' => '<section class="about">',
+		'before_widget' => '<section class="about %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<header><h1 class="text-center">',
 		'after_title'   => '</header></h1>',
 	));
 
-
-
+	register_sidebar( array(
+		'name'          => 'Фильтр (ВЕРХ)',
+		'id'            => 'sidebar-3',
+		'description'   => '',
+		'before_widget' => '<div class="widget %2$s" id="%1$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<p class="widget-title">',
+		'after_title'   => '</p>',
+	));
+	register_sidebar( array(
+		'name'          => 'Фильтр (НИЗ)',
+		'id'            => 'sidebar-4',
+		'description'   => '',
+		'before_widget' => '<div class="d-flex justify-content-center"><div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<p class="widget-title">',
+		'after_title'   => '</p>',
+	));
 }
 
 
@@ -594,6 +623,45 @@ function band_top_menu_atts( $atts, $item, $args )
 {
 	$atts['data-hover'] = $item->title;
 	return $atts;
+}
+
+
+
+add_filter( 'nav_menu_css_class', 'change_menu_item_css_classes', 10, 4 );
+function change_menu_item_css_classes( $classes, $item, $args, $depth ) {
+
+$cate = get_queried_object();
+
+
+$productCAT = $_GET['product_cat'];
+if( $term = get_term_by( 'slug', $productCAT, 'product_cat' ) ){ 
+
+	if ($item->ID == 168) {
+		$classes[] = 'no-active';
+	}
+
+	if ($item->ID == 228) {
+		$classes[] = 'current-menu-parent';
+	}
+	if( $item->title === $term->name){
+		$classes[] = 'current-menu-item';
+		return $classes;
+	}
+
+};
+
+
+// var_dump($item);
+
+// 		if( $term = get_term_by( 'slug', $productCAT, 'product_cat' ) ){
+					
+// 		}
+
+
+// echo $term->name;
+
+
+	return $classes;
 }
 
 
@@ -905,5 +973,19 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/woocommerce/includes/wc-functions-remove.php';
 	// require get_template_directory() . '/woocommerce/includes/wc-functions-cart.php';
 }
+
+
+// function my_request( $request ) {
+//     $dummy_query = new WP_Query();
+//     $dummy_query->parse_query( $request );
+
+//     if ( $dummy_query->is_archive() ) {
+//         $request['posts_per_page'] = 1;
+//     }
+
+//     return $request;
+// }
+// add_filter( 'request', 'my_request' );
+
 
 ?>

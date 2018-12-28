@@ -41,7 +41,7 @@
 
 /* =filter
 ---------------------------*/
-.filter{
+.filter-box{
 	border-bottom: 1px solid $color3;
 	margin-top: 35px;
 	padding-bottom: 15px;
@@ -82,6 +82,9 @@
 						color: $color7;					
 						text-decoration: none;
 					}
+					&:before{
+						display: none !important;
+					}
 				}
 				&.chosen{
 					a{
@@ -102,28 +105,30 @@
 			}
 			a{
 				border-radius: 50%;
-				border: 2px solid #fff;
+				border: 2px solid #fff !important;
 				display: block;
-				height: 19px;
+				height: 19px !important;
 				overflow: hidden;
 				text-indent: 9999em;
 				letter-spacing: -9999px;
-				width: 19px;
+				width: 19px !important;
 				position: relative;
+				margin: 0 !important;
+				box-sizing: border-box !important;
 				&:before,
 				&:after
 				{
 					@extend .before;
-					border-radius: 50%;					
+					border-radius: 50% !important;
 					opacity: 0;
 					transition: opacity .3s;
 				}
 				&:before{
 					border: 1px solid #c2c2c2;
-					height: 23px;
+					height: 23px !important;
 					left: -4px;
 					top: -4px;
-					width: 23px;
+					width: 23px !important;
 				}
 				&:after{
 					background: #fff;

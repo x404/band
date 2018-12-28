@@ -1,5 +1,12 @@
 .collections{
 	margin-bottom: -15px;
+	.filter-box,
+	.term-description{
+		display: none;
+	}
+	.products{
+		display: flex !important;
+	}
 }
 .visual{
 	margin-bottom: -20px;
@@ -13,53 +20,62 @@
 .collection{
 	&__item{
 		margin-bottom: 35px;
-	}
-	&__link{
-		position: relative;
-		display: block;
-		img{
+		a{
+			position: relative;
 			display: block;
-			border-radius: 5px;
-			width: 100%;
-		}
-
-		.more{
-			align-items: center;
-			background-color: #ffffff;
-			border-radius: 10px;
-			bottom: 75px;
-			display: flex;
-			height: 53px;
-			justify-content: center;
-			left: 50%;
-			margin-left: -72px;
-			opacity: 0;
-			position: absolute;
-			transition: .4s;
-			width: 145px;
-		}
-
-		&:hover{
-			.collection{
-				&__title{
-					height:  calc(100% - 24px);
-					left: 12px;
-					margin-left: 0;
-					margin-top: 0;
-					top: 12px;
-					width: calc(100% - 24px);
-				}
-			}
-			h3{
-				transform: translateY(-28px)
+			img{
+				display: block;
+				border-radius: 5px;
+				width: 100%;
 			}
 
 			.more{
-				opacity: 1;
-				bottom: 55px;
+				align-items: center;
+				background-color: #ffffff;
+				border-radius: 10px;
+				bottom: 75px;
+				display: flex;
+				height: 53px;
+				justify-content: center;
+				left: 50%;
+				margin-left: -72px;
+				opacity: 0;
+				position: absolute;
+				transition: .4s;
+				width: 145px;
 			}
+
+			.count{
+				display: none !important;
+			}
+
+			&:hover{
+				.collection{
+					&__title{
+						height:  calc(100% - 24px);
+						left: 12px;
+						margin-left: 0;
+						margin-top: 0;
+						top: 12px;
+						width: calc(100% - 24px);
+					}
+				}
+				.woocommerce-loop-category__title{
+					transform: translateY(-28px)
+				}
+
+				.more{
+					opacity: 1;
+					bottom: 55px;
+				}
+			}			
 		}
 	}
+	// &__link{
+	// 	position: relative;
+	// 	display: block;
+
+	// }
 	&__title{
 		align-items: center;
 		border-radius: 5px;
@@ -76,7 +92,7 @@
 		width: 440px;
 		z-index: 2;
 
-		h3{
+		.woocommerce-loop-category__title{
 			color: $color2;
 			font-size: 46px;
 			font-weight: 400;

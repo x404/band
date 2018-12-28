@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<tr>
 			<th class="product-name">Наименование товара</th>
 			<th class="product-qty">Количество, шт</th>
-			<th class="product-total">Итого, грн</th>
+			<th class="product-total">Сумма, грн</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -40,17 +40,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					?>
 					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-						<td class="product-name" data-title="Наименование">
+						<td class="product-name" data-title="Наименование"><span>
 							<?php //var_dump($_product);
 							 echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
-							<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
+							<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?></span>
 						</td>
 						<td class="product-qty" data-title="Количество">
 							<?php
 							echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <span class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</span>', $cart_item, $cart_item_key ); 
 							?>
 						</td>
-						<td class="product-total" data-title="Итого">
+						<td class="product-total" data-title="Сумма">
 							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
 						</td>
 					</tr>

@@ -67,11 +67,14 @@
 		</div>
 
 		<!-- =nav -->
+<?php
+
+?>
 		<div class="navmenu">
 			<div class="navmenu__inner">
 				<nav id="navbar" class="mainnav">
 					<div class="mainnav__list">
-						<ul class="nav nav-tabs menu cl-effect-11">
+						<ul class="nav nav-tabs menu cl-effect-11 <?php echo $class;?>">
 							<?php 
 								wp_nav_menu( array(
 									'theme_location'  => 'top',

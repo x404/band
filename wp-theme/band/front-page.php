@@ -20,6 +20,17 @@ get_header(); ?>
 		<div class="container">
 			<?php if ( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>			
 
+
+			<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+				<div class="filter">
+					<div class="filter__body">
+						<?php dynamic_sidebar( 'sidebar-3' ); ?>
+					</div>					
+				</div>
+			<?php endif; ?>
+
+
+
 			<?php while ( have_posts() ) : the_post();
 				the_content();
 			endwhile;

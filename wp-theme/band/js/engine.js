@@ -318,10 +318,12 @@ document.querySelector('.footer .mess').addEventListener('click', function(){
 
 // =/mobile menu
 
-document.querySelector('.showcomments').addEventListener('click', function(){
+
+jQuery(document).on('click', '.showcomments', function(e){
+	e.preventDefault();
 	document.querySelector('.togglecomments').style.display='none';
 	document.querySelector('.allcomments').style.display='block';
-}, false);
+});
 
 
 var timer;

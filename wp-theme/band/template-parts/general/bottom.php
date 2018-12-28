@@ -11,11 +11,6 @@
 ?>
 
 
-
-<!-- [products limit="4" columns="4" orderby="popularity" class="quick-sale" on_sale="true" ] -->
-
-
-
 <!-- =subcats -->
 <?php 
 	wp_nav_menu( array(
@@ -35,11 +30,27 @@
 ?>
 <!-- =/subcats -->
 
-<?php if( get_field('seotext') ): ?>
+
+<?php
+if(is_shop()){
+    $page_id = woocommerce_get_page_id('shop');
+  }else{
+    $page_id = $post->ID;
+  }
+
+// id shop is 23
+if ($page_id == 23){?>
+	<section class="about">
+		<?php echo get_field('seotext', 23); ?>
+	</section>
+<?php }
+
+
+if( get_field('seotext') ): ?>
 <?php ?>
 	<!-- =seotext -->
 	<section class="about">
-		<?php the_field('seotext'); ?>
+		<?php echo get_field('seotext'); ?>
 	</section>
 	<!-- =/seotext -->
 <?php endif; ?>

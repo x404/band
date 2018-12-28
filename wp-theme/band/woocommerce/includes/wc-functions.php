@@ -38,6 +38,31 @@ function band_wrapper_end() {
 }
 
 
+// categories
+remove_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
+add_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10);
+
+function woocommerce_subcategory_thumbnail( $category ) {
+	$thumbnail_id         = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+
+	if ( $thumbnail_id ) {
+		$image        = wp_get_attachment_image_src( $thumbnail_id, $small_thumbnail_size );
+		$image        = $image[0];
+	} else {
+		$image        = wc_placeholder_img_src();
+	}
+
+	if ( $image ) {
+		// Prevent esc_url from breaking spaces in urls for image embeds.
+		// Ref: https://core.trac.wordpress.org/ticket/23605.
+		$image = str_replace( ' ', '%20', $image );
+
+		// Add responsive image markup if available.
+
+		echo kama_thumb_img('w=570 &h=290 &crop=right', esc_url( $image ));
+	}
+}
+
 add_action('woocommerce_before_single_product', 'band_wrapper_product_start', 5);
 function band_wrapper_product_start(){
   ?>
@@ -253,4 +278,6 @@ function wc_cart_totals_shipping_method_label_dub( $method ) {
 
 	return apply_filters( 'woocommerce_cart_shipping_method_full_label', $label, $method );
 }
+
+
 ?>

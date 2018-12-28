@@ -182,6 +182,10 @@
 				}
 			}
 		}
+
+		&__cart{
+			display: flex;
+		}
 	}
 
 	.top__contacts-right{
@@ -328,6 +332,10 @@
 			.top__contacts{
 				display: none !important;
 			}
+		}
+
+		&__cart{
+			margin-right: 60px;
 		}
 	}
 
@@ -555,6 +563,23 @@
 	}
 }
 
+
+@media (max-width: 390px){
+	.top .basket-btn{
+		padding-right: 15px;
+		padding-left: 45px;
+	}
+	.top__contacts-left{
+		padding-left: 15px;
+	}
+}
+
+
+@media (max-width: 350px){
+	.basket-btn__label{
+		display: none;
+	}
+}
 
 @media (max-width: 320px){
 	.creators{
