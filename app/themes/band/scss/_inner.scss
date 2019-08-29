@@ -34,6 +34,15 @@
 	}
 }
 
+.home{
+	.main{
+		&.inner{
+			.filter-box{
+				border-top: none;				
+			}
+		}
+	}
+}
 
 .main{
 	&.inner{
@@ -111,9 +120,11 @@
 			}
 		}
 
-
 		ul{
 			list-style: none;
+		}
+
+		ul:not(.wp-block-gallery):not(.payment_methods){
 			li{
 				padding-left: 16px;
 				position: relative;
@@ -128,6 +139,12 @@
 					background-color: #35495c;
 					border-radius: 50%;
 				};
+			}
+		}
+
+		.wp-block-gallery{
+			a{
+				color: $color2;
 			}
 		}
 
@@ -161,20 +178,31 @@
 		}
 
 
-		.justifyleft {text-align:left !important; }
-		.justifyright {text-align:right !important; }
-		.justifycenter {text-align: center !important; }
+		.justifyleft,.alignleft {text-align:left !important; }
+		.justifyright, .alignright {text-align:right !important; }
+		.justifycenter,.aligncenter {text-align: center !important; }
 		.justifyfull {text-align:justify !important; }
 
-		img.justifyleft, table.justifyleft {float:left; margin-right:25px;margin-bottom:25px;}
-		img.justifyright, table.justifyright {float:right; margin-left:25px;margin-bottom:25px;}
-		img.justifycenter, table.justifycenter { display: block; margin-left: auto; margin-right: auto;}		
+		img.justifyleft, img.alignleft, table.justifyleft {float:left; margin-right:25px;margin-bottom:25px;}
+		img.justifyright, img.alignright, table.justifyright {float:right; margin-left:25px;margin-bottom:25px;}
+		img.justifycenter, img.aligncenter, table.justifycenter { display: block; margin-left: auto; margin-right: auto;}		
 
 		img{
 			max-width: 100%
 		}
 	}
 }
+
+
+.justifyleft,.alignleft {text-align:left !important; }
+.justifyright, .alignright {text-align:right !important; }
+.justifycenter,.aligncenter {text-align: center !important; }
+.justifyfull {text-align:justify !important; }
+
+img.justifyleft, img.alignleft, table.justifyleft {float:left; margin-right:25px;margin-bottom:25px;}
+img.justifyright, img.alignright, table.justifyright {float:right; margin-left:25px;margin-bottom:25px;}
+img.justifycenter, img.aligncenter, table.justifycenter { display: block; margin-left: auto; margin-right: auto;}		
+
 
 
 /* =newest
@@ -198,6 +226,7 @@
 			z-index: 5;
 		}
 		.box-default{
+			border-radius: 8px;
 			height: 225px;
 		}
 		.box-hover{
@@ -265,7 +294,7 @@
 		}
 	}
 	.woocommerce-loop-product__title{
-		margin: 2px 15px 11px;
+		margin: 8px 15px 11px;
 	}
 }
 /* =newest
@@ -321,3 +350,4 @@
 }
 /* =/subcat
 ---------------------------*/
+

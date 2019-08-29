@@ -1,6 +1,6 @@
-$color_1: #fff; 
-// $color_2: #35495c;
-$color_2: #000;
+$color_1: #000;
+$color_2: #fff; 
+$color_3: #35495c;
 
 
 /* =mobile-menu
@@ -81,7 +81,7 @@ $color_2: #000;
 		text-align: left;
 	}
 	.navbar-toggle{
-		background-color:$color_2;
+		background-color:$color_3;
 		border: none;
 		cursor: pointer;
 		display: block;
@@ -93,7 +93,7 @@ $color_2: #000;
 		width: 60px;
 		z-index: 99;
 		.icon-bar{
-			background-color: $color_1;
+			background-color: $color_2;
 			display: block;
 			height: 2px;
 			margin: 6px auto;
@@ -117,7 +117,7 @@ $color_2: #000;
 		.mobinfo{
 			padding-left: 1rem;
 			a{
-				color: $color_1;
+				color: $color_2;
 				display: block;
 				margin: 18px;
 				text-decoration: none;
@@ -131,7 +131,7 @@ $color_2: #000;
 			@include font-size(1.5);
 			padding-left: 15px;
 			a{
-				color: $color2;
+				color: $color_2;
 				display: block;
 				margin: 18px 0;
 				text-decoration: none;
@@ -145,7 +145,7 @@ $color_2: #000;
 
 	.close-menu{
 		@include transition;
-		background-color: $color_2;
+		background-color: $color_1;
 		background: none;
 		border: none;
 		cursor: pointer;
@@ -157,7 +157,7 @@ $color_2: #000;
 		text-align: center;
 		top: 0;
 		width: 58px;
-		z-index: 99;
+		z-index: 999;
 		img{
 			transition: transform .2s;			
 		}
@@ -168,7 +168,7 @@ $color_2: #000;
 
 
 	#navbar{
-		background-color:$color_2;
+		background-color:$color_3;
 		a{
 			border-bottom: none !important;
 			font-size: 18px;
@@ -197,7 +197,7 @@ $color_2: #000;
 				border-bottom: 1px solid #fff;
 
 				a, span{
-					color: $color_1;
+					color: $color_2;
 					display: block;
 					height: auto;
 					line-height: normal;

@@ -86,3 +86,15 @@
 		text-align: left !important;
 	}
 }
+
+.woocommerce-order-details{
+	.woocommerce-order-desc{
+		font-size: 18px;	
+	}
+}
+
+.woocommerce-checkout{
+	.woocommerce-table--order-details{
+		width: 100%;
+	}
+}

@@ -41,11 +41,6 @@
 		width: 98%;
 		text-align: center;
 
-
-
-
-
-
 		.close{
 			right: 15px;
 			top: 15px;
@@ -131,20 +126,31 @@
 		}
 	}
 
-	.submit{
+	.textarea-wrap{
 		display: block;
-		border: 1px solid #35495c;
-		background: none;
-		border-radius: 8px;
+	}
+
+	.submit{
+		@extend .btn-default;
 		margin: 35px auto 0;
 		padding: 15px 32px;
+
+	}
+}
+
+.btn-default{
+		display: block;
+		border-radius: 8px;
+		border: 1px solid #35495c;
+		background: #35495c;
+		color: $color2;
 		transition: .3s;
 		&:hover{
-			color: $color7;
+			color: $color2 !important;
 			border-color: $color7;
 			background-color: $color7;
-		}
-	}
+			text-decoration: none;
+		}	
 }
 
 .contact-page{

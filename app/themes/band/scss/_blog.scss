@@ -1,14 +1,14 @@
 .listnews{
 	padding-bottom: 10px;
 	margin-left: -15px;
-	margin-right: -15px;
+	margin-right: -22px;
 	.new{
 		&__item{
 			background: $color6;
 			overflow: hidden;
 			margin-bottom: 30px;
-			margin-left: 15px;
-			margin-right: 15px;
+			margin-left: 20px;
+			margin-right: 20px;
 			&-pic .new__title{
 				background: $color6;
 			}

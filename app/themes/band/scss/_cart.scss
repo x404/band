@@ -259,12 +259,16 @@ abbr{
 		}
 	}
 
-	.back,
-	.wc-proceed-to-checkout .checkout-button{
-		align-items: center;
+	.back{
 		border-radius: 8px;
 		border: 1px solid $color3;	
+	}
+	
+	.back,
+	.wc-proceed-to-checkout .checkout-button
+	{
 		display: flex;
+		align-items: center;
 		font-size: 14px;
 		height: 53px;
 		margin-right: 28px;
@@ -273,20 +277,15 @@ abbr{
 		transition: .3s;
 	}
 
-
 	.wc-proceed-to-checkout{
 		.checkout-button{
+			display: flex;
 			align-items: center;
 			background-color: $color3;
 			color: $color2;
 			width: 175px;
-
 			margin-right: 0;
-			&:hover{
-				color: $color3;
-				background-color: $color2;
-				text-decoration: none;
-			}
+			@extend .btn-default;
 		}
 	}
 }
@@ -508,27 +507,32 @@ abbr{
 	}
 
 	.button{
-		background: #35495c;
-		border-radius: 8px;
-		border: 1px solid rgba(0,0,0,0);
-		color: $color2;
-		font-size: 14px;
-		height: 55px;
-		text-transform: uppercase;
-		width: 200px;
-		cursor: pointer;
 
 		position: absolute;
 		left: 50%;
 		margin-left: -100px;
 		bottom: -100px;
-		
-		transition: .3s;
-		&:hover{
-			background: #fff;
-			color: #35495c;
-			border-color: currentColor;
-		}
+
+	}
+}
+
+.woocommerce-checkout-payment,
+.woocommerce-checkout-payment-md{
+	.button{
+		font-size: 14px;
+		height: 55px;
+		text-transform: uppercase;
+		width: 200px;
+		cursor: pointer;
+		@extend .btn-default;
+	}
+}
+
+.woocommerce-checkout-payment-md{
+	margin-top: 20px;
+	.button{
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

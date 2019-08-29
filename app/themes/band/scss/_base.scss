@@ -1,6 +1,6 @@
 /*** reset ***********/
 html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}
-header, section, footer, aside, , article {display:block}
+header, section, footer, aside , article {display:block}
 ul{list-style:none}
 
 
@@ -250,6 +250,10 @@ input[type="submit"]{
 					text-decoration: none;
 				}
 			}
+			& > a{
+				position: relative;
+				z-index: 100;
+			}
 			.menu-item{
 				text-transform: none;
 				a{
@@ -274,6 +278,19 @@ input[type="submit"]{
 			a{
 				color: $color7;
 			}
+		}
+	}
+}
+
+.product-template-default{
+	#menu-item-228{
+		a{
+			&:before{
+				max-width: 0;
+			}
+		}
+		&:hover a:before{
+			// max-width: 100%;
 		}
 	}
 }
@@ -472,9 +489,15 @@ $r: 10px;
 .quickmsg{
 	background-color: $color8;
 	border-bottom: 2px solid #4bcbb1;
-	display: none;
+	// display: none;
 	position: relative;
 	transition: .3s;
+	height: 0;
+	overflow: hidden;
+	transition: height .3s;
+	&.open{
+		height: 530px;
+	}
 	&:after{
 
 		@extend .before;
@@ -521,14 +544,15 @@ $r: 10px;
 		height: 165px;
 	}
 
-	.submit{
+	.submit,
+	.wpcf7-submit{
 		border: 2px solid $color3;
 		background-color: $color3;
 		border-radius: 10px;
 		color: $color2;
 		display: block;
 		height: 50px;
-		margin-top: 27px;
+		margin: 27px auto 0;
 		text-transform: uppercase;
 		width: 140px;
 		transition: .3s;
@@ -653,4 +677,23 @@ input[type=number]::-webkit-outer-spin-button {
 	-moz-appearance:textfield;
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.woocommerce-error{
+	li{
+		padding-left: 0;
+		&:before{
+			display: none !important;
+		}
+	}
+}
+
+
+.wpcf7-not-valid-tip{
+	display: none !important;
+}
+
+.grecaptcha-badge{
+	display: none !important;
 }
