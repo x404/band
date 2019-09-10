@@ -76,6 +76,9 @@
 		}
 		.yith-wcan-list{
 			li{
+				span{
+					padding-left: 17px;
+				}
 				a{
 					padding-left: 17px;
 					&:hover{
@@ -212,7 +215,9 @@
 	}
 }
 
-#yith-woo-ajax-navigation-2{
+#yith-woo-ajax-navigation-2,
+#yith-woo-ajax-navigation-9
+{
 	justify-content: center;
 	margin-right: 0;
 	width: 100%;

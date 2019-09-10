@@ -1,9 +1,9 @@
 .main .card-page{
 	h1:not(.title){
-		font-weight: 400;
-		font-size: 30px;
-		line-height: 1;
 		font-family: "Fira Sans Condensed";
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 1.2;
 		margin-bottom: 0;
 	}
 	.articul,
@@ -60,7 +60,7 @@
 	}
 
 	.woo-variation-product-gallery{
-		max-width: 100%;
+		max-width: 100% !important ;
 	}
 
 	.to-cart{
