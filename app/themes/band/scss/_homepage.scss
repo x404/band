@@ -259,6 +259,7 @@
 	margin: 40px 0 20px;
 	.product{
 		margin-bottom: 35px;
+		position: relative;
 		text-align: center;
 		.box{
 			&-default{
@@ -307,6 +308,9 @@
 					text-decoration: none;
 				}
 			}
+			.newprice{
+				color: $color14;
+			}
 		}
 		.product_type_simple.button,
 		.add_to_cart_button{
@@ -326,6 +330,29 @@
 				img{
 					filter: grayscale(0) brightness(5)
 				}
+			}
+		}
+
+		.label{
+			align-items: center;
+			border-radius: 50%;
+			color: #fff;
+			display: flex;
+			font-weight: bold;
+			height: 65px;
+			justify-content: center;
+			position: absolute;
+			right: -5px;
+			top: 5px;
+			width: 65px;
+			z-index: 99;
+			&-sale{
+				background-color: $color14;
+				font-size: 24px;
+			}
+			&-new{
+				background-color: $color7;
+				font-size: 16px;
 			}
 		}
 	}
