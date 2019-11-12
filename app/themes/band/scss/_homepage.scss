@@ -355,6 +355,12 @@
 				font-size: 16px;
 			}
 		}
+
+
+		&.outofstock{
+			opacity: .65;
+			filter: grayscale(1)
+		}
 	}
 	.woocommerce-loop-product__link{
 		display: block;
