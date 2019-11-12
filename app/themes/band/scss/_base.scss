@@ -75,6 +75,10 @@ h5{
 									"lastnews"
 									"footer";
 		grid-template-rows: auto auto 1fr auto auto;
+
+		@media (max-width: 768px){
+			display: block;
+		}
 	}
 }
 
