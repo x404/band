@@ -167,10 +167,16 @@
 				a{
 					&:after,
 					&:before{
-						opacity: 0;
+						opacity: 1;
 					}
 				}
 			}
+		}
+	}
+
+	#yith-woo-ajax-navigation-3{
+		.widget-title{
+			padding-right: .5rem;
 		}
 	}
 
