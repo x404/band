@@ -939,3 +939,27 @@ ul.color-variable-wrapper{
 
 }
 
+.woocommerce{
+	.xoo-wl-submit{
+		background-color: $color3;
+		border: none;
+		cursor: pointer;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 120px;
+		transition: background-color .3s;
+		&:hover{
+			background-color: $color7
+		}
+	}
+	span.xoo-wl-close:hover{
+		color: $color7;
+	}
+
+	.xoo-wl-success{
+		background-color: $color8;
+		text-align: center;
+		color: #000;
+	}
+}
