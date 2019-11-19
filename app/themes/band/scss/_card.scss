@@ -1,5 +1,6 @@
 .main .card-page{
-	h1:not(.title){
+	h1:not(.title),
+	.product_title{
 		font-family: "Fira Sans Condensed";
 		font-size: 30px;
 		font-weight: 400;
@@ -66,7 +67,7 @@
 	.to-cart{
 		align-items: center;
 		display: flex;
-		margin-top: 35px;
+		margin-top: 15px;
 		.button{
 			background-color: #ebedef;
 			border-radius: 50%;
@@ -321,6 +322,154 @@
 				}
 			}
 		}
+	}
+
+	.newest{
+		.title{
+			font-size: 30px;
+		}
+	}
+
+
+
+	a.mdwcpt-trigger{
+		align-items: flex-end;
+		border-bottom: none !important;
+		display: flex;
+		font-size: 1.6rem;
+		line-height: 1;
+		margin-top: 1.5rem;
+		.mdwcpt-track-icon{
+			background: url(images/mdwcpt.png) no-repeat left center !important;
+			opacity: 1 !important;
+			min-height: 24px;
+			width: 27px; 
+		}
+		&:hover{
+			font-weight: normal !important;
+			text-decoration: none !important;
+		}
+	}
+
+
+	.clickBuyButton{
+		background: url(images/arrowclick.png) no-repeat left center;
+		border: none;
+		position: relative;
+		z-index: 999;
+		cursor: pointer;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 30px;
+		margin-top: 1rem;
+		&.running{
+			background-image: none;
+		}
+		&:hover{
+			color: $color7;	
+		}
+	}
+
+}
+
+
+#formOrderOneClick{
+	h2,
+	.title{
+		color: #35495c;
+		font-size: 18px;
+		text-align: center;
+		font-weight: normal;
+		line-height: 1.5;
+	}
+	div.popup{
+		border-radius: 10px !important;
+		border: 2px solid $color3 !important;
+		padding-bottom: 20px !important;
+		width: 450px;
+		transform: none !important;
+		margin-left: -225px !important;
+		margin-top: -140px !important;
+		padding-top: 60px;
+
+		@media (max-width: 480px){
+			margin-left: 0 !important;
+			left: 3% !important;
+			width: 94%;
+			.b1c-form{
+				width: 100%;
+				.input-text,
+				.buyvalide {
+					width: 100%;
+				}				
+			}
+		}
+	}
+	.b1c-form{
+		margin-left: auto;
+		margin-right: auto;
+		width: 32rem;
+		.input-text,
+		.buyvalide {
+			border-radius: 8px;
+			color: $color3;
+			border: 1px solid;
+			font-size: 1.4rem;
+			height: 42px;
+			margin-top: 1.8rem;
+			padding-left: 1.2rem;
+			padding-right: 1.2rem;
+			width: 318px;
+		}
+	}
+	.buyButtonOkForm {
+		@extend .flex-center;
+		background-color: $color3;
+		border-radius: 10px;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-size: 14px;
+		height: 52px;
+		margin: 20px auto 0;
+		width: 90px;
+		&:hover{
+			background-color: $color7
+		}
+	}
+
+	.form-message-result{
+		font-size: 13px;
+		color: red;
+		margin-top: 5px;
+	}
+
+	.close_order,
+	.close_message{
+		background: url(images/close3.png) no-repeat left top !important;
+		height: 20px !important;
+		right: 25px !important;
+		top: 20px !important;
+		width: 21px !important;
+		text-indent: -9999em;
+		border-radius: 0 !important;
+		border: none !important;
+		box-shadow: none !important;
+		&:hover{
+			background-position: left bottom !important;
+		}
+	}
+
+	.close_message{
+		right: 10px !important;
+		top: 10px !important;
+	}
+
+
+	.popummessage{
+		font-size: 16px;
+		padding: 35px 15px !important;
+		text-align: center !important;
 	}
 }
 
@@ -959,7 +1108,8 @@ ul.color-variable-wrapper{
 
 	.xoo-wl-success{
 		background-color: $color8;
-		text-align: center;
 		color: #000;
+		text-align: center;
 	}
 }
+

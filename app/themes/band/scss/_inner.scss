@@ -211,9 +211,8 @@ img.justifycenter, img.aligncenter, table.justifycenter { display: block; margin
 .newest{
 	margin-left: -15px;
 	margin-right: -15px;
+
 	.product{
-		// border-radius: 8px;
-		// border: 1px solid $color12;
 		margin-bottom: 0;
 		margin-left: 15px;
 		margin-right: 15px;
@@ -221,7 +220,6 @@ img.justifycenter, img.aligncenter, table.justifycenter { display: block; margin
 		width: 262px;
 
 		.woocommerce-loop-product__link{
-			// height: 335px;
 			padding-left: 0;
 			padding-right: 0;
 			z-index: 5;

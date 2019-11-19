@@ -482,6 +482,9 @@
 
 
 @media (max-width: 575px){
+	.homeslider {
+		display: none;
+	}
 	.main .text-contact{
 		display: flex;
 		align-items: center;

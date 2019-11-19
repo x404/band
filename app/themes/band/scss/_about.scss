@@ -1,3 +1,6 @@
 #newest-carousel{
 	display: flex;
+	&.slick-initialized{
+		display: block;
+	}
 }
