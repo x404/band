@@ -332,24 +332,27 @@
 
 
 
-	a.mdwcpt-trigger{
-		align-items: flex-end;
+
+	a.open-popup-spy-form{
+		background: url(images/mdwcpt.png) no-repeat left 2px;
 		border-bottom: none !important;
-		display: flex;
+		// display: inline-block;
+		display: none;
 		font-size: 1.6rem;
 		line-height: 1;
-		margin-top: 1.5rem;
-		.mdwcpt-track-icon{
-			background: url(images/mdwcpt.png) no-repeat left center !important;
-			opacity: 1 !important;
-			min-height: 24px;
-			width: 27px; 
-		}
+		margin-top: 2.5rem;
+		min-height: 44px;
+		padding-top: 10px;
+		padding: 10px;
+		padding-left: 36px;
+		position: relative;
+		z-index: 999;
 		&:hover{
 			font-weight: normal !important;
 			text-decoration: none !important;
 		}
 	}
+
 
 
 	.clickBuyButton{
@@ -370,9 +373,222 @@
 		}
 	}
 
+
+
+	.woocommerce-product-rating{
+		align-items: center;
+		display: flex;
+		margin-top: 1.5rem;
+		.woocommerce-review-link{
+			margin-left: 1rem;
+			font-size: 1.4rem;
+		}
+	}
+
+	.woocommerce-Tabs-panel--reviews{
+		#reviews_order,
+		#reviews_header,
+		.reviews_bar,
+		.woocommerce-product-rating,
+		.review-inappropriate{
+			display: none !important;
+		}
+	}
+
+	.open-reply{
+		display: block;
+		font-size: 1.2rem;
+	}
+
+
+
+
+	#review_form{
+		.submit{
+			font-size: 1.4rem !important;
+			float: none;
+		}
+		.form-submit{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.ywar_show_more{
+		text-align: left;
+
+		a{
+			background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALBAMAAABbgmoVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX////y8/SGkp1dbX3X295CVWfJztQ1SVyutr68wsnevM5KAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IMBBIkKAY1VD0AAAA8SURBVAjXY2BgYBBgAAEmQzDFEgymGFwVGBgEBQXFghgYykGggWHmzJkzgsFqhSFKTR3A+kLAHMYJDAwALmQI1Aw0pFMAAAAASUVORK5CYII=") no-repeat right center;
+			border: none;
+			color: $color3;
+			height: 32px;
+			display: inline-flex;
+			align-items: center;
+			font-weight: 700;
+			font-size: 16px;
+			margin-top: 0;
+			margin-bottom: 5px;
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 15px;
+			cursor: pointer;
+			transition: .3s color;
+
+			&:hover{
+				background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALBAMAAABbgmoVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEX////w+/h118NHyq/R8usowaLC7eQZvZuj5dey6d7WpHa7AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IMBBIiGQGx84EAAAA8SURBVAjXY2BgYBBgAAEmQzDFEgymGFwVGBgEBQXFghgYykGggWHmzJkzgsFqhSFKTR3A+kLAHMYJDAwALmQI1Aw0pFMAAAAASUVORK5CYII=") no-repeat right center;
+				color: $color7;
+			}
+		}
+
+	}
+
+
+	#comments{
+		.comment-respond{
+			background: #f6f8fa;
+			padding: 1rem 1rem 2rem; 
+		}
+		.submit{
+			margin-top: 1.8rem;
+		}
+
+		#review_form{
+			position: relative;
+		}
+	}
+
+	#cancel-comment-reply-link{
+		display: block;
+		overflow: hidden;
+
+
+		background: url(images/close3.png) no-repeat left top !important;
+		height: 20px !important;
+		right: 15px !important;
+		top: 15px !important;
+		width: 21px !important;
+		text-indent: -9999em;
+		border-radius: 0 !important;
+		border: none !important;
+		box-shadow: none !important;
+		position: absolute;
+
+		transition: none;
+
+
+		&:hover{
+			background-position: left bottom !important;
+		}
+
+	}
+
+	.review-actions{
+		.reply{
+			// display: none !important;
+		}
+	}
+
 }
 
 
+
+#spy-form{
+	color: $color3;
+	font-size: 18px;
+	max-width: 540px;
+	border-radius: 10px !important;
+	border: 2px solid $color3 !important;
+
+	.spy-modal__content{
+		padding-top: 60px;
+		padding-bottom: 30px
+	}
+
+	.spy-modal__header{
+		background-color: transparent;
+		border-bottom: none;
+		padding: 0;
+	}
+
+	.spy-modal__header-close{
+		border-left: none;
+	}
+
+	h3,
+	label,
+	.spy-modal__header-title,
+	.spy-modal__header-close-ico
+	{
+		display: none;
+	}
+
+	.woocommerce-Button{
+		@extend .flex-center;
+		background-color: $color3;
+		border-radius: 10px;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-size: 14px;
+		height: 52px;
+		margin: 20px auto 0;
+		width: 90px;
+		position: relative;
+		&:hover{
+			background-color: $color7
+		}		
+	}
+
+	.spy-modal__header-close{
+		background: url(images/close3.png) no-repeat left top !important;
+		height: 20px !important;
+		right: 25px !important;
+		top: 20px !important;
+		width: 21px !important;
+		text-indent: -9999em;
+		border-radius: 0 !important;
+		border: none !important;
+		box-shadow: none !important;
+		&:hover{
+			background-position: left bottom !important;
+		}		
+	}
+
+	p{
+		text-align: center;
+	}
+
+	.input-text{
+		border-radius: 8px;
+		color: $color3;
+		border: 1px solid;
+		font-size: 1.4rem;
+		height: 42px;
+		margin: 1.8rem auto 0;
+		padding-left: 1.2rem;
+		padding-right: 1.2rem;
+		width: 318px;		
+		display: block;
+		text-align: center;
+	}
+
+
+	@media (max-width: 480px){
+		margin-left: 0 !important;
+		left: 3% !important;
+		max-width: 94%;
+		.input-text{
+			width: 100%;		
+		}
+	}
+
+}
+
+
+
+
+// order by one click
 #formOrderOneClick{
 	h2,
 	.title{
@@ -803,23 +1019,56 @@ ul.color-variable-wrapper{
 
 
 // =coments
+#commentform{
+	// background: #f6f8fa;
+}
+
+
 .commentlist{
 	list-style: none;
 	margin-left: 0 !important;
 
 	.comment{
-		margin: 3rem 0;
+		margin: 1rem 0;
 	}
 	.review{
 		margin: 1rem 0;
 	}
 	.comment,
 	.review{
+
+		.comment_container{
+			padding: 0 !important;
+		}
 		.meta{
 			color: #35495c;
 			.woocommerce-review__published-date{
 				margin-left: 5px;
 			}
+		}
+
+		.reply{
+			float: none;
+			padding-bottom: 0;
+			.reply{
+				padding-top: 0;
+			}
+			.comment-reply-link{
+				background: url(images/icon_reply_arrow.png) no-repeat left center;
+				padding-left: 18px;
+			}
+		}
+
+		.stop-reply,
+		.comment-edit-link
+		{
+			color: #989696;
+			display: block;
+			font-size: 12px;
+		}
+
+		div.review-inappropriate{
+			padding: 0 !important;
 		}
 
 		.description{
@@ -868,6 +1117,33 @@ ul.color-variable-wrapper{
 				overflow: hidden;
 				padding-top: 1.5em;
 				position: absolute;
+				top: 0;
+			}
+		}
+	}
+
+	.children{
+		list-style: none;   
+		margin-left: 0;
+		li{
+			background: #f6f8fa;
+			padding: 10px 16px;
+			position: relative;
+			&:before{
+				display: none !important;
+			}
+
+			.woocommerce-review__published-date{
+				display: none;
+			}
+
+			.description{
+				margin-top: .3rem;
+			}
+
+			.review-inappropriate{
+				position: absolute;
+				right: 0;
 				top: 0;
 			}
 		}
