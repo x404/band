@@ -408,11 +408,9 @@
 			font-size: 1.4rem !important;
 			float: none;
 		}
-		.form-submit{
-			display: flex;
-			justify-content: space-between;
-		}
 	}
+
+
 
 	.ywar_show_more{
 		text-align: left;
@@ -448,6 +446,10 @@
 		.comment-respond{
 			background: #f6f8fa;
 			padding: 1rem 1rem 2rem; 
+			.form-submit{
+				display: flex;
+				justify-content: space-between;
+			}
 		}
 		.submit{
 			margin-top: 1.8rem;
@@ -480,12 +482,11 @@
 		&:hover{
 			background-position: left bottom !important;
 		}
-
 	}
 
-	.review-actions{
-		.reply{
-			// display: none !important;
+	span.error.empty-review{
+		span{
+			display: block;
 		}
 	}
 
